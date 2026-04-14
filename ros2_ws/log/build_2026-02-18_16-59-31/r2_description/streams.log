@@ -1,0 +1,59 @@
+[0.797s] Invoking command in '/home/tejas-raut/ros2_ws/src/r2_description': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/tejas-raut/ros2_ws/build/r2_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/tejas-raut/ros2_ws/install/r2_description/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/r2_description build --build-base /home/tejas-raut/ros2_ws/build/r2_description/build install --record /home/tejas-raut/ros2_ws/build/r2_description/install.log --single-version-externally-managed install_data
+[1.017s] running egg_info
+[1.017s] creating ../../build/r2_description/r2_description.egg-info
+[1.023s] writing ../../build/r2_description/r2_description.egg-info/PKG-INFO
+[1.024s] writing dependency_links to ../../build/r2_description/r2_description.egg-info/dependency_links.txt
+[1.024s] writing requirements to ../../build/r2_description/r2_description.egg-info/requires.txt
+[1.024s] writing top-level names to ../../build/r2_description/r2_description.egg-info/top_level.txt
+[1.024s] writing manifest file '../../build/r2_description/r2_description.egg-info/SOURCES.txt'
+[1.054s] reading manifest file '../../build/r2_description/r2_description.egg-info/SOURCES.txt'
+[1.055s] writing manifest file '../../build/r2_description/r2_description.egg-info/SOURCES.txt'
+[1.055s] running build
+[1.055s] running build_py
+[1.055s] creating /home/tejas-raut/ros2_ws/build/r2_description/build
+[1.055s] creating /home/tejas-raut/ros2_ws/build/r2_description/build/lib
+[1.055s] creating /home/tejas-raut/ros2_ws/build/r2_description/build/lib/r2_description
+[1.055s] copying r2_description/__init__.py -> /home/tejas-raut/ros2_ws/build/r2_description/build/lib/r2_description
+[1.055s] running install
+[1.060s] running install_lib
+[1.075s] creating /home/tejas-raut/ros2_ws/install/r2_description/lib/python3.12/site-packages/r2_description
+[1.075s] copying /home/tejas-raut/ros2_ws/build/r2_description/build/lib/r2_description/__init__.py -> /home/tejas-raut/ros2_ws/install/r2_description/lib/python3.12/site-packages/r2_description
+[1.076s] byte-compiling /home/tejas-raut/ros2_ws/install/r2_description/lib/python3.12/site-packages/r2_description/__init__.py to __init__.cpython-312.pyc
+[1.076s] running install_data
+[1.076s] creating /home/tejas-raut/ros2_ws/install/r2_description/share/ament_index
+[1.076s] creating /home/tejas-raut/ros2_ws/install/r2_description/share/ament_index/resource_index
+[1.077s] creating /home/tejas-raut/ros2_ws/install/r2_description/share/ament_index/resource_index/packages
+[1.077s] copying resource/r2_description -> /home/tejas-raut/ros2_ws/install/r2_description/share/ament_index/resource_index/packages
+[1.077s] copying package.xml -> /home/tejas-raut/ros2_ws/install/r2_description/share/r2_description
+[1.077s] creating /home/tejas-raut/ros2_ws/install/r2_description/share/r2_description/launch
+[1.077s] copying launch/gazebo.launch.py -> /home/tejas-raut/ros2_ws/install/r2_description/share/r2_description/launch
+[1.077s] copying launch/display.launch.py -> /home/tejas-raut/ros2_ws/install/r2_description/share/r2_description/launch
+[1.077s] creating /home/tejas-raut/ros2_ws/install/r2_description/share/r2_description/urdf
+[1.077s] copying urdf/r2.xacro -> /home/tejas-raut/ros2_ws/install/r2_description/share/r2_description/urdf
+[1.077s] copying urdf/r2.trans -> /home/tejas-raut/ros2_ws/install/r2_description/share/r2_description/urdf
+[1.077s] copying urdf/materials.xacro -> /home/tejas-raut/ros2_ws/install/r2_description/share/r2_description/urdf
+[1.077s] copying urdf/r2.gazebo -> /home/tejas-raut/ros2_ws/install/r2_description/share/r2_description/urdf
+[1.077s] creating /home/tejas-raut/ros2_ws/install/r2_description/share/r2_description/meshes
+[1.077s] copying meshes/base_link.stl -> /home/tejas-raut/ros2_ws/install/r2_description/share/r2_description/meshes
+[1.077s] copying meshes/horizontal_stage_1_1.stl -> /home/tejas-raut/ros2_ws/install/r2_description/share/r2_description/meshes
+[1.077s] copying meshes/kfs_gripper_1.stl -> /home/tejas-raut/ros2_ws/install/r2_description/share/r2_description/meshes
+[1.077s] copying meshes/vertical_expandable_1.stl -> /home/tejas-raut/ros2_ws/install/r2_description/share/r2_description/meshes
+[1.077s] copying meshes/horizontal_stage_2_1.stl -> /home/tejas-raut/ros2_ws/install/r2_description/share/r2_description/meshes
+[1.077s] copying meshes/front_link_1.stl -> /home/tejas-raut/ros2_ws/install/r2_description/share/r2_description/meshes
+[1.077s] copying meshes/wheel2_1.stl -> /home/tejas-raut/ros2_ws/install/r2_description/share/r2_description/meshes
+[1.077s] copying meshes/back_link_1.stl -> /home/tejas-raut/ros2_ws/install/r2_description/share/r2_description/meshes
+[1.077s] copying meshes/wheel3_1.stl -> /home/tejas-raut/ros2_ws/install/r2_description/share/r2_description/meshes
+[1.077s] copying meshes/camera_link_1.stl -> /home/tejas-raut/ros2_ws/install/r2_description/share/r2_description/meshes
+[1.078s] copying meshes/wheel4_1.stl -> /home/tejas-raut/ros2_ws/install/r2_description/share/r2_description/meshes
+[1.078s] copying meshes/storage_plate_1.stl -> /home/tejas-raut/ros2_ws/install/r2_description/share/r2_description/meshes
+[1.078s] copying meshes/wheel1_1.stl -> /home/tejas-raut/ros2_ws/install/r2_description/share/r2_description/meshes
+[1.078s] copying meshes/spearhead_gripper_1.stl -> /home/tejas-raut/ros2_ws/install/r2_description/share/r2_description/meshes
+[1.078s] creating /home/tejas-raut/ros2_ws/install/r2_description/share/r2_description/config
+[1.078s] copying config/ros_gz_bridge_gazebo.yaml -> /home/tejas-raut/ros2_ws/install/r2_description/share/r2_description/config
+[1.078s] copying config/gazebo.rviz -> /home/tejas-raut/ros2_ws/install/r2_description/share/r2_description/config
+[1.078s] copying config/display.rviz -> /home/tejas-raut/ros2_ws/install/r2_description/share/r2_description/config
+[1.078s] running install_egg_info
+[1.093s] Copying ../../build/r2_description/r2_description.egg-info to /home/tejas-raut/ros2_ws/install/r2_description/lib/python3.12/site-packages/r2_description-0.0.0-py3.12.egg-info
+[1.094s] running install_scripts
+[1.195s] writing list of installed files to '/home/tejas-raut/ros2_ws/build/r2_description/install.log'
+[1.231s] Invoked command in '/home/tejas-raut/ros2_ws/src/r2_description' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/tejas-raut/ros2_ws/build/r2_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/tejas-raut/ros2_ws/install/r2_description/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/r2_description build --build-base /home/tejas-raut/ros2_ws/build/r2_description/build install --record /home/tejas-raut/ros2_ws/build/r2_description/install.log --single-version-externally-managed install_data

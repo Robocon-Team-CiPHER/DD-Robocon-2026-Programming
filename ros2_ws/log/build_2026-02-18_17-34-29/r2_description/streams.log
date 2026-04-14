@@ -1,0 +1,20 @@
+[0.912s] Invoking command in '/home/tejas-raut/ros2_ws/src/r2_description': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/tejas-raut/ros2_ws/build/r2_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/tejas-raut/ros2_ws/install/r2_description/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/r2_description build --build-base /home/tejas-raut/ros2_ws/build/r2_description/build install --record /home/tejas-raut/ros2_ws/build/r2_description/install.log --single-version-externally-managed install_data
+[1.145s] running egg_info
+[1.163s] writing ../../build/r2_description/r2_description.egg-info/PKG-INFO
+[1.163s] writing dependency_links to ../../build/r2_description/r2_description.egg-info/dependency_links.txt
+[1.163s] writing requirements to ../../build/r2_description/r2_description.egg-info/requires.txt
+[1.163s] writing top-level names to ../../build/r2_description/r2_description.egg-info/top_level.txt
+[1.193s] reading manifest file '../../build/r2_description/r2_description.egg-info/SOURCES.txt'
+[1.194s] writing manifest file '../../build/r2_description/r2_description.egg-info/SOURCES.txt'
+[1.194s] running build
+[1.195s] running build_py
+[1.195s] running install
+[1.202s] running install_lib
+[1.217s] running install_data
+[1.217s] copying urdf/r2.urdf -> /home/tejas-raut/ros2_ws/install/r2_description/share/r2_description/urdf
+[1.217s] running install_egg_info
+[1.236s] removing '/home/tejas-raut/ros2_ws/install/r2_description/lib/python3.12/site-packages/r2_description-0.0.0-py3.12.egg-info' (and everything under it)
+[1.236s] Copying ../../build/r2_description/r2_description.egg-info to /home/tejas-raut/ros2_ws/install/r2_description/lib/python3.12/site-packages/r2_description-0.0.0-py3.12.egg-info
+[1.237s] running install_scripts
+[1.349s] writing list of installed files to '/home/tejas-raut/ros2_ws/build/r2_description/install.log'
+[1.379s] Invoked command in '/home/tejas-raut/ros2_ws/src/r2_description' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/tejas-raut/ros2_ws/build/r2_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/tejas-raut/ros2_ws/install/r2_description/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/r2_description build --build-base /home/tejas-raut/ros2_ws/build/r2_description/build install --record /home/tejas-raut/ros2_ws/build/r2_description/install.log --single-version-externally-managed install_data
