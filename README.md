@@ -1,2 +1,9 @@
-# DD-Robocon-2026---Programming
-openCV | ROS2 | Gazebo 
+# Gazebo-Simulation-R2
+## Simulation of R2 Robocon -v2
+
+Added the URDF File into the world.
+Added the arena_components
+Just need to change the inertia of the components.
+Can use 'Translate' in gz sim to move the r2 in environment...
+Needs further changes to it...
+Over and out...
