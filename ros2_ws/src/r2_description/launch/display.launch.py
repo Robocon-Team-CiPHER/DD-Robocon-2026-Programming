@@ -9,20 +9,18 @@ from ament_index_python.packages import get_package_share_directory
 
 
 def generate_launch_description():
-    share_dir = get_package_share_directory('r2_description')
-
-    xacro_file = os.path.join(share_dir, 'urdf', 'r2.xacro')
-    robot_description_config = xacro.process_file(xacro_file)
-    robot_urdf = robot_description_config.toxml()
-
-    rviz_config_file = os.path.join(share_dir, 'config', 'display.rviz')
-
-    gui_arg = DeclareLaunchArgument(
-        name='gui',
-        default_value='True'
+   urdf_path = os.path.joint(
+        get_package_share_path('r2_description'),
+        'urdf',
+        'r2.xacro'
     )
+    
 
-    show_gui = LaunchConfiguration('gui')
+  rviz_config_path = os.path.joint(
+       get_package_share_path('r2_description'),
+       'rviz'
+       'r2_config.rviz'
+    )
 
     robot_state_publisher_node = Node(
         package='robot_state_publisher',
