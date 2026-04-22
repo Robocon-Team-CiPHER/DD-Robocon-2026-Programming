@@ -1,18 +1,19 @@
-# Gazebo-Simulation-R2
-Simulation of R2 Robocon -v2
+# Stage 2 Prograamming
 
-1. Added the URDF File into the world.
-2. Added the arena_components
-3. Just need to change the inertia of the components.
-4. Can use 'Translate' in gz sim to move the r2 in environment...
-5. Needs further changes to it...
+1. Currently wokring on Perception, Mapping and Control
+2. R2 Simulation
+
+# Team:
+1. **Paritosh Raut (Captain)** _@paritosh21raut_
+2. **Sameer Patwardhan** _@MysticCore_
+3. **Sahil Kale** _@Xtroncs_
+4. **Tejas Raut** _@TejasRaut15k_
 
 Over and out...
-
-<p align="center">
+<!-- <p align="center">
   <img src="highlights/r2_5.png"/>
 </p>
-
+--->
 <p align="center">
-  <img src="world/v2/v2_arena_with_light.png"/>
+  <img src="world/v2_arena_with_light.png"/>
 </p>
