@@ -3,21 +3,21 @@
 <robot name="r2">
 
     <link name="base_link">
-        <inertial>
+        <!-- <inertial>
             <origin xyz="-2.754680731088154e-15 -1.97871432796473e-15 0.10924180943280747" rpy="0.0 0.0 0.0" />
             <mass value="1.2658464000000376" />
             <inertia ixx="0.06186366737247589" iyy="0.09131507331808722" izz="0.10042441113600484" ixy="-7.763737812638297e-15" iyz="-9.022659862038864e-16" ixz="-1.0174272550697287e-15" />
-        </inertial>
+        </inertial> -->
         <visual name="base_link_visual">
             <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
             <geometry>
-                <mesh filename="meshes/base_link.stl" scale="0.001 0.001 0.001" />
+                <mesh filename="package://r2_description/meshes/base_link.stl" scale="0.001 0.001 0.001" />
             </geometry>
         </visual>
         <collision name="base_link_collision">
             <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
             <geometry>
-                <mesh filename="meshes/base_link.stl" scale="0.001 0.001 0.001" />
+                <mesh filename="package://r2_description/meshes/base_link.stl" scale="0.001 0.001 0.001" />
             </geometry>
         </collision>
     </link>
@@ -31,13 +31,13 @@
         <visual name="front_link_visual">
             <origin xyz="-0.3000000000000001 -1.0658141036401502e-16 -1.7763568394002505e-17" rpy="3.141592653589793 3.032184104443262e-30 -1.5707963267948968" />
             <geometry>
-                <mesh filename="meshes/front_link.stl" scale="0.001 0.001 0.001" />
+                <mesh filename="package://r2_description/meshes/front_link.stl" scale="0.001 0.001 0.001" />
             </geometry>
         </visual>
         <collision name="front_link_collision">
             <origin xyz="-0.3000000000000001 -1.0658141036401502e-16 -1.7763568394002505e-17" rpy="3.141592653589793 3.032184104443262e-30 -1.5707963267948968" />
             <geometry>
-                <mesh filename="meshes/front_link.stl" scale="0.001 0.001 0.001" />
+                <mesh filename="package://r2_description/meshes/front_link.stl" scale="0.001 0.001 0.001" />
             </geometry>
         </collision>
     </link>
@@ -51,13 +51,13 @@
         <visual name="back_link_visual">
             <origin xyz="-0.3000000000000001 -1.8669045833583418e-61 -1.7763568394002505e-17" rpy="3.141592653589793 3.032184104443262e-30 1.5707963267948961" />
             <geometry>
-                <mesh filename="meshes/back_link.stl" scale="0.001 0.001 0.001" />
+                <mesh filename="package://r2_description/meshes/back_link.stl" scale="0.001 0.001 0.001" />
             </geometry>
         </visual>
         <collision name="back_link_collision">
             <origin xyz="-0.3000000000000001 -1.8669045833583418e-61 -1.7763568394002505e-17" rpy="3.141592653589793 3.032184104443262e-30 1.5707963267948961" />
             <geometry>
-                <mesh filename="meshes/back_link.stl" scale="0.001 0.001 0.001" />
+                <mesh filename="package://r2_description/meshes/back_link.stl" scale="0.001 0.001 0.001" />
             </geometry>
         </collision>
     </link>
@@ -71,13 +71,13 @@
         <visual name="vertical_expandable_visual">
             <origin xyz="-0.254 0.11449999999999999 0.0" rpy="1.5707963267948966 -1.5707963267948966 0" />
             <geometry>
-                <mesh filename="meshes/vertical_expandable.stl" scale="0.001 0.001 0.001" />
+                <mesh filename="package://r2_description/meshes/vertical_expandable.stl" scale="0.001 0.001 0.001" />
             </geometry>
         </visual>
         <collision name="vertical_expandable_collision">
             <origin xyz="-0.254 0.11449999999999999 0.0" rpy="1.5707963267948966 -1.5707963267948966 0" />
             <geometry>
-                <mesh filename="meshes/vertical_expandable.stl" scale="0.001 0.001 0.001" />
+                <mesh filename="package://r2_description/meshes/vertical_expandable.stl" scale="0.001 0.001 0.001" />
             </geometry>
         </collision>
     </link>
@@ -91,13 +91,13 @@
         <visual name="horizontal_stage_1_visual">
             <origin xyz="-0.5545 0.00999999999999993 0.23399999999999999" rpy="1.5707963267948966 -0.0 1.5707963267948968" />
             <geometry>
-                <mesh filename="meshes/horizontal_stage_1.stl" scale="0.001 0.001 0.001" />
+                <mesh filename="package://r2_description/meshes/horizontal_stage_1.stl" scale="0.001 0.001 0.001" />
             </geometry>
         </visual>
         <collision name="horizontal_stage_1_collision">
             <origin xyz="-0.5545 0.00999999999999993 0.23399999999999999" rpy="1.5707963267948966 -0.0 1.5707963267948968" />
             <geometry>
-                <mesh filename="meshes/horizontal_stage_1.stl" scale="0.001 0.001 0.001" />
+                <mesh filename="package://r2_description/meshes/horizontal_stage_1.stl" scale="0.001 0.001 0.001" />
             </geometry>
         </collision>
     </link>
@@ -111,13 +111,13 @@
         <visual name="horizontal_stage_2_visual">
             <origin xyz="0.5345000000000036 0.49681547379575514 0.2140000000000017" rpy="1.5707963267948968 9.543733192263807e-17 -1.5707963267948968" />
             <geometry>
-                <mesh filename="meshes/horizontal_stage_2.stl" scale="0.001 0.001 0.001" />
+                <mesh filename="package://r2_description/meshes/horizontal_stage_2.stl" scale="0.001 0.001 0.001" />
             </geometry>
         </visual>
         <collision name="horizontal_stage_2_collision">
             <origin xyz="0.5345000000000036 0.49681547379575514 0.2140000000000017" rpy="1.5707963267948968 9.543733192263807e-17 -1.5707963267948968" />
             <geometry>
-                <mesh filename="meshes/horizontal_stage_2.stl" scale="0.001 0.001 0.001" />
+                <mesh filename="package://r2_description/meshes/horizontal_stage_2.stl" scale="0.001 0.001 0.001" />
             </geometry>
         </collision>
     </link>
@@ -131,13 +131,13 @@
         <visual name="f_wheelR_visual">
             <origin xyz="-1.7763568394002505e-17 -0.025000000000000105 -1.4210854715202004e-16" rpy="3.0501593568876112e-30 1.5707963267948966 0" />
             <geometry>
-                <mesh filename="meshes/f_wheelR.stl" scale="0.001 0.001 0.001" />
+                <mesh filename="package://r2_description/meshes/f_wheelR.stl" scale="0.001 0.001 0.001" />
             </geometry>
         </visual>
         <collision name="f_wheelR_collision">
             <origin xyz="-1.7763568394002505e-17 -0.025000000000000105 -1.4210854715202004e-16" rpy="3.0501593568876112e-30 1.5707963267948966 0" />
             <geometry>
-                <mesh filename="meshes/f_wheelR.stl" scale="0.001 0.001 0.001" />
+                <mesh filename="package://r2_description/meshes/f_wheelR.stl" scale="0.001 0.001 0.001" />
             </geometry>
         </collision>
     </link>
@@ -151,13 +151,13 @@
         <visual name="f_wheelL_visual">
             <origin xyz="-2.6645352591003756e-17 -0.025000000000000248 7.105427357601002e-17" rpy="2.636779683484741e-16 6.938893903906515e-18 -2.6367796834847103e-16" />
             <geometry>
-                <mesh filename="meshes/f_wheelL.stl" scale="0.001 0.001 0.001" />
+                <mesh filename="package://r2_description/meshes/f_wheelL.stl" scale="0.001 0.001 0.001" />
             </geometry>
         </visual>
         <collision name="f_wheelL_collision">
             <origin xyz="-2.6645352591003756e-17 -0.025000000000000248 7.105427357601002e-17" rpy="2.636779683484741e-16 6.938893903906515e-18 -2.6367796834847103e-16" />
             <geometry>
-                <mesh filename="meshes/f_wheelL.stl" scale="0.001 0.001 0.001" />
+                <mesh filename="package://r2_description/meshes/f_wheelL.stl" scale="0.001 0.001 0.001" />
             </geometry>
         </collision>
     </link>
@@ -171,13 +171,13 @@
         <visual name="r_wheelR_visual">
             <origin xyz="-4.4408920985006264e-17 -0.025000000000000213 -7.105427357601002e-17" rpy="5.551115123125773e-16 -6.9388939039061375e-18 -5.551115123125803e-16" />
             <geometry>
-                <mesh filename="meshes/r_wheelR.stl" scale="0.001 0.001 0.001" />
+                <mesh filename="package://r2_description/meshes/r_wheelR.stl" scale="0.001 0.001 0.001" />
             </geometry>
         </visual>
         <collision name="r_wheelR_collision">
             <origin xyz="-4.4408920985006264e-17 -0.025000000000000213 -7.105427357601002e-17" rpy="5.551115123125773e-16 -6.9388939039061375e-18 -5.551115123125803e-16" />
             <geometry>
-                <mesh filename="meshes/r_wheelR.stl" scale="0.001 0.001 0.001" />
+                <mesh filename="package://r2_description/meshes/r_wheelR.stl" scale="0.001 0.001 0.001" />
             </geometry>
         </collision>
     </link>
@@ -191,13 +191,13 @@
         <visual name="r_wheelL_visual">
             <origin xyz="-4.4408920985006264e-17 -0.02500000000000007 -1.4210854715202004e-16" rpy="5.551115123125773e-16 6.938893903906754e-18 -5.551115123125742e-16" />
             <geometry>
-                <mesh filename="meshes/r_wheelL.stl" scale="0.001 0.001 0.001" />
+                <mesh filename="package://r2_description/meshes/r_wheelL.stl" scale="0.001 0.001 0.001" />
             </geometry>
         </visual>
         <collision name="r_wheelL_collision">
             <origin xyz="-4.4408920985006264e-17 -0.02500000000000007 -1.4210854715202004e-16" rpy="5.551115123125773e-16 6.938893903906754e-18 -5.551115123125742e-16" />
             <geometry>
-                <mesh filename="meshes/r_wheelL.stl" scale="0.001 0.001 0.001" />
+                <mesh filename="package://r2_description/meshes/r_wheelL.stl" scale="0.001 0.001 0.001" />
             </geometry>
         </collision>
     </link>
@@ -211,13 +211,13 @@
         <visual name="kfs_gripper_visual">
             <origin xyz="-0.21400000000000027 0.5200000037957534 0.029999999999999645" rpy="-3.141592653589793 2.6812903756237625e-30 -1.5707963267948966" />
             <geometry>
-                <mesh filename="meshes/kfs_gripper.stl" scale="0.001 0.001 0.001" />
+                <mesh filename="package://r2_description/meshes/kfs_gripper.stl" scale="0.001 0.001 0.001" />
             </geometry>
         </visual>
         <collision name="kfs_gripper_collision">
             <origin xyz="-0.21400000000000027 0.5200000037957534 0.029999999999999645" rpy="-3.141592653589793 2.6812903756237625e-30 -1.5707963267948966" />
             <geometry>
-                <mesh filename="meshes/kfs_gripper.stl" scale="0.001 0.001 0.001" />
+                <mesh filename="package://r2_description/meshes/kfs_gripper.stl" scale="0.001 0.001 0.001" />
             </geometry>
         </collision>
     </link>
@@ -231,13 +231,13 @@
         <visual name="spearhead_gripper_visual">
             <origin xyz="0.7849999962042474 0.024999999999999786 -1.2837700418743427e-13" rpy="1.5707963267948966 -1.6383774849359318e-13 3.141592653589793" />
             <geometry>
-                <mesh filename="meshes/spearhead_gripper.stl" scale="0.001 0.001 0.001" />
+                <mesh filename="package://r2_description/meshes/spearhead_gripper.stl" scale="0.001 0.001 0.001" />
             </geometry>
         </visual>
         <collision name="spearhead_gripper_collision">
             <origin xyz="0.7849999962042474 0.024999999999999786 -1.2837700418743427e-13" rpy="1.5707963267948966 -1.6383774849359318e-13 3.141592653589793" />
             <geometry>
-                <mesh filename="meshes/spearhead_gripper.stl" scale="0.001 0.001 0.001" />
+                <mesh filename="package://r2_description/meshes/spearhead_gripper.stl" scale="0.001 0.001 0.001" />
             </geometry>
         </collision>
     </link>
@@ -251,13 +251,13 @@
         <visual name="camera_link_visual">
             <origin xyz="0.019999996204246636 -0.7374999999999997 -3.0222783444973474e-16" rpy="-1.5707963267948966 -1.6418168380461448e-46 2.6871342267766736e-30" />
             <geometry>
-                <mesh filename="meshes/camera_link.stl" scale="0.001 0.001 0.001" />
+                <mesh filename="package://r2_description/meshes/camera_link.stl" scale="0.001 0.001 0.001" />
             </geometry>
         </visual>
         <collision name="camera_link_collision">
             <origin xyz="0.019999996204246636 -0.7374999999999997 -3.0222783444973474e-16" rpy="-1.5707963267948966 -1.6418168380461448e-46 2.6871342267766736e-30" />
             <geometry>
-                <mesh filename="meshes/camera_link.stl" scale="0.001 0.001 0.001" />
+                <mesh filename="package://r2_description/meshes/camera_link.stl" scale="0.001 0.001 0.001" />
             </geometry>
         </collision>
     </link>
@@ -271,13 +271,13 @@
         <visual name="storage_plate_visual">
             <origin xyz="1.2621774483536214e-32 -1.9665017430799094e-47 0.08800000000000001" rpy="2.2346610716817193e-46 -0.0 2.8327694488239854e-16" />
             <geometry>
-                <mesh filename="meshes/storage_plate.stl" scale="0.001 0.001 0.001" />
+                <mesh filename="package://r2_description/meshes/storage_plate.stl" scale="0.001 0.001 0.001" />
             </geometry>
         </visual>
         <collision name="storage_plate_collision">
             <origin xyz="1.2621774483536214e-32 -1.9665017430799094e-47 0.08800000000000001" rpy="2.2346610716817193e-46 -0.0 2.8327694488239854e-16" />
             <geometry>
-                <mesh filename="meshes/storage_plate.stl" scale="0.001 0.001 0.001" />
+                <mesh filename="package://r2_description/meshes/storage_plate.stl" scale="0.001 0.001 0.001" />
             </geometry>
         </collision>
     </link>
@@ -288,6 +288,8 @@
         <parent link="base_link" />
         <child link="back_link" />
         <axis xyz="0.0 0.0 1.0" />
+
+        <limit lower="-0.75" upper="0" effort="100.0" velocity="0.1" />
     </joint>
 
     // base link front side up down joint
@@ -296,30 +298,51 @@
         <parent link="base_link" />
         <child link="front_link" />
         <axis xyz="0.0 -0.0 1.0" />
+
+        <limit lower="-0.75" upper="0" effort="100.0" velocity="0.1" />
     </joint>
 
-    
+    // Vertical stage 1 up down joint
     <joint name="base_link_v_level_1_joint" type="prismatic">
         <origin xyz="-0.25399999999999984 5.63993296509578e-17 0.01599999999999998" rpy="-1.5707963267948966 -7.888609052210118e-31 3.141592653589793" />
         <parent link="base_link" />
         <child link="vertical_expandable" />
         <axis xyz="-0.0 1.0 0.0" />
+
+        <limit lower="0" upper="0.75" effort="100.0" velocity="0.1" />
     </joint>
 
+    // Vertical stage 2 up down joint
     <joint name="vertical_expandable_v_level_2_joint" type="prismatic">
         <origin xyz="-0.02 -0.44 -0.01" rpy="1.5707963267948966 1.2363847319689245e-16 -1.5707963267948966" />
         <parent link="vertical_expandable" />
         <child link="horizontal_stage_1" />
         <axis xyz="1.0 1.2363847319689245e-16 0.0" />
+
+        <limit lower="0" upper="0.75" effort="100.0" velocity="0.1" />
     </joint>
 
+    // Horizontal stage 1 up down joint
     <joint name="horizontal_stage_1_h_level_1_joint" type="prismatic">
         <origin xyz="-0.02 0.25 0.02" rpy="0.0 -0.0 -3.141592653589793" />
         <parent link="horizontal_stage_1" />
         <child link="horizontal_stage_2" />
         <axis xyz="-0.0 1.0 0.0" />
+
+        <limit lower="0" upper="0.75" effort="100.0" velocity="0.1" />
     </joint>
 
+    // Horizontal stage 2 up down joint
+    <joint name="horizontal_stage_2_h_level_2_joint" type="prismatic">
+        <origin xyz="0.0 -0.07318453000000001 0.0" rpy="-0.0 1.5707963267948966 0" />
+        <parent link="horizontal_stage_2" />
+        <child link="kfs_gripper" />
+        <axis xyz="-1.0058791648216564e-33 1.0 0.0" />
+
+        <limit lower="0" upper="0.75" effort="100.0" velocity="0.1" />
+    </joint>
+
+    // front right wheel joint
     <joint name="front_link_f_wheelR_joint" type="continuous">
         <origin xyz="-0.09600000000000002 0.179 0.040999999999999995" rpy="3.141592653589793 1.5707963267948966 0" />
         <parent link="front_link" />
@@ -327,12 +350,15 @@
         <axis xyz="0.0 -1.0 -4.930380657631326e-32" />
     </joint>
 
+    // front left wheel joint
     <joint name="front_link_f_wheelL_joint" type="continuous">
         <origin xyz="-0.09600000000000002 -0.179 0.040999999999999995" rpy="-4.930380657631326e-32 1.5707963267948966 0" />
         <parent link="front_link" />
         <child link="f_wheelL" />
         <axis xyz="0.0 -1.0 -4.930380657631326e-32" />
     </joint>
+
+    // back right wheel joint
     <joint name="back_link_r_wheelR_joint" type="continuous">
         <origin xyz="-0.09600000000000002 -0.179 0.0385" rpy="-9.86076131526265e-32 1.5707963267948966 0" />
         <parent link="back_link" />
@@ -340,6 +366,7 @@
         <axis xyz="0.0 -1.0 -9.86076131526265e-32" />
     </joint>
 
+    // back left wheel joint
     <joint name="back_link_r_wheelL_joint" type="continuous">
         <origin xyz="-0.09600000000000002 0.179 0.0385" rpy="3.141592653589793 1.5707963267948966 0" />
         <parent link="back_link" />
@@ -347,13 +374,7 @@
         <axis xyz="0.0 -1.0 -9.86076131526265e-32" />
     </joint>
 
-    <joint name="horizontal_stage_2_h_level_2_joint" type="prismatic">
-        <origin xyz="0.0 -0.07318453000000001 0.0" rpy="-0.0 1.5707963267948966 0" />
-        <parent link="horizontal_stage_2" />
-        <child link="kfs_gripper" />
-        <axis xyz="-1.0058791648216564e-33 1.0 0.0" />
-    </joint>
-
+    // KFS gripper spearhead gripper joint
     <joint name="kfs_gripper_spearhead_gripper_joint" type="continuous">
         <origin xyz="-0.214 0.04 0.06" rpy="1.5707963267948966 -0.0 -1.5707963267948966" />
         <parent link="kfs_gripper" />
@@ -361,6 +382,7 @@
         <axis xyz="1.6418168380461448e-46 0.0 1.0" />
     </joint>
 
+    // KFS gripper camera joint
     <joint name="kfs_gripper_camera_rotation_joint" type="continuous">
         <origin xyz="-0.214 0.04 0.0" rpy="-1.5707963267948966 -0.0 -1.5707963267948966" />
         <parent link="kfs_gripper" />
@@ -368,6 +390,7 @@
         <axis xyz="-1.6418168380461448e-46 -0.0 1.0" />
     </joint>
 
+    // base link storage plate joint
     <joint name="base_link_storage_plate_joint" type="fixed">
         <origin xyz="2.8025969286496245e-48 1.2621774483536173e-32 0.01599999999999998" rpy="-7.888609052210113e-31 -1.7516230804060184e-46 -1.5707963267948968" />
         <parent link="base_link" />
