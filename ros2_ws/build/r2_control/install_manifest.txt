@@ -1,0 +1,15 @@
+/home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_control/share/ament_index/resource_index/package_run_dependencies/r2_control
+/home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_control/share/ament_index/resource_index/parent_prefix_path/r2_control
+/home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_control/share/r2_control/environment/ament_prefix_path.sh
+/home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_control/share/r2_control/environment/ament_prefix_path.dsv
+/home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_control/share/r2_control/environment/path.sh
+/home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_control/share/r2_control/environment/path.dsv
+/home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_control/share/r2_control/local_setup.bash
+/home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_control/share/r2_control/local_setup.sh
+/home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_control/share/r2_control/local_setup.zsh
+/home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_control/share/r2_control/local_setup.dsv
+/home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_control/share/r2_control/package.dsv
+/home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_control/share/ament_index/resource_index/packages/r2_control
+/home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_control/share/r2_control/cmake/r2_controlConfig.cmake
+/home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_control/share/r2_control/cmake/r2_controlConfig-version.cmake
+/home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_control/share/r2_control/package.xml

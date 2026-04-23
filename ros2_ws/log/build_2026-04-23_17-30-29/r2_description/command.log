@@ -1,0 +1,1 @@
+Invoking command in '/home/void/DD-Robocon-2026-Programming/ros2_ws/build/r2_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/void/DD-Robocon-2026-Programming/ros2_ws/build/r2_description -- -j14 -l14

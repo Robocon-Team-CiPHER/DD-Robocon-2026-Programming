@@ -1,0 +1,5 @@
+[0.013s] Invoking command in '/home/void/DD-Robocon-2026-Programming/ros2_ws/build/ros2_perception': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/void/DD-Robocon-2026-Programming/ros2_ws/build/ros2_perception -- -j14 -l14
+[0.086s] [0mCMake Error: The source directory "/home/void/DD-Robocon-2026-Programming/ros2_ws/src/ros2_perception" does not exist.
+[0.087s] Specify --help for usage, or press the help button on the CMake GUI.[0m
+[0.092s] gmake: *** [Makefile:226: cmake_check_build_system] Error 1
+[0.095s] Invoked command in '/home/void/DD-Robocon-2026-Programming/ros2_ws/build/ros2_perception' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/void/DD-Robocon-2026-Programming/ros2_ws/build/ros2_perception -- -j14 -l14
