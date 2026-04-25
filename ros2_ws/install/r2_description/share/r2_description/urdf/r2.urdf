@@ -243,14 +243,14 @@
             <inertia ixx="0.0005990477747521011" iyy="0.000599047774752122" izz="0.000965557192347262" ixy="0.0" iyz="6.938893903907228e-18" ixz="1.734723475976807e-18" />
         </inertial>
         <visual name="f_wheel_r_visual">
-            <origin xyz="0.044524999999999995 0.23800000000000002 -0.2223" rpy="-0.0 1.5707963267948966 0" />
+            <origin xyz="0.044524999999999995 0.23800000000000002 -0.2223" rpy="1.5708 1.5707963267948966 0" />
             <geometry>
                 <mesh filename="package://r2_description/meshes/f_wheel_r.stl" scale="0.001 0.001 0.001" />
             </geometry>
             <material name="wheel_color"/>
         </visual>
         <collision name="f_wheel_r_collision">
-            <origin xyz="0.044524999999999995 0.23800000000000002 -0.2223" rpy="-0.0 1.5707963267948966 0" />
+            <origin xyz="0.044524999999999995 0.23800000000000002 -0.2223" rpy="1.5708 1.5707963267948966 0" />
             <geometry>
                 <mesh filename="package://r2_description/meshes/f_wheel_r.stl" scale="0.001 0.001 0.001" />
             </geometry>
@@ -263,14 +263,14 @@
             <inertia ixx="0.0005990477747521011" iyy="0.0005990477747521289" izz="0.000965557192347262" ixy="0.0" iyz="0.0" ixz="1.734723475976807e-18" />
         </inertial>
         <visual name="f_wheel_l_visual">
-            <origin xyz="0.044524999999999995 -0.23800000000000002 -0.2225" rpy="-3.141592653589793 -1.5707963267948966 0" />
+            <origin xyz="0.044524999999999995 -0.23800000000000002 -0.2225" rpy="1.5708 -1.5707963267948966 0" />
             <geometry>
                 <mesh filename="package://r2_description/meshes/f_wheel_l.stl" scale="0.001 0.001 0.001" />
             </geometry>
             <material name="wheel_color"/>
         </visual>
         <collision name="f_wheel_l_collision">
-            <origin xyz="0.044524999999999995 -0.23800000000000002 -0.2225" rpy="-3.141592653589793 -1.5707963267948966 0" />
+            <origin xyz="0.044524999999999995 -0.23800000000000002 -0.2225" rpy="1.5708 -1.5707963267948966 0" />
             <geometry>
                 <mesh filename="package://r2_description/meshes/f_wheel_l.stl" scale="0.001 0.001 0.001" />
             </geometry>
@@ -283,14 +283,14 @@
             <inertia ixx="0.0005990477747520873" iyy="0.0005990477747521081" izz="0.000965557192347262" ixy="0.0" iyz="6.938893903907228e-18" ixz="-2.6020852139652106e-18" />
         </inertial>
         <visual name="b_wheel_r_visual">
-            <origin xyz="0.044524999999999995 -0.23800000000000002 -0.22530000000000003" rpy="-0.0 1.5707963267948966 0" />
+            <origin xyz="0.044524999999999995 -0.23800000000000002 -0.22530000000000003" rpy="1.5708 1.5707963267948966 0" />
             <geometry>
                 <mesh filename="package://r2_description/meshes/b_wheel_r.stl" scale="0.001 0.001 0.001" />
             </geometry>
             <material name="wheel_color"/>
         </visual>
         <collision name="b_wheel_r_collision">
-            <origin xyz="0.044524999999999995 -0.23800000000000002 -0.22530000000000003" rpy="-0.0 1.5707963267948966 0" />
+            <origin xyz="0.044524999999999995 -0.23800000000000002 -0.22530000000000003" rpy="1.5708 1.5707963267948966 0" />
             <geometry>
                 <mesh filename="package://r2_description/meshes/b_wheel_r.stl" scale="0.001 0.001 0.001" />
             </geometry>
@@ -487,28 +487,28 @@
 
 <!-- Wheel Joints -->
     <joint name="front_link_f_wheel_r" type="continuous">
-        <origin xyz="-0.2223 0.0 0.0385" rpy="-3.141592653589793 1.5707963267948966 0" />
+        <origin xyz="-0.2223 0.0 0.0385" rpy="0 1.5707963267948966 0" />
         <parent link="front_link" />
         <child link="f_wheel_r" />
-        <axis xyz="0.0 0.0 1.0" />
+        <axis xyz="0.0 1.0 0.0" />
     </joint>
     <joint name="front_link_f_wheel_l" type="continuous">
-        <origin xyz="0.2225 0.0 0.0385" rpy="-0.0 1.5707963267948966 0" />
+        <origin xyz="0.2225 0.0 0.0385" rpy="0 1.5707963267948966 0" />
         <parent link="front_link" />
         <child link="f_wheel_l" />
-        <axis xyz="0.0 0.0 1.0" />
+        <axis xyz="0.0 1.0 0.0" />
     </joint>
     <joint name="back_link_b_wheel_r" type="continuous">
-        <origin xyz="-0.22530000000000003 0.0 0.0385" rpy="-3.141592653589793 1.5707963267948966 0" />
+        <origin xyz="-0.22530000000000003 0.0 0.0385" rpy="0 1.5707963267948966 0" />
         <parent link="back_link" />
         <child link="b_wheel_r" />
-        <axis xyz="0.0 0.0 1.0" />
+        <axis xyz="0.0 1.0 0.0" />
     </joint>
     <joint name="back_link_b_wheel_l" type="continuous">
-        <origin xyz="0.22530000000000003 0.0 0.0385" rpy="-0.0 1.5707963267948966 0" />
+        <origin xyz="0.22530000000000003 0.0 0.0385" rpy="0 1.5707963267948966 0" />
         <parent link="back_link" />
         <child link="b_wheel_l" />
-        <axis xyz="0.0 0.0 1.0" />
+        <axis xyz="0.0 1.0 0.0" />
     </joint>
 
 <!-- KFS Gripper Joints -->
