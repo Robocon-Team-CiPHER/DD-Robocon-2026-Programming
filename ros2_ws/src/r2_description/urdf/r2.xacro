@@ -319,7 +319,7 @@
         <collision name="b_wheel_l_collision">
             <origin xyz="0.044524999999999995 0.23800000000000002 -0.22530000000000003" rpy="1.5708 -1.5707963267948966 0" />
             <geometry>
-                <mesh filename="package://r2_description/meshes/b_wheel_l.stl" scale="0.001 0.001 0.001" />
+                <mesh filename="package://r2_description/meshes/b_wheel_l.stl" scale="0.001 ₀.₀₀₁" />
             </geometry>
         </collision>
     </link>
