@@ -1,0 +1,129 @@
+<?xml version='1.0' encoding='utf-8'?>
+<sdf version="1.7">
+    <model name="arena">
+        <link name="ramp">
+            <pose>0.0 0.0 0.0 0.0 -0.0 0.0</pose>
+            <inertial>
+                <mass>620.9999999999997</mass>
+                <pose>0.0 0.15166666666666662 4.249999999999999 0.0 0.0 0.0</pose>
+                <inertia>
+                    <ixx>98.53027500000644</ixx>
+                    <iyy>17487.748125000002</iyy>
+                    <izz>17403.083399999992</izz>
+                    <ixy>-9.313225746154786e-14</ixy>
+                    <iyz>-12.213000000000193</iyz>
+                    <ixz>0.0</ixz>
+                </inertia>
+            </inertial>
+            <visual name="ramp_visual">
+                <geometry>
+                    <mesh>
+                        <uri>model://arena/meshes/ramp.stl</uri>
+                        <scale>0.001 0.001 0.001</scale>
+                    </mesh>
+                </geometry>
+            </visual>
+            <collision name="ramp_collision">
+                <geometry>
+                    <mesh>
+                        <uri>model://arena/meshes/ramp.stl</uri>
+                        <scale>0.001 0.001 0.001</scale>
+                    </mesh>
+                </geometry>
+            </collision>
+        </link>
+        <link name="walls">
+            <pose>0.0 0.0 0.0 0.0 -0.0 0.0</pose>
+            <inertial>
+                <mass>578.5775999999992</mass>
+                <pose>-1.421665992427622e-16 0.23978508673685256 2.758595825348233 0.0 0.0 0.0</pose>
+                <inertia>
+                    <ixx>8818.167154611641</ixx>
+                    <iyy>17841.189322974817</iyy>
+                    <izz>9064.823705636825</izz>
+                    <ixy>-4.604479191880563e-14</ixy>
+                    <iyz>-182.79974855930703</iyz>
+                    <ixz>-1.0691918277132845e-12</ixz>
+                </inertia>
+            </inertial>
+            <visual name="walls_visual">
+                <geometry>
+                    <mesh>
+                        <uri>model://arena/meshes/walls.stl</uri>
+                        <scale>0.001 0.001 0.001</scale>
+                    </mesh>
+                </geometry>
+            </visual>
+            <collision name="walls_collision">
+                <geometry>
+                    <mesh>
+                        <uri>model://arena/meshes/walls.stl</uri>
+                        <scale>0.001 0.001 0.001</scale>
+                    </mesh>
+                </geometry>
+            </collision>
+        </link>
+        <link name="obstacles">
+            <pose>0.0 0.0 0.0 0.0 -0.0 0.0</pose>
+            <inertial>
+                <mass>8425.524040919116</mass>
+                <pose>-1.2150875857994425e-16 0.2619061402257464 -0.30511169133944943 0.0 0.0 0.0</pose>
+                <inertia>
+                    <ixx>26186.17808953398</ixx>
+                    <iyy>102125.83692136501</iyy>
+                    <izz>77005.41947466662</izz>
+                    <ixy>-3.5962011922705567e-13</ixy>
+                    <iyz>-1207.1836777677108</iyz>
+                    <ixz>9.073511966864733e-13</ixz>
+                </inertia>
+            </inertial>
+            <visual name="obstacles_visual">
+                <geometry>
+                    <mesh>
+                        <uri>model://arena/meshes/obstacles.stl</uri>
+                        <scale>0.001 0.001 0.001</scale>
+                    </mesh>
+                </geometry>
+            </visual>
+            <collision name="obstacles_collision">
+                <geometry>
+                    <mesh>
+                        <uri>model://arena/meshes/obstacles.stl</uri>
+                        <scale>0.001 0.001 0.001</scale>
+                    </mesh>
+                </geometry>
+            </collision>
+        </link>
+        <link name="floor">
+            <pose>0.0 0.0 0.0 0.0 -0.0 0.0</pose>
+            <inertial>
+                <mass>8567.431919999999</mass>
+                <pose>-1.7060160643815564e-17 0.17380981604578657 3.187938870064578 0.0 0.0 0.0</pose>
+                <inertia>
+                    <ixx>92554.27479583713</ixx>
+                    <iyy>183855.96454513673</iyy>
+                    <izz>91648.27241121644</izz>
+                    <ixy>-2.116495860090719e-13</ixy>
+                    <iyz>-2107.751001669053</iyz>
+                    <ixz>-2.139970591541319e-12</ixz>
+                </inertia>
+            </inertial>
+            <visual name="floor_visual">
+                <geometry>
+                    <mesh>
+                        <uri>model://arena/meshes/floor.stl</uri>
+                        <scale>0.001 0.001 0.001</scale>
+                    </mesh>
+                </geometry>
+            </visual>
+            <collision name="floor_collision">
+                <geometry>
+                    <mesh>
+                        <uri>model://arena/meshes/floor.stl</uri>
+                        <scale>0.001 0.001 0.001</scale>
+                    </mesh>
+                </geometry>
+            </collision>
+        </link>
+    </model>
+</sdf>
