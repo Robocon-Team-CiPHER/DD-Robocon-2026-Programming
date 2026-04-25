@@ -420,24 +420,32 @@
         <parent link="base_link" />
         <child link="front_link" />
         <axis xyz="0.0 0.0 1.0" />
+
+        <limit lower="0.0" upper="0.3" effort="100" velocity="1.0"/>
     </joint>
     <joint name="base_link_back_link_joint" type="prismatic">
         <origin xyz="0.0 0.23800000000000002 -0.006025000000000001" rpy="3.141592653589793 -0.0 0.0" />
         <parent link="base_link" />
         <child link="back_link" />
         <axis xyz="0.0 0.0 1.0" />
+
+        <limit lower="0.0" upper="0.3" effort="100" velocity="1.0"/>
     </joint>
     <joint name="base_link_v_expandable_r" type="prismatic">
         <origin xyz="-0.307 0.0 0.016" rpy="-1.5707963267948966 -0.0 -1.5707963267948966" />
         <parent link="base_link" />
         <child link="v_expandable_r" />
         <axis xyz="0.0 1.0 0.0" />
+
+        <limit lower="0.0" upper="0.3" effort="100" velocity="1.0"/>
     </joint>
     <joint name="base_link_v_expandable_l" type="prismatic">
         <origin xyz="0.307 0.0 0.016" rpy="-1.5707963267948966 -0.0 1.5707963267948966" />
         <parent link="base_link" />
         <child link="v_expandable_l" />
         <axis xyz="0.0 1.0 0.0" />
+
+        <limit lower="0.0" upper="0.3" effort="100" velocity="1.0"/>
     </joint>
 
 <!-- Expandable Joints -->
@@ -446,12 +454,16 @@
         <parent link="v_expandable_r" />
         <child link="v_gantry_r" />
         <axis xyz="1.0 0.0 0.0" />
+
+        <limit lower="0.0" upper="0.3" effort="100" velocity="1.0"/>
     </joint>
     <joint name="v_expandable_l_v_gantry_expandable_l" type="prismatic">
         <origin xyz="0.0 -0.22 0.02" rpy="0.0 -0.0 -1.5707963267948966" />
         <parent link="v_expandable_l" />
         <child link="v_gantry_l" />
         <axis xyz="1.0 0.0 0.0" />
+
+        <limit lower="0.0" upper="0.3" effort="100" velocity="1.0"/>
     </joint>
     <joint name="v_gantry_l_v_gantry_l" type="fixed">
         <origin xyz="0.0 0.0 0.017100000000000008" rpy="0.0 -0.0 0.0" />
@@ -468,12 +480,16 @@
         <parent link="h_expandable_r" />
         <child link="h_gantry_r" />
         <axis xyz="0.0 1.0 0.0" />
+
+        <limit lower="0.0" upper="0.3" effort="100" velocity="1.0"/>
     </joint>
     <joint name="h_expandable_l_Slider-14" type="prismatic">
         <origin xyz="0.0 0.0 0.02" rpy="0.0 -0.0 0.0" />
         <parent link="h_expandable_l" />
         <child link="h_gantry_l" />
         <axis xyz="0.0 1.0 0.0" />
+
+        <limit lower="0.0" upper="0.3" effort="100" velocity="1.0"/>
     </joint>
 
 <!-- Wheel Joints -->
@@ -530,4 +546,10 @@
         <axis xyz="0.0 0.0 1.0" />
     </joint>
 
+<!-- Storage Plate Joint -->
+    <joint name="base_link_fixed_storage_plate" type="fixed">
+        <origin xyz="0.0 0.0 -0.01" rpy="0.0 0.0 0.0" />
+        <parent link="base_link" />
+        <child link="storage_plate" />
+    </joint>
 </robot>

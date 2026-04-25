@@ -11,12 +11,21 @@ def generate_launch_description():
     )
 
     return LaunchDescription([
+
+        # Joint State Publisher
+        Node(
+            package='joint_state_publisher',
+            executable='joint_state_publisher'
+        ),
+
+        # Robot State Publisher
         Node(
             package='robot_state_publisher',
             executable='robot_state_publisher',
             parameters=[{'robot_description': robot_description}]
         ),
 
+        # RViz
         Node(
             package='rviz2',
             executable='rviz2'
