@@ -1,4 +1,4 @@
-# Stage 2 Prograamming
+# Stage 2 Programming
 
 1. Currently wokring on Perception, Mapping and Control
 2. R2 Simulation
