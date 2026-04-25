@@ -10,10 +10,10 @@
 4. **Tejas Raut** _@TejasRaut15k_
 
 Over and out...
-<!-- <p align="center">
-  <img src="highlights/r2_5.png"/>
+<p align="center">
+  <img src="highlights/r2_in_RViz.png"/>
 </p>
---->
+
 <p align="center">
   <img src="world/v2_arena_with_light.png"/>
 </p>
