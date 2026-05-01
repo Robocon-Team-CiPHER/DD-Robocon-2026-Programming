@@ -5,7 +5,7 @@
 
 # Team:
 1. **Paritosh Raut (Captain)** _@paritosh21raut_
-2. **Sameer Patwardhan** _@MysticCore_
+2. **Sameer Patwardhan** _@sam-airobotics_
 3. **Sahil Kale** _@Xtroncs_
 4. **Tejas Raut** _@TejasRaut15k_
 
