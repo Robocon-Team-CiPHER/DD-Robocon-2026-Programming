@@ -11,7 +11,7 @@
 
 Over and out...
 <p align="center">
-  <img src="highlights/r2_in_RViz.png"/>
+  <img src="highlights/rviz/r2_rviz[7_5_2026].png"/>
 </p>
 
 <p align="center">
