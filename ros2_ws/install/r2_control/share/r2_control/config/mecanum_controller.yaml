@@ -1,0 +1,24 @@
+mecanum_controller:
+  ros__parameters:
+
+    front_left_wheel_command_joint: front_link_f_wheel_l
+    front_right_wheel_command_joint: front_link_f_wheel_r
+
+    rear_left_wheel_command_joint: back_link_b_wheel_l
+    rear_right_wheel_command_joint: back_link_b_wheel_r
+
+    wheel_radius: 0.06
+
+    wheel_separation_width: 0.545
+    wheel_separation_length: 0.476
+
+    publish_rate: 50
+
+    base_frame_id: base_link
+    odom_frame_id: odom
+
+    use_stamped_vel: false
+
+    cmd_vel_timeout: 0.5
+
+    enable_odom_tf: true

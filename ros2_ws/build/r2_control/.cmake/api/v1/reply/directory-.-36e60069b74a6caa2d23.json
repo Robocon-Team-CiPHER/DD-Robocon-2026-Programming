@@ -212,6 +212,12 @@
 				"file" : 3,
 				"line" : 157,
 				"parent" : 29
+			},
+			{
+				"command" : 0,
+				"file" : 4,
+				"line" : 28,
+				"parent" : 0
 			}
 		]
 	},
@@ -357,6 +363,17 @@
 				"package.xml"
 			],
 			"type" : "file"
+		},
+		{
+			"backtrace" : 32,
+			"component" : "Unspecified",
+			"destination" : "share/r2_control",
+			"paths" : 
+			[
+				"config",
+				"launch"
+			],
+			"type" : "directory"
 		}
 	],
 	"paths" : 

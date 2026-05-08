@@ -1,0 +1,8 @@
+step_controller:
+  ros__parameters:
+
+    joints:
+      - base_link_front_link
+      - base_link_back_link
+
+    interface_name: position

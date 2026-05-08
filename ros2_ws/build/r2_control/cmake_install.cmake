@@ -101,6 +101,13 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/r2_control" TYPE FILE FILES "/home/void/DD-Robocon-2026-Programming/ros2_ws/src/r2_control/package.xml")
 endif()
 
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/r2_control" TYPE DIRECTORY FILES
+    "/home/void/DD-Robocon-2026-Programming/ros2_ws/src/r2_control/config"
+    "/home/void/DD-Robocon-2026-Programming/ros2_ws/src/r2_control/launch"
+    )
+endif()
+
 if(CMAKE_INSTALL_COMPONENT)
   set(CMAKE_INSTALL_MANIFEST "install_manifest_${CMAKE_INSTALL_COMPONENT}.txt")
 else()

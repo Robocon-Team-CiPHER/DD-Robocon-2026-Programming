@@ -13,3 +13,9 @@
 /home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_control/share/r2_control/cmake/r2_controlConfig.cmake
 /home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_control/share/r2_control/cmake/r2_controlConfig-version.cmake
 /home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_control/share/r2_control/package.xml
+/home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_control/share/r2_control/config/mecanum_controller.yaml
+/home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_control/share/r2_control/config/step_controller.yaml
+/home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_control/share/r2_control/config/horizontal_gantry_controller.yaml
+/home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_control/share/r2_control/config/controller_manager.yaml
+/home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_control/share/r2_control/config/vertical_expandable_controller.yaml
+/home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_control/share/r2_control/launch/controllers.launch.py

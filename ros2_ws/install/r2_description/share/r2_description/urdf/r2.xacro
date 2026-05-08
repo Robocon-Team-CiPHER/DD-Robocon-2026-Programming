@@ -423,6 +423,7 @@
         <child link="front_link" />
         <axis xyz="0.0 0.0 1.0" />
         <limit lower="0.0" upper="0.2" effort="100" velocity="1.0"/>
+        <dynamics damping="10.0" friction="2.0"/>
     </joint>
     <joint name="base_link_back_link" type="prismatic">
         <origin xyz="-0.23800000000000002 0.0 -0.006025000000000001" rpy="3.141592653589793 -0.0 0.0" />
@@ -430,6 +431,7 @@
         <child link="back_link" />
         <axis xyz="0.0 0.0 1.0" />
         <limit lower="0.0" upper="0.2" effort="100" velocity="1.0"/>
+        <dynamics damping="10.0" friction="2.0"/>
     </joint>
 
     <!--Wheel Joints-->
@@ -465,6 +467,7 @@
         <child link="v_expandable_r" />
         <axis xyz="0.0 1.0 0.0" />
         <limit lower="0.0" upper="0.2" effort="100" velocity="1.0"/>
+        <dynamics damping="5.0" friction="1.0"/>
     </joint>
     <joint name="base_link_v_expandable_l" type="prismatic">
         <origin xyz="0.0 0.307 0.5660000000000001" rpy="1.5707963267948966 -0.0 0.0" />
@@ -472,6 +475,7 @@
         <child link="v_expandable_l" />
         <axis xyz="0.0 1.0 0.0" />
         <limit lower="0.0" upper="0.2" effort="100" velocity="1.0"/>
+        <dynamics damping="5.0" friction="1.0"/>
     </joint>
 
     <!--V_expandable-to-gantry-->
@@ -481,6 +485,7 @@
         <child link="v_gantry_r" />
         <axis xyz="0.0 1.0 2.1895288505075267e-47" />
         <limit lower="0.0" upper="0.2" effort="100" velocity="1.0"/>
+        <dynamics damping="5.0" friction="1.0"/>
     </joint>
     <joint name="v_expandable_l_v_gantry_l" type="prismatic">
         <origin xyz="0.0 -0.22 0.02" rpy="0.0 -1.1947622849140125e-34 0.0" />
@@ -488,6 +493,7 @@
         <child link="v_gantry_l" />
         <axis xyz="0.0 1.0 0.0" />
         <limit lower="0.0" upper="0.2" effort="100" velocity="1.0"/>
+        <dynamics damping="5.0" friction="1.0"/>
     </joint>
 
     <!--V_gantry-to-H_Expandable-->
@@ -509,6 +515,7 @@
         <child link="h_gantry_r" />
         <axis xyz="0.0 1.0 0.0" />
         <limit lower="0.0" upper="0.2" effort="100" velocity="1.0"/>
+        <dynamics damping="5.0" friction="1.0"/>
     </joint>
     <joint name="h_expandable_l_h_gantry_l" type="prismatic">
         <origin xyz="0.0 0.0 0.02" rpy="0.0 -0.0 0.0" />
@@ -516,6 +523,7 @@
         <child link="h_gantry_l" />
         <axis xyz="0.0 1.0 0.0" />
         <limit lower="0.0" upper="0.2" effort="100" velocity="1.0"/>
+        <dynamics damping="5.0" friction="1.0"/>
     </joint>
 
     <!--horizontal Gantry and KFS Gripper-->
@@ -524,12 +532,13 @@
         <parent link="h_gantry_r" />
         <child link="kfs_gripper_link" />
     </joint>
+    <!--
     <joint name="h_gantry_left_kfs_gripper_gantry_l" type="fixed">
         <origin xyz="-0.0325 0.01 0.03739999999999998" rpy="0.0 -0.0 0.0" />
         <parent link="h_gantry_l" />
         <child link="kfs_gripper_link" />
     </joint>
-
+    -->
     <!--Spearhead Revolute-->
     <joint name="kfs_gripper_link_spearhead_gripper_rotate" type="continuous">
         <origin xyz="0.0 0.12 0.2125" rpy="-3.141592653589793 -0.0 1.1869459682199748e-66" />
@@ -552,4 +561,134 @@
         <child link="storage_plate"/>
         <origin xyz="0 0 0" rpy="0 0 0"/>
     </joint>
+
+<!--Wheels Friction-->
+        <gazebo reference="f_wheel_r">
+            <mu1>1.8</mu1>
+            <mu2>1.8</mu2>
+        </gazebo>
+        <gazebo reference="f_wheel_l">
+            <mu1>1.8</mu1>
+            <mu2>1.8</mu2>
+        </gazebo>
+        <gazebo reference="b_wheel_r">
+            <mu1>1.8</mu1>
+            <mu2>1.8</mu2>
+        </gazebo>
+        <gazebo reference="b_wheel_l">
+            <mu1>1.8</mu1>
+            <mu2>1.8</mu2>
+        </gazebo>  
+
+<!-- ROS2_Control-Gazebo Plugin-->
+    <gazebo>
+        <plugin name="gazebo_ros2_control"
+                filename="libgazebo_ros2_control.so">
+        </plugin>
+    </gazebo>
+
+<!--ro2_control block-->
+    <ros2_control name="GazeboSystem" type="system">
+
+        <hardware>
+            <plugin>gazebo_ros2_control/GazeboSystem</plugin>
+        </hardware>
+
+        <!-- Front Step Mechanism -->
+        <joint name="base_link_front_link">
+            <command_interface name="position"/>
+            <state_interface name="position"/>
+            <state_interface name="velocity"/>
+        </joint>
+
+        <!-- Back Step Mechanism -->
+        <joint name="base_link_back_link">
+            <command_interface name="position"/>
+            <state_interface name="position"/>
+            <state_interface name="velocity"/>
+        </joint>
+
+        <!-- Front Right -->
+        <joint name="front_link_f_wheel_r">
+
+            <command_interface name="velocity"/>
+
+            <state_interface name="position"/>
+            <state_interface name="velocity"/>
+
+        </joint>
+
+        <!-- Front Left -->
+        <joint name="front_link_f_wheel_l">
+
+            <command_interface name="velocity"/>
+
+            <state_interface name="position"/>
+            <state_interface name="velocity"/>
+
+        </joint>
+
+        <!-- Back Right -->
+        <joint name="back_link_b_wheel_r">
+
+            <command_interface name="velocity"/>
+
+            <state_interface name="position"/>
+            <state_interface name="velocity"/>
+
+        </joint>
+
+        <!-- Back Left -->
+        <joint name="back_link_b_wheel_l">
+
+            <command_interface name="velocity"/>
+
+            <state_interface name="position"/>
+            <state_interface name="velocity"/>
+
+        </joint>
+
+        <!-- Vertical Expandable Right -->
+        <joint name="base_link_v_expandable_r">
+            <command_interface name="position"/>
+            <state_interface name="position"/>
+            <state_interface name="velocity"/>
+        </joint>
+
+        <!-- Vertical Expandable Left -->
+        <joint name="base_link_v_expandable_l">
+            <command_interface name="position"/>
+            <state_interface name="position"/>
+            <state_interface name="velocity"/>
+        </joint>
+
+        <!-- Vertical Gantry Right -->
+        <joint name="v_expandable_r_v_gantry_r">
+            <command_interface name="position"/>
+            <state_interface name="position"/>
+            <state_interface name="velocity"/>
+        </joint>
+
+        <!-- Vertical Gantry Left -->
+        <joint name="v_expandable_l_v_gantry_l">
+            <command_interface name="position"/>
+            <state_interface name="position"/>
+            <state_interface name="velocity"/>
+        </joint>
+
+        <!-- Horizontal Gantry Right -->
+        <joint name="h_expandable_r_h_gantry_r">
+            <command_interface name="position"/>
+            <state_interface name="position"/>
+            <state_interface name="velocity"/>
+        </joint>
+
+        <!-- Horizontal Gantry Left -->
+        <joint name="h_expandable_l_h_gantry_l">
+            <command_interface name="position"/>
+            <state_interface name="position"/>
+            <state_interface name="velocity"/>
+        </joint>
+
+    </ros2_control>
 </robot>
