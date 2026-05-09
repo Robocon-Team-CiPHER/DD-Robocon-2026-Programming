@@ -392,6 +392,38 @@
         </collision>
     </link>
 
+<!--LIDAR-->
+    <link name="lidar_link">
+
+        <inertial>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <mass value="0.2"/>
+
+            <inertia
+                ixx="0.0001"
+                ixy="0.0"
+                ixz="0.0"
+                iyy="0.0001"
+                iyz="0.0"
+                izz="0.0001"/>
+        </inertial>
+
+        <visual name="lidar_visual">
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <cylinder radius="0.04" length="0.03"/>
+            </geometry>
+            <material name="camera_color"/>
+        </visual>
+
+        <collision name="lidar_collision">
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <cylinder radius="0.04" length="0.03"/>
+            </geometry>
+        </collision>
+    </link>
+
 <!--Storage Plate-->
     <link name="storage_plate">
         <inertial>
@@ -554,6 +586,13 @@
         <child link="camera_link" />
         <axis xyz="0.0 3.944304526105059e-31 1.0" />
     </joint>
+
+    <!--LIDAR Joint-->
+    <joint name="base_to_lidar" type="fixed">
+        <parent link="base_link"/>
+        <child link="lidar_link"/>
+        <origin xyz="0 0 -0.05" rpy="0 0 0"/>
+    </joint>
     
     <!--Storage Plate Joint-->
     <joint name="base_to_storage_plate" type="fixed">
@@ -610,6 +649,32 @@
             </camera>
 
             <topic>camera/image_raw</topic>
+        </sensor>
+    </gazebo>
+
+<!--LIDAR Sensor Plugin-->
+    <gazebo reference="lidar_link">
+        <sensor name="lidar_sensor" type="ray">
+            <pose>0 0 0 0 0 0</pose>
+            <always_on>true</always_on>
+            <visualize>true</visualize>
+            <update_rate>10</update_rate>
+            <topic>scan</topic>
+            <ray>
+                <scan>
+                    <horizontal>
+                        <samples>720</samples>
+                        <resolution>1</resolution>
+                        <min_angle>-3.14159</min_angle>
+                        <max_angle>3.14159</max_angle>
+                    </horizontal>
+                </scan>
+                <range>
+                    <min>0.10</min>
+                    <max>12.0</max>
+                    <resolution>0.01</resolution>
+                </range>
+            </ray>
         </sensor>
     </gazebo>
 

@@ -1,0 +1,15 @@
+/home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_perception/share/ament_index/resource_index/package_run_dependencies/r2_perception
+/home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_perception/share/ament_index/resource_index/parent_prefix_path/r2_perception
+/home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_perception/share/r2_perception/environment/ament_prefix_path.sh
+/home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_perception/share/r2_perception/environment/ament_prefix_path.dsv
+/home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_perception/share/r2_perception/environment/path.sh
+/home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_perception/share/r2_perception/environment/path.dsv
+/home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_perception/share/r2_perception/local_setup.bash
+/home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_perception/share/r2_perception/local_setup.sh
+/home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_perception/share/r2_perception/local_setup.zsh
+/home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_perception/share/r2_perception/local_setup.dsv
+/home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_perception/share/r2_perception/package.dsv
+/home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_perception/share/ament_index/resource_index/packages/r2_perception
+/home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_perception/share/r2_perception/cmake/r2_perceptionConfig.cmake
+/home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_perception/share/r2_perception/cmake/r2_perceptionConfig-version.cmake
+/home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_perception/share/r2_perception/package.xml
