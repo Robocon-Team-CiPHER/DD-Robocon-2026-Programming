@@ -5,4 +5,9 @@ horizontal_gantry_controller:
       - h_expandable_r_h_gantry_r
       - h_expandable_l_h_gantry_l
 
-    interface_name: position
+    command_interfaces:
+      - position
+
+    state_interfaces:
+      - position
+      - velocity

@@ -528,4 +528,187 @@
         <child link="storage_plate"/>
         <origin xyz="0 0 0" rpy="0 0 0"/>
     </joint>
+
+    <!-- ================================= -->
+<!-- IGNITION FORTRESS + ROS2 HUMBLE -->
+<!-- ================================= -->
+
+<!-- IGNITION ROS2 CONTROL PLUGIN -->
+    <gazebo>
+        <plugin
+            filename="libign_ros2_control-system.so"
+            name="ign_ros2_control::IgnitionROS2ControlPlugin">
+        </plugin>
+    </gazebo>
+
+    <!-- CAMERA SENSOR -->
+    <gazebo reference="camera_link">
+
+        <sensor name="camera_sensor" type="camera">
+
+            <always_on>true</always_on>
+
+            <update_rate>30</update_rate>
+
+            <visualize>true</visualize>
+
+            <topic>camera/image_raw</topic>
+
+            <camera>
+
+                <horizontal_fov>1.047</horizontal_fov>
+
+                <image>
+
+                    <width>640</width>
+                    <height>480</height>
+
+                    <format>R8G8B8</format>
+
+                </image>
+
+                <clip>
+
+                    <near>0.1</near>
+                    <far>100.0</far>
+
+                </clip>
+
+            </camera>
+
+        </sensor>
+
+    </gazebo>
+
+    <!-- LIDAR SENSOR -->
+    <gazebo reference="base_link">
+
+        <sensor name="lidar_sensor" type="gpu_lidar">
+
+            <pose>0 0 0.25 0 0 0</pose>
+
+            <always_on>true</always_on>
+
+            <visualize>true</visualize>
+
+            <update_rate>10</update_rate>
+
+            <topic>scan</topic>
+
+            <lidar>
+
+                <scan>
+
+                    <horizontal>
+
+                        <samples>720</samples>
+
+                        <resolution>1</resolution>
+
+                        <min_angle>-3.14159</min_angle>
+
+                        <max_angle>3.14159</max_angle>
+
+                    </horizontal>
+
+                </scan>
+
+                <range>
+
+                    <min>0.10</min>
+
+                    <max>12.0</max>
+
+                    <resolution>0.01</resolution>
+
+                </range>
+
+            </lidar>
+
+        </sensor>
+
+    </gazebo>
+
+    <!-- WHEEL FRICTION -->
+
+    <gazebo reference="f_wheel_r">
+        <mu1>1.2</mu1>
+        <mu2>1.2</mu2>
+        <kp>100000.0</kp>
+        <kd>1.0</kd>
+    </gazebo>
+
+    <gazebo reference="f_wheel_l">
+        <mu1>1.2</mu1>
+        <mu2>1.2</mu2>
+        <kp>100000.0</kp>
+        <kd>1.0</kd>
+    </gazebo>
+
+    <gazebo reference="b_wheel_r">
+        <mu1>1.2</mu1>
+        <mu2>1.2</mu2>
+        <kp>100000.0</kp>
+        <kd>1.0</kd>
+    </gazebo>
+
+    <gazebo reference="b_wheel_l">
+        <mu1>1.2</mu1>
+        <mu2>1.2</mu2>
+        <kp>100000.0</kp>
+        <kd>1.0</kd>
+    </gazebo>
+
+    <!-- ROS2 CONTROL -->
+
+    <ros2_control name="IgnitionSystem" type="system">
+
+        <hardware>
+
+            <plugin>ign_ros2_control/IgnitionSystem</plugin>
+
+        </hardware>
+
+        <!-- FRONT RIGHT -->
+        <joint name="front_link_f_wheel_r">
+
+            <command_interface name="velocity"/>
+
+            <state_interface name="position"/>
+            <state_interface name="velocity"/>
+
+        </joint>
+
+        <!-- FRONT LEFT -->
+        <joint name="front_link_f_wheel_l">
+
+            <command_interface name="velocity"/>
+
+            <state_interface name="position"/>
+            <state_interface name="velocity"/>
+
+        </joint>
+
+        <!-- BACK RIGHT -->
+        <joint name="back_link_b_wheel_r">
+
+            <command_interface name="velocity"/>
+
+            <state_interface name="position"/>
+            <state_interface name="velocity"/>
+
+        </joint>
+
+        <!-- BACK LEFT -->
+        <joint name="back_link_b_wheel_l">
+
+            <command_interface name="velocity"/>
+
+            <state_interface name="position"/>
+            <state_interface name="velocity"/>
+
+        </joint>
+
+    </ros2_control>
+
 </robot>

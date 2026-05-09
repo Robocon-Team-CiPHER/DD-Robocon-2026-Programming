@@ -1,44 +1,48 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
 
-  <!-- Base -->
+  <!-- ================================= -->
+  <!-- ROS2 HUMBLE + IGNITION MATERIALS -->
+  <!-- ================================= -->
+
+  <!-- BASE -->
   <material name="base_color">
-    <color rgba="0.2 0.2 0.2 1"/>
+    <color rgba="0.20 0.20 0.20 1.0"/>
   </material>
 
-  <!-- Front / Back Links -->
+  <!-- CHASSIS -->
   <material name="chassis_color">
-    <color rgba="0.6 0.6 0.6 1"/>
+    <color rgba="0.60 0.60 0.60 1.0"/>
   </material>
 
-  <!-- Expandable Mechanism -->
+  <!-- EXPANDABLE STRUCTURE -->
   <material name="expandable_color">
-    <color rgba="0.1 0.4 0.8 1"/>
+    <color rgba="0.10 0.40 0.80 1.0"/>
   </material>
 
-  <!-- Gantry -->
+  <!-- GANTRY -->
   <material name="gantry_color">
-    <color rgba="0.8 0.5 0.1 1"/>
+    <color rgba="0.80 0.50 0.10 1.0"/>
   </material>
 
-  <!-- Wheels -->
+  <!-- WHEELS -->
   <material name="wheel_color">
-    <color rgba="0.05 0.05 0.05 1"/>
+    <color rgba="0.05 0.05 0.05 1.0"/>
   </material>
-  
-  <!-- Gripper -->
+
+  <!-- GRIPPER -->
   <material name="gripper_color">
-    <color rgba="0.8 0.1 0.1 1"/>
+    <color rgba="0.80 0.10 0.10 1.0"/>
   </material>
 
-  <!-- Camera -->
+  <!-- CAMERA -->
   <material name="camera_color">
-    <color rgba="0.1 0.8 0.1 1"/>
+    <color rgba="0.10 0.80 0.10 1.0"/>
   </material>
 
-  <!-- Storage -->
+  <!-- STORAGE PLATE -->
   <material name="storage_plate_color">
-    <color rgba="0.5 0.2 0.7 1"/>
+    <color rgba="0.50 0.20 0.70 1.0"/>
   </material>
 
 </robot>
