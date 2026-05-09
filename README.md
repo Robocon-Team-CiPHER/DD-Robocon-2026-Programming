@@ -13,7 +13,7 @@ Over and out...
 
 ### R2
 <p align="center">
-  <img src="highlights/rviz/r2_rviz_for_controller.png"/>
+  <img src="highlights/rviz/r2_rviz.png"/>
 </p>
 
 ### World
