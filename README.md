@@ -9,6 +9,10 @@
 3. **Sahil Kale** [Xtroncs](https://github.com/Xtroncs)
 4. **Tejas Raut** [TejasRaut15k](https://github.com/TejasRaut16k)
 
+# System Requirements
+- ROS2 Humble
+- Gazebo Ignition
+
 Over and out...
 
 ### R2
