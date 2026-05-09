@@ -1,9 +1,0 @@
-/home/void/DD-Robocon-2026-Programming/ros2_ws/build/r2_perception/CMakeFiles/uninstall.dir
-/home/void/DD-Robocon-2026-Programming/ros2_ws/build/r2_perception/CMakeFiles/r2_perception_uninstall.dir
-/home/void/DD-Robocon-2026-Programming/ros2_ws/build/r2_perception/CMakeFiles/test.dir
-/home/void/DD-Robocon-2026-Programming/ros2_ws/build/r2_perception/CMakeFiles/edit_cache.dir
-/home/void/DD-Robocon-2026-Programming/ros2_ws/build/r2_perception/CMakeFiles/rebuild_cache.dir
-/home/void/DD-Robocon-2026-Programming/ros2_ws/build/r2_perception/CMakeFiles/list_install_components.dir
-/home/void/DD-Robocon-2026-Programming/ros2_ws/build/r2_perception/CMakeFiles/install.dir
-/home/void/DD-Robocon-2026-Programming/ros2_ws/build/r2_perception/CMakeFiles/install/local.dir
-/home/void/DD-Robocon-2026-Programming/ros2_ws/build/r2_perception/CMakeFiles/install/strip.dir
