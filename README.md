@@ -18,5 +18,5 @@ Over and out...
 
 ### World
 <p align="center">
-  <img src="world/v2_arena_with_light.png"/>
+  <img src="highlights/arena/arena_9-5-26.png"/>
 </p>
