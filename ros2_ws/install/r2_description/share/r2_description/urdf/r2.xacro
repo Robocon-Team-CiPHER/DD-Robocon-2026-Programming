@@ -1,0 +1,812 @@
+<?xml version="1.0"?>
+<robot name="r2" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <!-- Include materials -->
+  <xacro:include filename="$(find r2_description)/urdf/materials.xacro"/>
+
+  <!-- Include gazebo -->
+  <xacro:include filename="$(find r2_description)/urdf/gazebo.xacro"/>
+
+<!-- Base Link-->
+    <link name="base_link">
+        <inertial>
+            <origin xyz="0.0042186271235444715 2.679193213808116e-16 0.0773228479596528" rpy="0.0 0.0 0.0" />
+            <mass value="2.00" />
+            <inertia ixx="0.42155335598643257" iyy="0.2892124481695275" izz="0.5315505031508672" ixy="-1.1992727721844926e-16" iyz="1.5347918280439902e-16" ixz="0.0001585619900969315" />
+        </inertial>
+        <visual name="base_link_visual">
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="package://r2_description/meshes/base_link.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+            <material name="base_color"/>
+        </visual>   
+        <collision name="base_link_collision">
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="package://r2_description/meshes/base_link.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+
+<!--Front Link-->
+    <link name="front_link">
+        <inertial>
+            <origin xyz="1.1688428003253648e-14 -6.014164802022783e-17 -0.02416130998511414" rpy="0.0 -0.0 0.0" />
+            <mass value="2.4" />
+            <inertia ixx="0.16196111692017123" iyy="0.033252044124773755" izz="0.13349589075190105" ixy="1.6108970157799827e-17" iyz="5.0711098953601913e-17" ixz="-2.392183673372017e-15" />
+        </inertial>
+        <visual name="front_link_visual">
+            <origin xyz="-0.23800000000000002 0.0 -0.006025000000000001" rpy="3.141592653589793 -0.0 0.0" />
+            <geometry>
+                <mesh filename="package://r2_description/meshes/front_link.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+            <material name="chassis_color"/>
+        </visual>
+        <collision name="front_link_collision">
+            <origin xyz="-0.23800000000000002 0.0 -0.006025000000000001" rpy="3.141592653589793 -0.0 0.0" />
+            <geometry>
+                <mesh filename="package://r2_description/meshes/front_link.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+
+<!--Back Link-->
+    <link name="back_link">
+        <inertial>
+            <origin xyz="1.1688428003253648e-14 0.0 -0.024076465883564487" rpy="0.0 -0.0 0.0" />
+            <mass value="2.4" />
+            <inertia ixx="0.16435526563281905" iyy="0.03326294165161783" izz="0.1358827419377047" ixy="6.28642737865448e-17" iyz="0.0" ixz="-2.3869795029440866e-15" />
+        </inertial>
+        <visual name="back_link_visual">
+            <origin xyz="0.23800000000000002 0.0 -0.006025000000000001" rpy="3.141592653589793 -0.0 0.0" />
+            <geometry>
+                <mesh filename="package://r2_description/meshes/back_link.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+            <material name="chassis_color"/>
+        </visual>
+        <collision name="back_link_collision">
+            <origin xyz="0.23800000000000002 0.0 -0.006025000000000001" rpy="3.141592653589793 -0.0 0.0" />
+            <geometry>
+                <mesh filename="package://r2_description/meshes/back_link.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+
+<!-- Vertical Expandable-->
+    <link name="v_expandable_r">
+        <inertial>
+            <origin xyz="-1.2027605119163338e-13 -0.21999999999999964 0.010000000000000035" rpy="0.0 -0.0 0.0" />
+            <mass value="0.200" />
+            <inertia ixx="0.019534151646000752" iyy="9.07177309450169e-05" izz="0.019534151646180192" ixy="4.455505423730421e-18" iyz="-1.3877787807814457e-17" ixz="6.021653004568989e-18" />
+        </inertial>
+        <visual name="v_expandable_r_visual">
+            <origin xyz="-7.105427357601002e-17 -0.45599999999999946 0.3069999999999998" rpy="1.5707963267948966 -6.938893903907214e-18 3.141592653589793" />
+            <geometry>
+                <mesh filename="package://r2_description/meshes/v_expandable_r.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+            <material name="expandable_color"/>
+        </visual>
+        <collision name="v_expandable_r_collision">
+            <origin xyz="-7.105427357601002e-17 -0.45599999999999946 0.3069999999999998" rpy="1.5707963267948966 -6.938893903907214e-18 3.141592653589793" />
+            <geometry>
+                <mesh filename="package://r2_description/meshes/v_expandable_r.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="v_expandable_l">
+        <inertial>
+            <origin xyz="1.2020091795622878e-13 -0.22000000000000008 0.009999999999999858" rpy="0.0 -0.0 0.0" />
+            <mass value="0.200" />
+            <inertia ixx="0.019534151646000697" iyy="9.071773094505853e-05" izz="0.019534151646180414" ixy="1.2634758252215852e-18" iyz="1.1102230246251565e-16" ixz="-6.416558446259208e-18" />
+        </inertial>
+        <visual name="v_expandable_l_visual">
+            <origin xyz="-7.105427357601002e-17 -0.45600000000000007 0.3069999999999999" rpy="-1.5707963267948957 1.3877787807814443e-17 -1.2246467991473532e-16" />
+            <geometry>
+                <mesh filename="package://r2_description/meshes/v_expandable_l.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+            <material name="expandable_color"/>
+        </visual>
+        <collision name="v_expandable_l_collision">
+            <origin xyz="-7.105427357601002e-17 -0.45600000000000007 0.3069999999999999" rpy="-1.5707963267948957 1.3877787807814443e-17 -1.2246467991473532e-16" />
+            <geometry>
+                <mesh filename="package://r2_description/meshes/v_expandable_l.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+
+<!--Horizontal Expandable-->
+    <link name="h_expandable_r">
+        <inertial>
+            <origin xyz="2.5217287189604704e-16 -2.1316282072803005e-16 0.009999999999999966" rpy="0.0 -0.0 0.0" />
+            <mass value="0.56" />
+            <inertia ixx="0.00015121996039119123" iyy="0.08879108644737124" izz="0.08879108644737124" ixy="1.549594959280925e-17" iyz="2.7755575615628914e-17" ixz="7.182370609370982e-18" />
+        </inertial>
+        <visual name="h_expandable_r_visual">
+            <origin xyz="6.042827863252935e-17 0.2824999999999999 0.26990000000000003" rpy="1.5707963267948966 -0.0 -1.2246467991473532e-16" />
+            <geometry>
+                <mesh filename="package://r2_description/meshes/h_expandable_r.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+            <material name="expandable_color"/>
+        </visual>
+        <collision name="h_expandable_r_collision">
+            <origin xyz="6.042827863252935e-17 0.2824999999999999 0.26990000000000003" rpy="1.5707963267948966 -0.0 -1.2246467991473532e-16" />
+            <geometry>
+                <mesh filename="package://r2_description/meshes/h_expandable_r.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="h_expandable_l">
+        <inertial>
+            <origin xyz="-1.7783613980752874e-16 2.1316282072803005e-16 0.009999999999999929" rpy="0.0 -0.0 0.0" />
+            <mass value="0.56" />
+            <inertia ixx="0.0001512199603910247" iyy="0.08879108644737121" izz="0.08879108644737113" ixy="3.5843619808224064e-17" iyz="-8.326672684688674e-17" ixz="5.683068593498344e-18" />
+        </inertial>
+        <visual name="h_expandable_l_visual">
+            <origin xyz="-6.153850165715452e-17 -0.28250000000000003 0.26990000000000003" rpy="-1.5707963267948966 -0.0 -1.2246467991473532e-16" />
+            <geometry>
+                <mesh filename="package://r2_description/meshes/h_expandable_l.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+            <material name="expandable_color"/>
+        </visual>
+        <collision name="h_expandable_l_collision">
+            <origin xyz="-6.153850165715452e-17 -0.28250000000000003 0.26990000000000003" rpy="-1.5707963267948966 -0.0 -1.2246467991473532e-16" />
+            <geometry>
+                <mesh filename="package://r2_description/meshes/h_expandable_l.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+
+<!--Gantry-->
+    <link name="v_gantry_r">
+        <inertial>
+            <origin xyz="2.5832006556616624e-17 -7.105427357601002e-17 0.008550000000000075" rpy="0.0 -0.0 0.0" />
+            <mass value="0.187" />
+            <inertia ixx="0.00021350140791281946" iyy="0.00021350140791281252" izz="0.0003993631078125087" ixy="2.6773250283440193e-19" iyz="4.922530355325821e-36" ixz="2.231104190286638e-20" />
+        </inertial>
+        <visual name="v_gantry_r_visual">
+            <origin xyz="6.042827863252935e-17 0.2824999999999999 0.28700000000000003" rpy="1.5707963267948966 -4.479329460506078e-34 -1.2246467991473532e-16" />
+            <geometry>
+                <mesh filename="package://r2_description/meshes/v_gantry_r.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+            <material name="gantry_color"/>
+        </visual>
+        <collision name="v_gantry_r_collision">
+            <origin xyz="6.042827863252935e-17 0.2824999999999999 0.28700000000000003" rpy="1.5707963267948966 -4.479329460506078e-34 -1.2246467991473532e-16" />
+            <geometry>
+                <mesh filename="package://r2_description/meshes/v_gantry_r.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="v_gantry_l">
+        <inertial>
+            <origin xyz="-2.6942229581241788e-17 0.0 0.008550000000000075" rpy="0.0 -0.0 0.0" />
+            <mass value="0.187" />
+            <inertia ixx="0.00021350140791281946" iyy="0.00021350140791281252" izz="0.00039936310781249484" ixy="-2.6773250283440656e-19" iyz="1.1163468592440427e-67" ixz="-2.2311041902865608e-20" />
+        </inertial>
+        <visual name="v_gantry_l_visual">
+            <origin xyz="-6.153850165715452e-17 -0.28250000000000003 0.28700000000000003" rpy="-1.5707963267948966 1.1947622849140125e-34 -1.2246467991473532e-16" />
+            <geometry>
+                <mesh filename="package://r2_description/meshes/v_gantry_l.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+            <material name="gantry_color"/>
+        </visual>
+        <collision name="v_gantry_l_collision">
+            <origin xyz="-6.153850165715452e-17 -0.28250000000000003 0.28700000000000003" rpy="-1.5707963267948966 1.1947622849140125e-34 -1.2246467991473532e-16" />
+            <geometry>
+                <mesh filename="package://r2_description/meshes/v_gantry_l.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+
+    <link name="h_gantry_r">
+        <inertial>
+            <origin xyz="0.0 0.013832853025936558 0.02363371757925073" rpy="0.0 -0.0 0.0" />
+            <mass value="0.187" />
+            <inertia ixx="0.00028625336112315936" iyy="0.000320958411897658" izz="0.0004640047950588283" ixy="1.2494183465605601e-18" iyz="-5.6491115619582144e-05" ixz="8.031975085032172e-19" />
+        </inertial>
+        <visual name="h_gantry_r_visual">
+            <origin xyz="0.0 0.34600000000000003 0.24989999999999998" rpy="1.5707963267948966 -0.0 0.0" />
+            <geometry>
+                <mesh filename="package://r2_description/meshes/h_gantry_r.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+            <material name="gantry_color"/>
+        </visual>
+        <collision name="h_gantry_r_collision">
+            <origin xyz="0.0 0.34600000000000003 0.24989999999999998" rpy="1.5707963267948966 -0.0 0.0" />
+            <geometry>
+                <mesh filename="package://r2_description/meshes/h_gantry_r.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+
+    <link name="h_gantry_l">
+        <inertial>
+            <origin xyz="0.0 -0.013832853025936629 0.023633717579250695" rpy="0.0 -0.0 0.0" />
+            <mass value="0.187" />
+            <inertia ixx="0.00028625336112317323" iyy="0.0003209584118976441" izz="0.0004640047950588283" ixy="-1.7848833522293717e-19" iyz="5.6491115619575205e-05" ixz="-8.924416761146858e-20" />
+        </inertial>
+        <visual name="h_gantry_l_visual">
+            <origin xyz="0.0 -0.34600000000000003 0.24989999999999998" rpy="-1.5707963267948966 -0.0 0.0" />
+            <geometry>
+                <mesh filename="package://r2_description/meshes/h_gantry_l.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+            <material name="gantry_color"/>
+        </visual>
+        <collision name="h_gantry_l_collision">
+            <origin xyz="0.0 -0.34600000000000003 0.24989999999999998" rpy="-1.5707963267948966 -0.0 0.0" />
+            <geometry>
+                <mesh filename="package://r2_description/meshes/h_gantry_l.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+
+<!--Wheels-->
+    <link name="f_wheel_r">
+        <inertial>
+            <origin xyz="1.3713474800169933e-14 -2.6645352591003756e-17 -0.025026743072870658" rpy="0.0 -0.0 0.0" />
+            <mass value="0.76" />
+            <inertia ixx="0.0006063195606969968" iyy="0.0006063195607106525" izz="0.0009683138409003339" ixy="-8.673617379884035e-19" iyz="1.734723475976807e-18" ixz="-1.3877787807814457e-17" />
+        </inertial>
+        <visual name="f_wheel_r_visual">
+            <origin xyz="-0.23800000000000002 0.044524999999999995 -0.2715" rpy="-1.5707963267948966 -0.0 0.0" />
+            <geometry>
+                <mesh filename="package://r2_description/meshes/f_wheel_r.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+            <material name="wheel_color"/>
+        </visual>
+        <collision name="f_wheel_r_collision">
+            <origin xyz="-0.23800000000000002 0.044524999999999995 -0.2715" rpy="-1.5707963267948966 -0.0 0.0" />
+            <geometry>
+                <mesh filename="package://r2_description/meshes/f_wheel_r.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+
+            <surface>
+                <friction>
+                <ode>
+                    <mu>1.2</mu>
+                    <mu2>1.2</mu2>
+                </ode>
+                </friction>
+            </surface>
+        </collision>
+    </link>
+
+    <link name="f_wheel_l">
+        <inertial>
+            <origin xyz="7.105427357601002e-17 8.881784197001253e-18 -0.025026743072870658" rpy="0.0 -0.0 0.0" />
+            <mass value="0.76" />
+            <inertia ixx="0.0006063195607004176" iyy="0.000606319560700383" izz="0.0009683138408934852" ixy="8.673617379884035e-19" iyz="0.0" ixz="6.938893903907228e-18" />
+        </inertial>
+        <visual name="f_wheel_l_visual">
+            <origin xyz="-0.23800000000000002 -0.044524999999999995 -0.2715" rpy="1.5707963267948966 -0.0 0.0" />
+            <geometry>
+                <mesh filename="package://r2_description/meshes/f_wheel_l.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+            <material name="wheel_color"/>
+        </visual>
+        <collision name="f_wheel_l_collision">
+            <origin xyz="-0.23800000000000002 -0.044524999999999995 -0.2715" rpy="1.5707963267948966 -0.0 0.0" />
+            <geometry>
+                <mesh filename="package://r2_description/meshes/f_wheel_l.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+
+            <surface>
+                <friction>
+                <ode>
+                    <mu>1.2</mu>
+                    <mu2>1.2</mu2>
+                </ode>
+                </friction>
+            </surface>
+        </collision>
+    </link>
+
+    <link name="b_wheel_r">
+        <inertial>
+            <origin xyz="-6.8212102632969615e-15 -8.881784197001253e-18 -0.025026743072870658" rpy="0.0 -0.0 0.0" />
+            <mass value="0.76" />
+            <inertia ixx="0.0006063195607106525" iyy="0.0006063195606969829" izz="0.000968313840900327" ixy="3.469446951953614e-18" iyz="-8.673617379884035e-19" ixz="0.0" />
+        </inertial>
+        <visual name="b_wheel_r_visual">
+            <origin xyz="0.23800000000000002 0.044524999999999995 -0.2735" rpy="-1.5707963267948966 -0.0 0.0" />
+            <geometry>
+                <mesh filename="package://r2_description/meshes/b_wheel_r.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+            <material name="wheel_color"/>
+        </visual>
+        <collision name="b_wheel_r_collision">
+            <origin xyz="0.23800000000000002 0.044524999999999995 -0.2735" rpy="-1.5707963267948966 -0.0 0.0" />
+            <geometry>
+                <mesh filename="package://r2_description/meshes/b_wheel_r.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+
+            <surface>
+                <friction>
+                <ode>
+                    <mu>1.2</mu>
+                    <mu2>1.2</mu2>
+                </ode>
+                </friction>
+            </surface>
+        </collision>
+    </link>
+
+    <link name="b_wheel_l">
+        <inertial>
+            <origin xyz="-3.552713678800501e-17 1.7763568394002505e-17 -0.025026743072870696" rpy="0.0 -0.0 0.0" />
+            <mass value="0.76" />
+            <inertia ixx="0.0006063195607004385" iyy="0.0006063195607003968" izz="0.0009683138408934852" ixy="1.734723475976807e-18" iyz="-2.6020852139652106e-18" ixz="0.0" />
+        </inertial>
+        <visual name="b_wheel_l_visual">
+            <origin xyz="0.23800000000000002 -0.044524999999999995 -0.2735" rpy="1.5707963267948966 -0.0 0.0" />
+            <geometry>
+                <mesh filename="package://r2_description/meshes/b_wheel_l.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+            <material name="wheel_color"/>
+        </visual>
+        <collision name="b_wheel_l_collision">
+            <origin xyz="0.23800000000000002 -0.044524999999999995 -0.2735" rpy="1.5707963267948966 -0.0 0.0" />
+            <geometry>
+                <mesh filename="package://r2_description/meshes/b_wheel_l.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+
+            <surface>
+                <friction>
+                <ode>
+                    <mu>1.2</mu>
+                    <mu2>1.2</mu2>
+                </ode>
+                </friction>
+            </surface>
+        </collision>
+    </link>
+
+<!--KFS Gripper-->
+    <link name="kfs_gripper_link">
+        <inertial>
+            <origin xyz="0.2317152428810716 0.060000000000000143 0.21250000000000102" rpy="0.0 -0.0 0.0" />
+            <mass value="1.644" />
+            <inertia ixx="0.2679460085435912" iyy="0.38855510203554466" izz="0.14309519115594393" ixy="-2.7755575615628914e-16" iyz="-3.576344126329944e-15" ixz="-1.131665944136903e-15" />
+        </inertial>
+        <visual name="kfs_gripper_link_visual">
+            <origin xyz="1.3322676295501878e-17 0.35600000000000187 0.2125" rpy="1.5707963267948941 1.0408340855860872e-17 0.0" />
+            <geometry>
+                <mesh filename="package://r2_description/meshes/kfs_gripper_link.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+            <material name="gripper_color"/>
+        </visual>
+        <collision name="kfs_gripper_link_collision">
+            <origin xyz="1.3322676295501878e-17 0.35600000000000187 0.2125" rpy="1.5707963267948941 1.0408340855860872e-17 0.0" />
+            <geometry>
+                <mesh filename="package://r2_description/meshes/kfs_gripper_link.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+
+<!--Spearhead Gripper-->
+    <link name="spearhead_gripper_link">
+        <inertial>
+            <origin xyz="-0.1187965702156902 0.014232345919710633 6.106982515756493e-16" rpy="0.0 -0.0 0.0" />
+            <mass value="1.058" />
+            <inertia ixx="0.00619735005930841" iyy="0.013682230278330501" izz="0.008463736029391739" ixy="0.0007106267959798712" iyz="2.1015313562747538e-17" ixz="-1.216101173826227e-16" />
+        </inertial>
+        <visual name="spearhead_gripper_link_visual">
+            <origin xyz="0.02049999999999983 -0.2359999999999991 -4.1334256279161996e-17" rpy="-1.570796326794894 4.671268081547312e-31 -3.9048654142723077e-47" />
+            <geometry>
+                <mesh filename="package://r2_description/meshes/spearhead_gripper_link.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+            <material name="gripper_color"/>
+        </visual>
+        <collision name="spearhead_gripper_link_collision">
+            <origin xyz="0.02049999999999983 -0.2359999999999991 -4.1334256279161996e-17" rpy="-1.570796326794894 4.671268081547312e-31 -3.9048654142723077e-47" />
+            <geometry>
+                <mesh filename="package://r2_description/meshes/spearhead_gripper_link.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+
+<!--CAMERA-->
+    <link name="camera_link">
+        <inertial>
+            <origin xyz="0.009894465299491869 -0.012500000000000072 9.415354068752146e-15" rpy="0.0 -0.0 0.0" />
+            <mass value="0.3" />
+            <inertia ixx="0.00014832028606556052" iyy="0.0001429062226769995" izz="2.427338819091518e-05" ixy="8.673617379884035e-19" iyz="4.462208380571582e-20" ixz="-2.412613722866814e-17" />
+        </inertial>
+        <visual name="camera_link_visual">
+            <origin xyz="0.052499999999999984 0.36749999999999994 -3.552713678800515e-17" rpy="1.5707963267948966 -4.6816763546921983e-97 -1.1869459682199748e-66" />
+            <geometry>
+                <mesh filename="package://r2_description/meshes/camera_link.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+            <material name="camera_color"/>
+        </visual>
+        <collision name="camera_link_collision">
+            <origin xyz="0.052499999999999984 0.36749999999999994 -3.552713678800515e-17" rpy="1.5707963267948966 -4.6816763546921983e-97 -1.1869459682199748e-66" />
+            <geometry>
+                <mesh filename="package://r2_description/meshes/camera_link.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+
+<!--LIDAR-->
+    <link name="lidar_link">
+
+        <inertial>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <mass value="0.2"/>
+
+            <inertia
+                ixx="0.0001"
+                ixy="0.0"
+                ixz="0.0"
+                iyy="0.0001"
+                iyz="0.0"
+                izz="0.0001"/>
+        </inertial>
+
+        <visual name="lidar_visual">
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <cylinder radius="0.04" length="0.03"/>
+            </geometry>
+            <material name="camera_color"/>
+        </visual>
+
+        <collision name="lidar_collision">
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <cylinder radius="0.04" length="0.03"/>
+            </geometry>
+        </collision>
+    </link>
+
+<!--Storage Plate-->
+    <link name="storage_plate">
+        <inertial>
+            <origin xyz="6.939666025053356e-16 1.4457637552194492e-16 0.0884398437074973" rpy="0.0 0.0 0.0" />
+            <mass value="0.598" />
+            <inertia ixx="0.014939187362813498" iyy="0.009584187362813381" izz="0.024397306664266268" ixy="1.8702121451497085e-16" iyz="3.554700142666859e-17" ixz="6.845661002964557e-17" />
+        </inertial>
+        <visual name="storage_plate_visual">
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="package://r2_description/meshes/storage_plate.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+            <material name="storage_plate_color"/>
+        </visual>
+        <collision name="storage_plate_collision">
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="package://r2_description/meshes/storage_plate.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+
+<!--JOINTS-->
+
+    <!--Base link -Front-Back-Links-->
+    <joint name="base_link_front_link" type="prismatic">
+        <origin xyz="0.23800000000000002 0.0 -0.006025000000000001" rpy="3.141592653589793 -0.0 0.0" />
+        <parent link="base_link" />
+        <child link="front_link" />
+        <axis xyz="0.0 0.0 1.0" />
+        <limit lower="0.0" upper="0.2" effort="100" velocity="1.0"/>
+        <dynamics damping="10.0" friction="2.0"/>
+    </joint>
+    <joint name="base_link_back_link" type="prismatic">
+        <origin xyz="-0.23800000000000002 0.0 -0.006025000000000001" rpy="3.141592653589793 -0.0 0.0" />
+        <parent link="base_link" />
+        <child link="back_link" />
+        <axis xyz="0.0 0.0 1.0" />
+        <limit lower="0.0" upper="0.2" effort="100" velocity="1.0"/>
+        <dynamics damping="10.0" friction="2.0"/>
+    </joint>
+
+    <!--Wheel Joints-->
+    <joint name="front_link_f_wheel_r" type="continuous">
+        <origin xyz="0.0 0.2715 0.0385" rpy="-1.5707963267948966 -0.0 0.0" />
+        <parent link="front_link" />
+        <child link="f_wheel_r" />
+        <axis xyz="0.0 0.0 -1.0" />
+    </joint>
+    <joint name="front_link_f_wheel_l" type="continuous">
+        <origin xyz="0.0 -0.2715 0.0385" rpy="1.5707963267948966 -0.0 0.0" />
+        <parent link="front_link" />
+        <child link="f_wheel_l" />
+        <axis xyz="0.0 0.0 1.0" />
+    </joint>
+    <joint name="back_link_b_wheel_r" type="continuous">
+        <origin xyz="0.0 0.2735 0.0385" rpy="-1.5707963267948966 -0.0 0.0" />
+        <parent link="back_link" />
+        <child link="b_wheel_r" />
+        <axis xyz="0.0 0.0 -1.0" />
+    </joint>
+    <joint name="back_link_b_wheel_l" type="continuous">
+        <origin xyz="0.0 -0.2735 0.0385" rpy="1.5707963267948966 -0.0 0.0" />
+        <parent link="back_link" />
+        <child link="b_wheel_l" />
+        <axis xyz="0.0 0.0 1.0" />
+    </joint>
+
+    <!--base_link-to-V_expandable-->
+    <joint name="base_link_v_expandable_r" type="prismatic">
+        <origin xyz="0.0 -0.307 0.5660000000000001" rpy="1.5707963267948966 -0.0 3.141592653589793" />
+        <parent link="base_link" />
+        <child link="v_expandable_r" />
+        <axis xyz="0.0 1.0 0.0" />
+        <limit lower="0.0" upper="0.2" effort="100" velocity="1.0"/>
+        <dynamics damping="5.0" friction="1.0"/>
+    </joint>
+    <joint name="base_link_v_expandable_l" type="prismatic">
+        <origin xyz="0.0 0.307 0.5660000000000001" rpy="1.5707963267948966 -0.0 0.0" />
+        <parent link="base_link" />
+        <child link="v_expandable_l" />
+        <axis xyz="0.0 1.0 0.0" />
+        <limit lower="0.0" upper="0.2" effort="100" velocity="1.0"/>
+        <dynamics damping="5.0" friction="1.0"/>
+    </joint>
+
+    <!--V_expandable-to-gantry-->
+    <joint name="v_expandable_r_v_gantry_r" type="prismatic">
+        <origin xyz="0.0 -0.22 0.02" rpy="1.232595164407831e-32 4.479329460506062e-34 3.141592653589793" />
+        <parent link="v_expandable_r" />
+        <child link="v_gantry_r" />
+        <axis xyz="0.0 1.0 2.1895288505075267e-47" />
+        <limit lower="0.0" upper="0.2" effort="100" velocity="1.0"/>
+        <dynamics damping="5.0" friction="1.0"/>
+    </joint>
+    <joint name="v_expandable_l_v_gantry_l" type="prismatic">
+        <origin xyz="0.0 -0.22 0.02" rpy="0.0 -1.1947622849140125e-34 0.0" />
+        <parent link="v_expandable_l" />
+        <child link="v_gantry_l" />
+        <axis xyz="0.0 1.0 0.0" />
+        <limit lower="0.0" upper="0.2" effort="100" velocity="1.0"/>
+        <dynamics damping="5.0" friction="1.0"/>
+    </joint>
+
+    <!--V_gantry-to-H_Expandable-->
+    <joint name="v_gantry_r_h_expandable_r_to_v_gantry_r" type="fixed">
+        <origin xyz="-1.0538688655686983e-34 0.0 0.017100000000000008" rpy="-1.232595164407831e-32 -4.479329460506062e-34 -9.807621084706338e-81" />
+        <parent link="v_gantry_r" />
+        <child link="h_expandable_r" />
+    </joint>
+    <joint name="v_gantry_l_h_expandable_l_to_v_gantry_l" type="fixed">
+        <origin xyz="7.130076136060349e-51 0.0 0.017100000000000008" rpy="0.0 1.1947622849140125e-34 0.0" />
+        <parent link="v_gantry_l" />
+        <child link="h_expandable_l" />
+    </joint>
+
+    <!--Horizontal Expandable-->
+    <joint name="h_expandable_r_h_gantry_r" type="prismatic">
+        <origin xyz="0.0 0.0 0.02" rpy="0.0 -0.0 0.0" />
+        <parent link="h_expandable_r" />
+        <child link="h_gantry_r" />
+        <axis xyz="0.0 1.0 0.0" />
+        <limit lower="0.0" upper="0.2" effort="100" velocity="1.0"/>
+        <dynamics damping="5.0" friction="1.0"/>
+    </joint>
+    <joint name="h_expandable_l_h_gantry_l" type="prismatic">
+        <origin xyz="0.0 0.0 0.02" rpy="0.0 -0.0 0.0" />
+        <parent link="h_expandable_l" />
+        <child link="h_gantry_l" />
+        <axis xyz="0.0 1.0 0.0" />
+        <limit lower="0.0" upper="0.2" effort="100" velocity="1.0"/>
+        <dynamics damping="5.0" friction="1.0"/>
+    </joint>
+
+    <!--horizontal Gantry and KFS Gripper-->
+    <joint name="h_gantry_right_kfs_gripper_gantry_r" type="fixed">
+        <origin xyz="-0.0325 -0.01 0.03739999999999998" rpy="0.0 -0.0 0.0" />
+        <parent link="h_gantry_r" />
+        <child link="kfs_gripper_link" />
+    </joint>
+    <!--
+    <joint name="h_gantry_left_kfs_gripper_gantry_l" type="fixed">
+        <origin xyz="-0.0325 0.01 0.03739999999999998" rpy="0.0 -0.0 0.0" />
+        <parent link="h_gantry_l" />
+        <child link="kfs_gripper_link" />
+    </joint>
+    -->
+    <!--Spearhead Revolute-->
+    <joint name="kfs_gripper_link_spearhead_gripper_rotate" type="continuous">
+        <origin xyz="0.0 0.12 0.2125" rpy="-3.141592653589793 -0.0 1.1869459682199748e-66" />
+        <parent link="kfs_gripper_link" />
+        <child link="spearhead_gripper_link" />
+        <axis xyz="0.0 8.359326303060042e-17 1.0" />
+    </joint>
+
+    <!--CAMERA Rotation-->
+    <joint name="kfs_gripper_link_camera_rotate" type="continuous">
+        <origin xyz="0.0 0.0 0.2125" rpy="3.944304526105059e-31 -0.0 1.1869459682199748e-66" />
+        <parent link="kfs_gripper_link" />
+        <child link="camera_link" />
+        <axis xyz="0.0 3.944304526105059e-31 1.0" />
+    </joint>
+
+    <!--LIDAR Joint-->
+    <joint name="base_to_lidar" type="fixed">
+        <parent link="base_link"/>
+        <child link="lidar_link"/>
+        <origin xyz="0 0 -0.05" rpy="0 0 0"/>
+    </joint>
+    
+    <!--Storage Plate Joint-->
+    <joint name="base_to_storage_plate" type="fixed">
+        <parent link="base_link"/>
+        <child link="storage_plate"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+    </joint>
+
+<!-- Harmonic ROS2 Control Plugin -->
+    <gazebo>
+        <plugin
+            filename="libgz_ros2_control-system.so"
+            name="gz_ros2_control::GazeboSimROS2ControlPlugin">
+        </plugin>
+    </gazebo>
+
+<!--Camera Sensor Plugin-->
+    <gazebo reference="camera_link">
+        <sensor name="camera_sensor" type="camera">
+
+            <always_on>true</always_on>
+            <visualize>true</visualize>
+            <update_rate>30</update_rate>
+
+            <topic>camera/image_raw</topic>
+
+            <camera>
+            <horizontal_fov>1.047</horizontal_fov>
+
+            <image>
+                <width>640</width>
+                <height>480</height>
+                <format>R8G8B8</format>
+            </image>
+
+            <clip>
+                <near>0.1</near>
+                <far>100</far>
+            </clip>
+            </camera>
+
+        </sensor>
+    </gazebo>
+
+<!--LIDAR Sensor Plugin-->
+    <gazebo reference="lidar_link">
+        <sensor name="lidar_sensor" type="ray">
+
+            <always_on>true</always_on>
+            <visualize>true</visualize>
+            <update_rate>10</update_rate>
+
+            <topic>scan</topic>
+
+            <gz_frame_id>lidar_link</gz_frame_id>
+
+            <ray>
+            <scan>
+                <horizontal>
+                <samples>720</samples>
+                <resolution>1</resolution>
+                <min_angle>-3.14159</min_angle>
+                <max_angle>3.14159</max_angle>
+                </horizontal>
+            </scan>
+
+            <range>
+                <min>0.10</min>
+                <max>12.0</max>
+                <resolution>0.01</resolution>
+            </range>
+            </ray>
+
+        </sensor>
+    </gazebo>
+
+<!--ro2_control block-->
+    <ros2_control name="GazeboSimSystem" type="system">
+
+        <hardware>
+            <plugin>gz_ros2_control/GazeboSimSystem</plugin>
+        </hardware>
+
+        <!-- Front Step Mechanism -->
+        <joint name="base_link_front_link">
+            <command_interface name="position"/>
+            <state_interface name="position"/>
+            <state_interface name="velocity"/>
+        </joint>
+
+        <!-- Back Step Mechanism -->
+        <joint name="base_link_back_link">
+            <command_interface name="position"/>
+            <state_interface name="position"/>
+            <state_interface name="velocity"/>
+        </joint>
+
+        <!-- Front Right -->
+        <joint name="front_link_f_wheel_r">
+
+            <command_interface name="velocity"/>
+
+            <state_interface name="position"/>
+            <state_interface name="velocity"/>
+
+        </joint>
+
+        <!-- Front Left -->
+        <joint name="front_link_f_wheel_l">
+
+            <command_interface name="velocity"/>
+
+            <state_interface name="position"/>
+            <state_interface name="velocity"/>
+
+        </joint>
+
+        <!-- Back Right -->
+        <joint name="back_link_b_wheel_r">
+
+            <command_interface name="velocity"/>
+
+            <state_interface name="position"/>
+            <state_interface name="velocity"/>
+
+        </joint>
+
+        <!-- Back Left -->
+        <joint name="back_link_b_wheel_l">
+
+            <command_interface name="velocity"/>
+
+            <state_interface name="position"/>
+            <state_interface name="velocity"/>
+
+        </joint>
+
+        <!-- Vertical Expandable Right -->
+        <joint name="base_link_v_expandable_r">
+            <command_interface name="position"/>
+            <state_interface name="position"/>
+            <state_interface name="velocity"/>
+        </joint>
+
+        <!-- Vertical Expandable Left -->
+        <joint name="base_link_v_expandable_l">
+            <command_interface name="position"/>
+            <state_interface name="position"/>
+            <state_interface name="velocity"/>
+        </joint>
+
+        <!-- Vertical Gantry Right -->
+        <joint name="v_expandable_r_v_gantry_r">
+            <command_interface name="position"/>
+            <state_interface name="position"/>
+            <state_interface name="velocity"/>
+        </joint>
+
+        <!-- Vertical Gantry Left -->
+        <joint name="v_expandable_l_v_gantry_l">
+            <command_interface name="position"/>
+            <state_interface name="position"/>
+            <state_interface name="velocity"/>
+        </joint>
+
+        <!-- Horizontal Gantry Right -->
+        <joint name="h_expandable_r_h_gantry_r">
+            <command_interface name="position"/>
+            <state_interface name="position"/>
+            <state_interface name="velocity"/>
+        </joint>
+
+        <!-- Horizontal Gantry Left -->
+        <joint name="h_expandable_l_h_gantry_l">
+            <command_interface name="position"/>
+            <state_interface name="position"/>
+            <state_interface name="velocity"/>
+        </joint>
+
+    </ros2_control>
+</robot>
