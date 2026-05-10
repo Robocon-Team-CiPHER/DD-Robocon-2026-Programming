@@ -10,8 +10,8 @@
 4. **Tejas Raut** [TejasRaut15k](https://github.com/TejasRaut16k)
 
 # System Requirements
-- ROS2 Humble
-- Gazebo Ignition
+- ROS2 Jazzy
+- Gazebo Harmonic
 
 Over and out...
 
@@ -23,4 +23,11 @@ Over and out...
 ### World
 <p align="center">
   <img src="highlights/arena/arena_9-5-26.png"/>
+</p>
+
+### r2 in arena
+<p align="center">
+  <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/39854ebf-2e8c-4e3e-a03f-31016ec73437" />
+      <br>
+  <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/9f75bcc7-c604-4625-b746-aae379e46b9e" />
 </p>
