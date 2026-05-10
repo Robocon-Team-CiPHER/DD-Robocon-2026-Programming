@@ -24,3 +24,10 @@ Over and out...
 <p align="center">
   <img src="highlights/arena/arena_9-5-26.png"/>
 </p>
+
+### r2 in arena
+<p align="center">
+  <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/39854ebf-2e8c-4e3e-a03f-31016ec73437" />
+      <br>
+  <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/9f75bcc7-c604-4625-b746-aae379e46b9e" />
+</p>
