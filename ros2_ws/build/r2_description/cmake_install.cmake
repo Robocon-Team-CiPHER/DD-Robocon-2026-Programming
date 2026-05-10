@@ -48,6 +48,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
     "/home/void/DD-Robocon-2026-Programming/ros2_ws/src/r2_description/meshes"
     "/home/void/DD-Robocon-2026-Programming/ros2_ws/src/r2_description/launch"
     "/home/void/DD-Robocon-2026-Programming/ros2_ws/src/r2_description/rviz"
+    "/home/void/DD-Robocon-2026-Programming/ros2_ws/src/r2_description/arena"
     )
 endif()
 

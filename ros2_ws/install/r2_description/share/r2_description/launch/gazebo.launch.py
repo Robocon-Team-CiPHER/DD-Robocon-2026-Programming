@@ -36,7 +36,7 @@ def generate_launch_description():
 
     world_file = os.path.join(
         pkg_path,
-        'world',
+        'arena',
         'arena.sdf'
     )
 

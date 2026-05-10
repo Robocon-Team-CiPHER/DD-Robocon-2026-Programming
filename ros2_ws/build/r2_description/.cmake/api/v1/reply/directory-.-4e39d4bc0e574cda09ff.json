@@ -232,7 +232,8 @@
 				"urdf",
 				"meshes",
 				"launch",
-				"rviz"
+				"rviz",
+				"arena"
 			],
 			"type" : "directory"
 		},
