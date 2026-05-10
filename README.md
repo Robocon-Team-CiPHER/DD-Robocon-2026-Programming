@@ -10,8 +10,8 @@
 4. **Tejas Raut** [TejasRaut15k](https://github.com/TejasRaut16k)
 
 # System Requirements
-- ROS2 Humble
-- Gazebo Ignition
+- ROS2 Jazzy
+- Gazebo Harmonic
 
 Over and out...
 
