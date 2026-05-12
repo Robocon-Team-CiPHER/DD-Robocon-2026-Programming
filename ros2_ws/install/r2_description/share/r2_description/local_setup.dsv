@@ -1,2 +1,1 @@
-source;share/r2_description/environment/ament_prefix_path.sh
-source;share/r2_description/environment/path.sh
+/home/void/DD-Robocon-2026-Programming/ros2_ws/build/r2_description/ament_cmake_environment_hooks/local_setup.dsv

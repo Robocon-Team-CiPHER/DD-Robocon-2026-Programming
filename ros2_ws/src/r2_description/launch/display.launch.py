@@ -31,16 +31,6 @@ def generate_launch_description():
     )
 
     # =========================
-    # WORLD FILE
-    # =========================
-
-    world_file = os.path.join(
-        pkg_path,
-        'world',
-        'arena.sdf'
-    )
-
-    # =========================
     # RVIZ CONFIG
     # =========================
 
@@ -63,50 +53,20 @@ def generate_launch_description():
     )
 
     # =========================
-    # GAZEBO HARMONIC
-    # =========================
-
-    gazebo = IncludeLaunchDescription(
-        PythonLaunchDescriptionSource(
-            os.path.join(
-                get_package_share_directory('ros_gz_sim'),
-                'launch',
-                'gz_sim.launch.py'
-            )
-        ),
-        launch_arguments={
-            'gz_args': f'-r {world_file}'
-        }.items()
-    )
-
-    # =========================
-    # SPAWN ROBOT
-    # =========================
-
-    spawn_robot = Node(
-        package='ros_gz_sim',
-        executable='create',
-        arguments=[
-            '-topic',
-            'robot_description',
-            '-name',
-            'r2'
-        ],
-        output='screen'
-    )
-
-    # =========================
     # ROBOT STATE PUBLISHER
     # =========================
 
     robot_state_publisher = Node(
         package='robot_state_publisher',
         executable='robot_state_publisher',
+
         parameters=[{
-            'robot_description': robot_description
+            'robot_description': robot_description,
+            'use_sim_time': True
         }],
+
         output='screen'
-    )
+        )
 
     # =========================
     # JOINT STATE PUBLISHER
@@ -115,33 +75,6 @@ def generate_launch_description():
     joint_state_publisher = Node(
         package='joint_state_publisher',
         executable='joint_state_publisher',
-        output='screen'
-    )
-
-    # =========================
-    # CAMERA BRIDGE
-    # =========================
-
-    camera_bridge = Node(
-        package='ros_gz_bridge',
-        executable='parameter_bridge',
-        arguments=[
-            '/camera/image_raw@sensor_msgs/msg/Image@gz.msgs.Image',
-            '/camera/camera_info@sensor_msgs/msg/CameraInfo@gz.msgs.CameraInfo'
-        ],
-        output='screen'
-    )
-
-    # =========================
-    # LIDAR BRIDGE
-    # =========================
-
-    lidar_bridge = Node(
-        package='ros_gz_bridge',
-        executable='parameter_bridge',
-        arguments=[
-            '/scan@sensor_msgs/msg/LaserScan@gz.msgs.LaserScan'
-        ],
         output='screen'
     )
 
@@ -165,17 +98,9 @@ def generate_launch_description():
 
     return LaunchDescription([
 
-        gazebo,
-
         robot_state_publisher,
 
         joint_state_publisher,
-
-        spawn_robot,
-
-        camera_bridge,
-
-        lidar_bridge,
 
         rviz2
 

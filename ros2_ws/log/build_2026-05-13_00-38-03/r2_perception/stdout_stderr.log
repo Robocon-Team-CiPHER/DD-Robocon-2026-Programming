@@ -1,0 +1,17 @@
+running develop
+running egg_info
+writing r2_perception.egg-info/PKG-INFO
+writing dependency_links to r2_perception.egg-info/dependency_links.txt
+writing entry points to r2_perception.egg-info/entry_points.txt
+writing requirements to r2_perception.egg-info/requires.txt
+writing top-level names to r2_perception.egg-info/top_level.txt
+reading manifest file 'r2_perception.egg-info/SOURCES.txt'
+writing manifest file 'r2_perception.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_perception/lib/python3.12/site-packages/r2-perception.egg-link (link to .)
+Installing vision_node script to /home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_perception/lib/r2_perception
+
+Installed /home/void/DD-Robocon-2026-Programming/ros2_ws/build/r2_perception
+running symlink_data
+symbolically linking /home/void/DD-Robocon-2026-Programming/ros2_ws/build/r2_perception/resource/r2_perception -> /home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_perception/share/ament_index/resource_index/packages
+symbolically linking /home/void/DD-Robocon-2026-Programming/ros2_ws/build/r2_perception/package.xml -> /home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_perception/share/r2_perception

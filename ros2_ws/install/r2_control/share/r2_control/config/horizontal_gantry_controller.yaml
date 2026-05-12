@@ -1,8 +1,1 @@
-horizontal_gantry_controller:
-  ros__parameters:
-
-    joints:
-      - h_expandable_r_h_gantry_r
-      - h_expandable_l_h_gantry_l
-
-    interface_name: position
+/home/void/DD-Robocon-2026-Programming/ros2_ws/src/r2_control/config/horizontal_gantry_controller.yaml

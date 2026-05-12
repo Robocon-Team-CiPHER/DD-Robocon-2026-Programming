@@ -43,72 +43,7 @@ if(NOT DEFINED CMAKE_OBJDUMP)
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/r2_description" TYPE DIRECTORY FILES
-    "/home/void/DD-Robocon-2026-Programming/ros2_ws/src/r2_description/urdf"
-    "/home/void/DD-Robocon-2026-Programming/ros2_ws/src/r2_description/meshes"
-    "/home/void/DD-Robocon-2026-Programming/ros2_ws/src/r2_description/launch"
-    "/home/void/DD-Robocon-2026-Programming/ros2_ws/src/r2_description/rviz"
-    "/home/void/DD-Robocon-2026-Programming/ros2_ws/src/r2_description/arena"
-    )
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/package_run_dependencies" TYPE FILE FILES "/home/void/DD-Robocon-2026-Programming/ros2_ws/build/r2_description/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/r2_description")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/parent_prefix_path" TYPE FILE FILES "/home/void/DD-Robocon-2026-Programming/ros2_ws/build/r2_description/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/r2_description")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/r2_description/environment" TYPE FILE FILES "/opt/ros/jazzy/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/r2_description/environment" TYPE FILE FILES "/home/void/DD-Robocon-2026-Programming/ros2_ws/build/r2_description/ament_cmake_environment_hooks/ament_prefix_path.dsv")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/r2_description/environment" TYPE FILE FILES "/opt/ros/jazzy/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/r2_description/environment" TYPE FILE FILES "/home/void/DD-Robocon-2026-Programming/ros2_ws/build/r2_description/ament_cmake_environment_hooks/path.dsv")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/r2_description" TYPE FILE FILES "/home/void/DD-Robocon-2026-Programming/ros2_ws/build/r2_description/ament_cmake_environment_hooks/local_setup.bash")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/r2_description" TYPE FILE FILES "/home/void/DD-Robocon-2026-Programming/ros2_ws/build/r2_description/ament_cmake_environment_hooks/local_setup.sh")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/r2_description" TYPE FILE FILES "/home/void/DD-Robocon-2026-Programming/ros2_ws/build/r2_description/ament_cmake_environment_hooks/local_setup.zsh")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/r2_description" TYPE FILE FILES "/home/void/DD-Robocon-2026-Programming/ros2_ws/build/r2_description/ament_cmake_environment_hooks/local_setup.dsv")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/r2_description" TYPE FILE FILES "/home/void/DD-Robocon-2026-Programming/ros2_ws/build/r2_description/ament_cmake_environment_hooks/package.dsv")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/packages" TYPE FILE FILES "/home/void/DD-Robocon-2026-Programming/ros2_ws/build/r2_description/ament_cmake_index/share/ament_index/resource_index/packages/r2_description")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/r2_description/cmake" TYPE FILE FILES
-    "/home/void/DD-Robocon-2026-Programming/ros2_ws/build/r2_description/ament_cmake_core/r2_descriptionConfig.cmake"
-    "/home/void/DD-Robocon-2026-Programming/ros2_ws/build/r2_description/ament_cmake_core/r2_descriptionConfig-version.cmake"
-    )
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/r2_description" TYPE FILE FILES "/home/void/DD-Robocon-2026-Programming/ros2_ws/src/r2_description/package.xml")
+  include("/home/void/DD-Robocon-2026-Programming/ros2_ws/build/r2_description/ament_cmake_symlink_install/ament_cmake_symlink_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)

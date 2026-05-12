@@ -46,7 +46,7 @@ def generate_launch_description():
 
     robot_description = ParameterValue(
         Command([
-            'xacro ',
+            'xacro',
             xacro_file
         ]),
         value_type=str
@@ -78,11 +78,12 @@ def generate_launch_description():
         executable='robot_state_publisher',
 
         parameters=[{
-            'robot_description': robot_description
+            'robot_description': robot_description,
+            'use_sim_time': True
         }],
 
         output='screen'
-    )
+        )
 
     # =========================
     # JOINT STATE PUBLISHER
@@ -111,7 +112,7 @@ def generate_launch_description():
 
             '-x', '0',
             '-y', '0',
-            '-z', '0.5'
+            '-z', '0.2'
         ],
 
         output='screen'

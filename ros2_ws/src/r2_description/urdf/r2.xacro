@@ -365,43 +365,102 @@
 <!--KFS Gripper-->
     <link name="kfs_gripper_link">
         <inertial>
-            <origin xyz="0.2317152428810716 0.060000000000000143 0.21250000000000102" rpy="0.0 -0.0 0.0" />
-            <mass value="1.644" />
-            <inertia ixx="0.2679460085435912" iyy="0.38855510203554466" izz="0.14309519115594393" ixy="-2.7755575615628914e-16" iyz="-3.576344126329944e-15" ixz="-1.131665944136903e-15" />
+            <origin xyz="0.1955779403489025 0.059999999999999894 0.3528781654473832" rpy="0.0 -0.0 0.0" />
+            <mass value="4.017441599999999" />
+            <inertia ixx="0.06819760915846967" iyy="0.15450102238452545" izz="0.10060982797165563" ixy="-2.7755575615628914e-17" iyz="-2.7755575615628914e-17" ixz="-0.050359599489332496" />
         </inertial>
         <visual name="kfs_gripper_link_visual">
-            <origin xyz="1.3322676295501878e-17 0.35600000000000187 0.2125" rpy="1.5707963267948941 1.0408340855860872e-17 0.0" />
+            <origin xyz="0.0 0.3559999999999999 0.21249999999999997" rpy="1.5707963267948966 -0.0 0.0" />
             <geometry>
                 <mesh filename="package://r2_description/meshes/kfs_gripper_link.stl" scale="0.001 0.001 0.001" />
             </geometry>
-            <material name="gripper_color"/>
         </visual>
         <collision name="kfs_gripper_link_collision">
-            <origin xyz="1.3322676295501878e-17 0.35600000000000187 0.2125" rpy="1.5707963267948941 1.0408340855860872e-17 0.0" />
+            <origin xyz="0.0 0.3559999999999999 0.21249999999999997" rpy="1.5707963267948966 -0.0 0.0" />
             <geometry>
                 <mesh filename="package://r2_description/meshes/kfs_gripper_link.stl" scale="0.001 0.001 0.001" />
             </geometry>
         </collision>
     </link>
 
-<!--Spearhead Gripper-->
-    <link name="spearhead_gripper_link">
+    <!--kfs finger-->
+    <link name="kfs_finger">
         <inertial>
-            <origin xyz="-0.1187965702156902 0.014232345919710633 6.106982515756493e-16" rpy="0.0 -0.0 0.0" />
-            <mass value="1.058" />
-            <inertia ixx="0.00619735005930841" iyy="0.013682230278330501" izz="0.008463736029391739" ixy="0.0007106267959798712" iyz="2.1015313562747538e-17" ixz="-1.216101173826227e-16" />
+            <origin xyz="-0.0059999999999999784 0.059999999999999894 0.2728741721854304" rpy="0.0 -0.0 0.0" />
+            <mass value="2.7310464000000003" />
+            <inertia ixx="0.029521380670728292" iyy="0.02546431176832853" izz="0.0041226140159998925" ixy="0.0" iyz="-5.551115123125783e-17" ixz="-2.7755575615628914e-17" />
         </inertial>
-        <visual name="spearhead_gripper_link_visual">
-            <origin xyz="0.02049999999999983 -0.2359999999999991 -4.1334256279161996e-17" rpy="-1.570796326794894 4.671268081547312e-31 -3.9048654142723077e-47" />
+        <visual name="kfs_finger_visual">
+            <origin xyz="-0.2124999999999999 0.3559999999999999 -0.012000000000000002" rpy="1.5707963267948966 -1.5707963267948966 0" />
             <geometry>
-                <mesh filename="package://r2_description/meshes/spearhead_gripper_link.stl" scale="0.001 0.001 0.001" />
+                <mesh filename="package://r2_description/meshes/kfs_finger.stl" scale="0.001 0.001 0.001" />
             </geometry>
-            <material name="gripper_color"/>
         </visual>
-        <collision name="spearhead_gripper_link_collision">
-            <origin xyz="0.02049999999999983 -0.2359999999999991 -4.1334256279161996e-17" rpy="-1.570796326794894 4.671268081547312e-31 -3.9048654142723077e-47" />
+        <collision name="kfs_finger_collision">
+            <origin xyz="-0.2124999999999999 0.3559999999999999 -0.012000000000000002" rpy="1.5707963267948966 -1.5707963267948966 0" />
             <geometry>
-                <mesh filename="package://r2_description/meshes/spearhead_gripper_link.stl" scale="0.001 0.001 0.001" />
+                <mesh filename="package://r2_description/meshes/kfs_finger.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+
+<!--Spearhead Gripper-->
+    <link name="spearhead_body">
+        <inertial>
+            <origin xyz="-0.10650436783393792 -4.818367926873193e-16 0.24498998848839812" rpy="0.0 0.0 0.0" />
+            <mass value="0.95" />
+            <inertia ixx="0.005634036903364744" iyy="0.0018508087267255472" izz="0.006850373035303052" ixy="7.817097663620531e-17" iyz="1.3346564094906206e-17" ixz="0.00018420936308609" />
+        </inertial>
+        <visual name="spearhead_body_visual">
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="package://r2_description/meshes/spearhead_body.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="spearhead_body_collision">
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="package://r2_description/meshes/spearhead_body.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <!--right finger-->
+    <link name="spearhead_finger_r">
+        <inertial>
+            <origin xyz="-0.05790307713907636 4.676666307545929e-09 0.007694370676839134" rpy="0.0 -0.0 0.0" />
+            <mass value="0.058" />
+            <inertia ixx="2.506499874757595e-05" iyy="0.0009802969467722182" izz="0.0009816202967382268" ixy="2.7755575615628914e-17" iyz="-6.559423143537302e-18" ixz="-5.176100770984052e-06" />
+        </inertial>
+        <visual name="spearhead_finger_r_visual">
+            <origin xyz="0.10250000190230253 0.2560000046766657 -0.008748863488359066" rpy="1.5707963267948963 -0.0 0.0" />
+            <geometry>
+                <mesh filename="package://r2_description/meshes/spearhead_finger_r.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="spearhead_finger_r_collision">
+            <origin xyz="0.10250000190230253 0.2560000046766657 -0.008748863488359066" rpy="1.5707963267948963 -0.0 0.0" />
+            <geometry>
+                <mesh filename="package://r2_description/meshes/spearhead_finger_r.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <!--left finger-->
+    <link name="spearhead_finger_l">
+        <inertial>
+            <origin xyz="-0.02790307713902619 4.676666343073066e-09 -0.007694364948372371" rpy="0.0 -0.0 0.0" />
+            <mass value="0.058" />
+            <inertia ixx="2.5064998747569012e-05" iyy="0.0009802969467739252" izz="0.0009816202967399268" ixy="2.42861286636753e-17" iyz="-7.589415207398531e-18" ixz="5.176100770980284e-06" />
+        </inertial>
+        <visual name="spearhead_finger_l_visual">
+            <origin xyz="0.13250000190230252 0.2560000046766657 0.008748869216825784" rpy="1.5707963267948963 -0.0 0.0" />
+            <geometry>
+                <mesh filename="package://r2_description/meshes/spearhead_finger_l.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="spearhead_finger_l_collision">
+            <origin xyz="0.13250000190230252 0.2560000046766657 0.008748869216825784" rpy="1.5707963267948963 -0.0 0.0" />
+            <geometry>
+                <mesh filename="package://r2_description/meshes/spearhead_finger_l.stl" scale="0.001 0.001 0.001" />
             </geometry>
         </collision>
     </link>
@@ -565,12 +624,12 @@
     </joint>
 
     <!--V_gantry-to-H_Expandable-->
-    <joint name="v_gantry_r_h_expandable_r_to_v_gantry_r" type="fixed">
+    <joint name="v_gantry_r_to_h_expandable_r" type="fixed">
         <origin xyz="-1.0538688655686983e-34 0.0 0.017100000000000008" rpy="-1.232595164407831e-32 -4.479329460506062e-34 -9.807621084706338e-81" />
         <parent link="v_gantry_r" />
         <child link="h_expandable_r" />
     </joint>
-    <joint name="v_gantry_l_h_expandable_l_to_v_gantry_l" type="fixed">
+    <joint name="v_gantry_l_to_h_expandable_l" type="fixed">
         <origin xyz="7.130076136060349e-51 0.0 0.017100000000000008" rpy="0.0 1.1947622849140125e-34 0.0" />
         <parent link="v_gantry_l" />
         <child link="h_expandable_l" />
@@ -607,11 +666,37 @@
         <child link="kfs_gripper_link" />
     </joint>
     -->
+    <!--KFS Finger Joint-->
+    <joint name="kfs_gripper_link_kfs_finger_grip" type="prismatic">
+        <origin xyz="0.012000000000000002 0.0 0.0" rpy="-0.0 1.5707963267948966 0" />
+        <parent link="kfs_gripper_link" />
+        <child link="kfs_finger" />
+        <axis xyz="1.0 0.0 0.0" />
+        <limit lower="0.0" upper="0.2" effort="100" velocity="1.0"/>
+    </joint>
+
+    <!--Spearhead Gripping Joint-->
+    <joint name="spearhead_body_spearhead_finger_r_grip" type="prismatic">
+        <origin xyz="-0.10250000190230202 -2.8642330940353845e-09 0.2560000046766657" rpy="-1.5707963267948966 -0.0 0.0" />
+        <parent link="spearhead_body" />
+        <child link="spearhead_finger_r" />
+        <axis xyz="0.0 -2.465190328815662e-32 1.0" />
+        <limit lower="0.0" upper="0.2" effort="100" velocity="1.0"/>
+    </joint>
+
+    <joint name="spearhead_body_spearhead_finger_l_grip" type="prismatic">
+        <origin xyz="-0.13250000190230193 -2.8642330940353845e-09 0.2560000046766657" rpy="-1.5707963267948966 -0.0 0.0" />
+        <parent link="spearhead_body" />
+        <child link="spearhead_finger_l" />
+        <axis xyz="0.0 -2.465190328815662e-32 1.0" />
+        <limit lower="0.0" upper="0.2" effort="100" velocity="1.0"/>
+    </joint>
+
     <!--Spearhead Revolute-->
     <joint name="kfs_gripper_link_spearhead_gripper_rotate" type="continuous">
-        <origin xyz="0.0 0.12 0.2125" rpy="-3.141592653589793 -0.0 1.1869459682199748e-66" />
+        <origin xyz="0.0 0.12 0.2125" rpy="+1.57 -0.0 0.0" />
         <parent link="kfs_gripper_link" />
-        <child link="spearhead_gripper_link" />
+        <child link="spearhead_body" />
         <axis xyz="0.0 8.359326303060042e-17 1.0" />
     </joint>
 
@@ -806,6 +891,36 @@
             <command_interface name="position"/>
             <state_interface name="position"/>
             <state_interface name="velocity"/>
+        </joint>
+
+        <!-- KFS Finger Gripper -->
+        <joint name="kfs_gripper_link_kfs_finger_grip">
+
+            <command_interface name="position"/>
+
+            <state_interface name="position"/>
+            <state_interface name="velocity"/>
+
+        </joint>
+
+        <!-- Spearhead Right Finger -->
+        <joint name="spearhead_body_spearhead_finger_r_grip">
+
+            <command_interface name="position"/>
+
+            <state_interface name="position"/>
+            <state_interface name="velocity"/>
+
+        </joint>
+
+        <!-- Spearhead Left Finger -->
+        <joint name="spearhead_body_spearhead_finger_l_grip">
+
+            <command_interface name="position"/>
+
+            <state_interface name="position"/>
+            <state_interface name="velocity"/>
+
         </joint>
 
     </ros2_control>

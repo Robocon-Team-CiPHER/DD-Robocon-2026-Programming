@@ -1,7 +1,1 @@
-parameters=[
-    controller_manager,
-    mecanum_controller,
-    step_controller,
-    vertical_controller,
-    gantry_controller
-]
+/home/void/DD-Robocon-2026-Programming/ros2_ws/src/r2_control/launch/controllers.launch.py
