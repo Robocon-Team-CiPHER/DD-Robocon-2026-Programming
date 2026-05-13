@@ -407,18 +407,18 @@
 <!--Spearhead Gripper-->
     <link name="spearhead_body">
         <inertial>
-            <origin xyz="-0.10650436783393792 -4.818367926873193e-16 0.24498998848839812" rpy="0.0 0.0 0.0" />
-            <mass value="0.95" />
-            <inertia ixx="0.005634036903364744" iyy="0.0018508087267255472" izz="0.006850373035303052" ixy="7.817097663620531e-17" iyz="1.3346564094906206e-17" ixz="0.00018420936308609" />
+            <origin xyz="-0.08600436783393724 0.013989988488398665 1.2223417510293177e-15" rpy="0.0 -0.0 0.0" />
+            <mass value="1.4580482779771917" />
+            <inertia ixx="0.005634036903364975" iyy="0.006850373035303139" izz="0.0018508087267253698" ixy="0.00018420936308629482" iyz="-2.4978652552286308e-17" ixz="-1.9215332864481175e-16" />
         </inertial>
         <visual name="spearhead_body_visual">
-            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+            <origin xyz="0.02049999999999983 -0.23099999999999896 2.7081604932444613e-17" rpy="-1.5707963267948941 7.216449660063482e-16 -6.032465745807708e-32" />
             <geometry>
                 <mesh filename="package://r2_description/meshes/spearhead_body.stl" scale="0.001 0.001 0.001" />
             </geometry>
         </visual>
         <collision name="spearhead_body_collision">
-            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+            <origin xyz="0.02049999999999983 -0.23099999999999896 2.7081604932444613e-17" rpy="-1.5707963267948941 7.216449660063482e-16 -6.032465745807708e-32" />
             <geometry>
                 <mesh filename="package://r2_description/meshes/spearhead_body.stl" scale="0.001 0.001 0.001" />
             </geometry>
@@ -670,28 +670,27 @@
     </joint>
 
     <!--Spearhead Gripping Joint-->
-    <joint name="spearhead_body_spearhead_finger_r_grip" type="prismatic">
-        <origin xyz="-0.10250000190230202 -2.8642330940353845e-09 0.2560000046766657" rpy="-1.5707963267948966 -0.0 0.0" />
-        <parent link="spearhead_body" />
-        <child link="spearhead_finger_r" />
-        <axis xyz="0.0 -2.465190328815662e-32 1.0" />
-        <limit lower="0.0" upper="0.2" effort="100" velocity="1.0"/>
-    </joint>
-
     <joint name="spearhead_body_spearhead_finger_l_grip" type="prismatic">
-        <origin xyz="-0.13250000190230193 -2.8642330940353845e-09 0.2560000046766657" rpy="-1.5707963267948966 -0.0 0.0" />
+        <origin xyz="-0.11199999999999999 0.025 -2.089831575765001e-18" rpy="3.141592653589793 1.4351862472329628e-62 3.4454487729021107e-46" />
         <parent link="spearhead_body" />
         <child link="spearhead_finger_l" />
-        <axis xyz="0.0 -2.465190328815662e-32 1.0" />
+        <axis xyz="-1.4449768080836794e-62 0.0 1.0" />
+        <limit lower="0.0" upper="0.2" effort="100" velocity="1.0"/>
+    </joint>
+    <joint name="spearhead_body_spearhead_finger_r_grip" type="prismatic">
+        <origin xyz="-0.08199999999999999 0.025 -2.089831575765001e-18" rpy="3.141592653589793 1.4351862472329628e-62 3.4454487729021107e-46" />
+        <parent link="spearhead_body" />
+        <child link="spearhead_finger_r" />
+        <axis xyz="-1.4449768080836794e-62 0.0 1.0" />
         <limit lower="0.0" upper="0.2" effort="100" velocity="1.0"/>
     </joint>
 
     <!--Spearhead Revolute-->
     <joint name="kfs_gripper_link_spearhead_gripper_rotate" type="continuous">
-        <origin xyz="0.0 0.12 0.2125" rpy="3.14 3.14 0" />
+        <origin xyz="0.0 0.12 0.2125" rpy="-3.141592653589793 -0.0 0.0" />
         <parent link="kfs_gripper_link" />
         <child link="spearhead_body" />
-        <axis xyz="0.0 8.359326303060042e-17 1.0" />
+        <axis xyz="0.0 8.359326303060002e-17 1.0" />
     </joint>
 
     <!--CAMERA Rotation-->
