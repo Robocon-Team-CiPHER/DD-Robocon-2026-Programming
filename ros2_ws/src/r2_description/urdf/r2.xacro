@@ -388,7 +388,7 @@
     <link name="kfs_finger">
         <inertial>
             <origin xyz="-0.0059999999999999784 0.059999999999999894 0.2728741721854304" rpy="0.0 -0.0 0.0" />
-            <mass value="2.7310464000000003" />
+            <mass value="0.412153" />
             <inertia ixx="0.029521380670728292" iyy="0.02546431176832853" izz="0.0041226140159998925" ixy="0.0" iyz="-5.551115123125783e-17" ixz="-2.7755575615628914e-17" />
         </inertial>
         <visual name="kfs_finger_visual">
@@ -598,7 +598,7 @@
         <parent link="base_link" />
         <child link="v_expandable_r" />
         <axis xyz="0.0 1.0 0.0" />
-        <limit lower="0.0" upper="0.2" effort="100" velocity="1.0"/>
+        <limit lower="0.0" upper="0.33" effort="100" velocity="1.0"/>
         <dynamics damping="5.0" friction="1.0"/>
     </joint>
     <joint name="base_link_v_expandable_l" type="prismatic">
@@ -606,7 +606,7 @@
         <parent link="base_link" />
         <child link="v_expandable_l" />
         <axis xyz="0.0 1.0 0.0" />
-        <limit lower="0.0" upper="0.2" effort="100" velocity="1.0"/>
+        <limit lower="0.0" upper="0.33" effort="100" velocity="1.0"/>
         <dynamics damping="5.0" friction="1.0"/>
     </joint>
 
@@ -616,7 +616,7 @@
         <parent link="v_expandable_r" />
         <child link="v_gantry_r" />
         <axis xyz="0.0 1.0 2.1895288505075267e-47" />
-        <limit lower="-0.18" upper="+0.18" effort="100" velocity="1.0"/>
+        <limit lower="-0.131" upper="+0.131" effort="100" velocity="1.0"/>
         <dynamics damping="5.0" friction="1.0"/>
     </joint>
     <joint name="v_expandable_l_v_gantry_l" type="prismatic">
@@ -624,7 +624,7 @@
         <parent link="v_expandable_l" />
         <child link="v_gantry_l" />
         <axis xyz="0.0 1.0 0.0" />
-        <limit lower="-0.18" upper="+0.18" effort="100" velocity="1.0"/>
+        <limit lower="-0.131" upper="+0.131" effort="100" velocity="1.0"/>
         <dynamics damping="5.0" friction="1.0"/>
     </joint>
 
@@ -646,7 +646,7 @@
         <parent link="h_expandable_r" />
         <child link="h_gantry_r" />
         <axis xyz="0.0 0.0 1.0" />
-        <limit lower="0.0" upper="0.2" effort="100" velocity="1.0"/>
+        <limit lower="-0.295" upper="0.295" effort="100" velocity="1.0"/>
         <dynamics damping="5.0" friction="1.0"/>
     </joint>
     <joint name="h_expandable_l_h_gantry_l" type="prismatic">
@@ -654,7 +654,7 @@
         <parent link="h_expandable_l" />
         <child link="h_gantry_l" />
         <axis xyz="0.0 1.0 0.0" />
-        <limit lower="0.0" upper="0.2" effort="100" velocity="1.0"/>
+        <limit lower="-0.295" upper="0.295" effort="100" velocity="1.0"/>
         <dynamics damping="5.0" friction="1.0"/>
     </joint>
 
@@ -671,7 +671,7 @@
         <parent link="kfs_gripper_link" />
         <child link="kfs_finger" />
         <axis xyz="1.0 0.0 0.0" />
-        <limit lower="0.0" upper="0.2" effort="100" velocity="1.0"/>
+        <limit lower="-0.089" upper="0.0" effort="100" velocity="1.0"/>
     </joint>
 
     <!--Spearhead Gripping Joint-->
@@ -680,14 +680,14 @@
         <parent link="spearhead_body" />
         <child link="spearhead_finger_l" />
         <axis xyz="-1.4449768080836794e-62 0.0 1.0" />
-        <limit lower="-0.05" upper="0.05" effort="100" velocity="1.0"/>
+        <limit lower="-0.02896" upper="-0.08765" effort="100" velocity="1.0"/>
     </joint>
     <joint name="spearhead_body_spearhead_finger_r_grip" type="prismatic">
         <origin xyz="-0.08199999999999999 0.025 -2.089831575765001e-18" rpy="3.141592653589793 1.4351862472329628e-62 3.4454487729021107e-46" />
         <parent link="spearhead_body" />
         <child link="spearhead_finger_r" />
         <axis xyz="-1.4449768080836794e-62 0.0 1.0" />
-        <limit lower="-0.05" upper="0.05" effort="100" velocity="1.0"/>
+        <limit lower="-0.02896" upper="-0.08765" effort="100" velocity="1.0"/>
     </joint>
 
     <!--Spearhead Revolute-->

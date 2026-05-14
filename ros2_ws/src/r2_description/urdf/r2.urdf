@@ -674,14 +674,14 @@
         <parent link="spearhead_body" />
         <child link="spearhead_finger_l" />
         <axis xyz="-1.4449768080836794e-62 0.0 1.0" />
-        <limit lower="-0.05" upper="0.05" effort="100" velocity="1.0"/>
+        <limit lower="-0.02896" upper="-0.008765" effort="100" velocity="1.0"/>
     </joint>
     <joint name="spearhead_body_spearhead_finger_r_grip" type="prismatic">
         <origin xyz="-0.08199999999999999 0.025 -2.089831575765001e-18" rpy="3.141592653589793 1.4351862472329628e-62 3.4454487729021107e-46" />
         <parent link="spearhead_body" />
         <child link="spearhead_finger_r" />
         <axis xyz="-1.4449768080836794e-62 0.0 1.0" />
-        <limit lower="-0.05" upper="0.05" effort="100" velocity="1.0"/>
+        <limit lower="-0.02896" upper="-0.008765" effort="100" velocity="1.0"/>
     </joint>
 
     <!--Spearhead Revolute-->

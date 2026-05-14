@@ -125,6 +125,21 @@ def generate_launch_description():
     )
 
     # =========================
+    # JOINT STATE BROADCASTER
+    # =========================
+
+    joint_state_broadcaster_spawner = Node(
+        package='controller_manager',
+        executable='spawner',
+
+        arguments=[
+            'joint_state_broadcaster'
+        ],
+
+        output='screen'
+    )
+
+    # =========================
     # LAUNCH DESCRIPTION
     # =========================
 
@@ -137,5 +152,5 @@ def generate_launch_description():
         joint_state_publisher,
 
         spawn_robot,
-        
+
     ])
