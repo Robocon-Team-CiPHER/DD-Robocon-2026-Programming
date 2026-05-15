@@ -28,6 +28,7 @@
 /home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/share/r2_description/meshes/v_gantry_r.stl
 /home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/share/r2_description/launch/display.launch.py
 /home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/share/r2_description/launch/gazebo.launch.py
+/home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/share/r2_description/launch/note.md
 /home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/share/r2_description/rviz/r2.rviz
 /home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/share/r2_description/arena/arena.sdf
 /home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/share/ament_index/resource_index/package_run_dependencies/r2_description
