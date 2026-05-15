@@ -219,7 +219,7 @@
         </collision>
     </link>
 
-    <link name="h_ganty_l">
+    <link name="h_gantry_l">
         <inertial>
             <origin xyz="0.0 -7.105427357601002e-17 0.005000000000000071" rpy="0.0 -0.0 0.0" />
             <mass value="0.10204999999999999" />
@@ -228,13 +228,13 @@
         <visual name="h_ganty_l_visual">
             <origin xyz="0.0 -0.34600000000000003 0.24989999999999998" rpy="-1.5707963267948966 -0.0 0.0" />
             <geometry>
-                <mesh filename="meshes/h_ganty_l.stl" scale="0.001 0.001 0.001" />
+                <mesh filename="meshes/h_gantry_l.stl" scale="0.001 0.001 0.001" />
             </geometry>
         </visual>
         <collision name="h_ganty_l_collision">
             <origin xyz="0.0 -0.34600000000000003 0.24989999999999998" rpy="-1.5707963267948966 -0.0 0.0" />
             <geometry>
-                <mesh filename="meshes/h_ganty_l.stl" scale="0.001 0.001 0.001" />
+                <mesh filename="meshes/h_gantry_l.stl" scale="0.001 0.001 0.001" />
             </geometry>
         </collision>
     </link>
@@ -660,29 +660,35 @@
         <child link="h_expandable_l" />
     </joint>
 
-    
-
     <!--Horizontal Expandable-->
-    <joint name="h_ganty_l_gantry_bridge_h_gantry_l" type="fixed">
+    <joint name="h_expandable_r_h_gantry_r" type="prismatic">
+        <origin xyz="0.0 0.0 0.02" rpy="0.0 -0.0 0.0" />
+        <parent link="h_expandable_r" />
+        <child link="h_gantry_r" />
+        <axis xyz="1.0 0.0 0.0" />
+    </joint>
+    <joint name="h_expandable_l_h_gantry_l" type="prismatic">
+        <origin xyz="0.0 0.0 0.02" rpy="0.0 -0.0 0.0" />
+        <parent link="h_expandable_l" />
+        <child link="h_gantry_l" />
+        <axis xyz="1.0 0.0 0.0" />
+    </joint>
+
+    <joint name="h_gantry_l_gantry_bridge" type="fixed">
         <origin xyz="0.0 0.0 0.01" rpy="0.0 -0.0 0.0" />
-        <parent link="h_ganty_l" />
+        <parent link="h_gantry_l" />
         <child link="gantry_bridge" />
     </joint>
-    <joint name="gantry_bridge_gantry_bridge_h_gantry_l-1" type="fixed">
+    <joint name="gantry_bridge_h_gantry_l-1" type="fixed">
         <origin xyz="0.0 0.0 0.4798" rpy="0.0 -0.0 0.0" />
         <parent link="gantry_bridge" />
         <child link="h_gantry_r" />
     </joint>
+
+<!-- KFS Gripper Joint -->
     <joint name="gantry_bridge_kfs_gripper_joint" type="fixed">
         <origin xyz="0.01 0.0 0.2399" rpy="1.5707963267948966 -0.0 1.5707963267948966" />
         <parent link="gantry_bridge" />
-        <child link="kfs_gripper_link" />
-    </joint>
-
-    <!--horizontal Gantry and KFS Gripper-->    
-    <joint name="h_gantry_left_kfs_gripper_gantry_l" type="fixed">
-        <origin xyz="-0.0325 0.01 0.03739999999999998" rpy="0.0 0.0 0.0" />
-        <parent link="h_gantry_l" />
         <child link="kfs_gripper_link" />
     </joint>
     
