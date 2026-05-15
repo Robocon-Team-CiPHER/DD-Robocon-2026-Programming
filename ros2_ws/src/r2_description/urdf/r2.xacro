@@ -201,42 +201,62 @@
 
     <link name="h_gantry_r">
         <inertial>
-            <origin xyz="0.0 0.013832853025936558 0.02363371757925073" rpy="0.0 -0.0 0.0" />
-            <mass value="0.187" />
-            <inertia ixx="0.00028625336112315936" iyy="0.000320958411897658" izz="0.0004640047950588283" ixy="1.2494183465605601e-18" iyz="-5.6491115619582144e-05" ixz="8.031975085032172e-19" />
+            <origin xyz="0.0 -7.105427357601002e-17 0.005000000000000071" rpy="0.0 -0.0 0.0" />
+            <mass value="0.10204999999999999" />
+            <inertia ixx="4.252083333333018e-06" iyy="3.678052083333234e-05" izz="3.9331770833336485e-05" ixy="0.0" iyz="0.0" ixz="0.0" />
         </inertial>
         <visual name="h_gantry_r_visual">
             <origin xyz="0.0 0.34600000000000003 0.24989999999999998" rpy="1.5707963267948966 -0.0 0.0" />
             <geometry>
-                <mesh filename="package://r2_description/meshes/h_gantry_r.stl" scale="0.001 0.001 0.001" />
+                <mesh filename="meshes/h_gantry_r.stl" scale="0.001 0.001 0.001" />
             </geometry>
-            <material name="gantry_color"/>
         </visual>
         <collision name="h_gantry_r_collision">
             <origin xyz="0.0 0.34600000000000003 0.24989999999999998" rpy="1.5707963267948966 -0.0 0.0" />
             <geometry>
-                <mesh filename="package://r2_description/meshes/h_gantry_r.stl" scale="0.001 0.001 0.001" />
+                <mesh filename="meshes/h_gantry_r.stl" scale="0.001 0.001 0.001" />
             </geometry>
         </collision>
     </link>
 
-    <link name="h_gantry_l">
+    <link name="h_ganty_l">
         <inertial>
-            <origin xyz="0.0 -0.013832853025936629 0.023633717579250695" rpy="0.0 -0.0 0.0" />
-            <mass value="0.187" />
-            <inertia ixx="0.00028625336112317323" iyy="0.0003209584118976441" izz="0.0004640047950588283" ixy="-1.7848833522293717e-19" iyz="5.6491115619575205e-05" ixz="-8.924416761146858e-20" />
+            <origin xyz="0.0 -7.105427357601002e-17 0.005000000000000071" rpy="0.0 -0.0 0.0" />
+            <mass value="0.10204999999999999" />
+            <inertia ixx="4.252083333333018e-06" iyy="3.678052083333234e-05" izz="3.9331770833333016e-05" ixy="1.7848833522293717e-19" iyz="1.734723475976807e-18" ixz="0.0" />
         </inertial>
-        <visual name="h_gantry_l_visual">
+        <visual name="h_ganty_l_visual">
             <origin xyz="0.0 -0.34600000000000003 0.24989999999999998" rpy="-1.5707963267948966 -0.0 0.0" />
             <geometry>
-                <mesh filename="package://r2_description/meshes/h_gantry_l.stl" scale="0.001 0.001 0.001" />
+                <mesh filename="meshes/h_ganty_l.stl" scale="0.001 0.001 0.001" />
             </geometry>
-            <material name="gantry_color"/>
         </visual>
-        <collision name="h_gantry_l_collision">
+        <collision name="h_ganty_l_collision">
             <origin xyz="0.0 -0.34600000000000003 0.24989999999999998" rpy="-1.5707963267948966 -0.0 0.0" />
             <geometry>
-                <mesh filename="package://r2_description/meshes/h_gantry_l.stl" scale="0.001 0.001 0.001" />
+                <mesh filename="meshes/h_ganty_l.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+
+<!-- Gantry Bridge -->
+
+    <link name="gantry_bridge">
+        <inertial>
+            <origin xyz="0.0 7.105427357601002e-17 0.2399" rpy="0.0 -0.0 0.0" />
+            <mass value="1.506572" />
+            <inertia ixx="0.02895230133657334" iyy="0.028952301336573342" izz="0.00010043813333332485" ixy="4.462208380573429e-20" iyz="-9.281393431592732e-18" ixz="0.0" />
+        </inertial>
+        <visual name="gantry_bridge_visual">
+            <origin xyz="0.0 -0.34600000000000003 0.2399" rpy="-1.5707963267948966 -0.0 0.0" />
+            <geometry>
+                <mesh filename="meshes/gantry_bridge.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="gantry_bridge_collision">
+            <origin xyz="0.0 -0.34600000000000003 0.2399" rpy="-1.5707963267948966 -0.0 0.0" />
+            <geometry>
+                <mesh filename="meshes/gantry_bridge.stl" scale="0.001 0.001 0.001" />
             </geometry>
         </collision>
     </link>
@@ -640,22 +660,23 @@
         <child link="h_expandable_l" />
     </joint>
 
+    
+
     <!--Horizontal Expandable-->
-    <joint name="h_expandable_r_h_gantry_r" type="prismatic">
-        <origin xyz="0.0 0.0 0.02" rpy="0.0 -0.0 0.0" />
-        <parent link="h_expandable_r" />
-        <child link="h_gantry_r" />
-        <axis xyz="1.0 0.0 0.0" />
-        <limit lower="-0.295" upper="0.295" effort="100" velocity="1.0"/>
-        <dynamics damping="5.0" friction="1.0"/>
+    <joint name="h_ganty_l_gantry_bridge_h_gantry_l" type="fixed">
+        <origin xyz="0.0 0.0 0.01" rpy="0.0 -0.0 0.0" />
+        <parent link="h_ganty_l" />
+        <child link="gantry_bridge" />
     </joint>
-    <joint name="h_expandable_l_h_gantry_l" type="prismatic">
-        <origin xyz="0.0 0.0 0.02" rpy="0.0 0.0 0.0" />
-        <parent link="h_expandable_l" />
-        <child link="h_gantry_l" />
-        <axis xyz="1.0 0.0 0.0" />
-        <limit lower="-0.295" upper="0.295" effort="100" velocity="1.0"/>
-        <dynamics damping="5.0" friction="1.0"/>
+    <joint name="gantry_bridge_gantry_bridge_h_gantry_l-1" type="fixed">
+        <origin xyz="0.0 0.0 0.4798" rpy="0.0 -0.0 0.0" />
+        <parent link="gantry_bridge" />
+        <child link="h_gantry_r" />
+    </joint>
+    <joint name="gantry_bridge_kfs_gripper_joint" type="fixed">
+        <origin xyz="0.01 0.0 0.2399" rpy="1.5707963267948966 -0.0 1.5707963267948966" />
+        <parent link="gantry_bridge" />
+        <child link="kfs_gripper_link" />
     </joint>
 
     <!--horizontal Gantry and KFS Gripper-->    
