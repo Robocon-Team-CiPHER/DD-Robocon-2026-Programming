@@ -1,0 +1,61 @@
+controller_manager:
+  ros__parameters:
+
+    update_rate: 100
+    use_sim_time: true
+
+    # =================================
+    # JOINT STATE BROADCASTER
+    # =================================
+
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+
+    # =================================
+    # MECANUM DRIVE CONTROLLER
+    # =================================
+
+    mecanum_controller:
+      type: mecanum_drive_controller/MecanumDriveController
+
+    # =================================
+    # STEP CONTROLLER
+    # =================================
+
+    step_controller:
+      type: position_controllers/JointGroupPositionController
+
+    # =================================
+    # VERTICAL EXPANDABLE
+    # =================================
+
+    vertical_expandable_controller:
+      type: position_controllers/JointGroupPositionController
+
+    # =================================
+    # VERTICAL GANTRY
+    # =================================
+
+    vertical_gantry_controller:
+      type: position_controllers/JointGroupPositionController
+
+    # =================================
+    # HORIZONTAL GANTRY
+    # =================================
+
+    horizontal_gantry_controller:
+      type: position_controllers/JointGroupPositionController
+
+    # =================================
+    # KFS GRIPPER
+    # =================================
+
+    kfs_gripper_controller:
+      type: position_controllers/JointGroupPositionController
+
+    # =================================
+    # SPEARHEAD GRIPPER
+    # =================================
+
+    spearhead_gripper_controller:
+      type: position_controllers/JointGroupPositionController
