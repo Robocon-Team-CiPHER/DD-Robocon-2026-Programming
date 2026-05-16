@@ -1,8 +1,0 @@
-horizontal_gantry_controller:
-  ros__parameters:
-
-    joints:
-      - h_expandable_r_h_gantry_r
-      - h_expandable_l_h_gantry_l
-
-    interface_name: position

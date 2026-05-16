@@ -1,2 +1,0 @@
-[console_scripts]
-vision_node = r2_perception.vision_node:main

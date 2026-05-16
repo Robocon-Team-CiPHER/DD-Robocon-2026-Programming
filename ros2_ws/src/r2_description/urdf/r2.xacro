@@ -239,28 +239,6 @@
         </collision>
     </link>
 
-<!-- Gantry Bridge -->
-
-    <link name="gantry_bridge">
-        <inertial>
-            <origin xyz="0.0 7.105427357601002e-17 0.2399" rpy="0.0 -0.0 0.0" />
-            <mass value="1.506572" />
-            <inertia ixx="0.02895230133657334" iyy="0.028952301336573342" izz="0.00010043813333332485" ixy="4.462208380573429e-20" iyz="-9.281393431592732e-18" ixz="0.0" />
-        </inertial>
-        <visual name="gantry_bridge_visual">
-            <origin xyz="0.0 -0.34600000000000003 0.2399" rpy="-1.5707963267948966 -0.0 0.0" />
-            <geometry>
-                <mesh filename="meshes/gantry_bridge.stl" scale="0.001 0.001 0.001" />
-            </geometry>
-        </visual>
-        <collision name="gantry_bridge_collision">
-            <origin xyz="0.0 -0.34600000000000003 0.2399" rpy="-1.5707963267948966 -0.0 0.0" />
-            <geometry>
-                <mesh filename="meshes/gantry_bridge.stl" scale="0.001 0.001 0.001" />
-            </geometry>
-        </collision>
-    </link>
-
 <!--Wheels-->
     <link name="f_wheel_r">
         <inertial>
@@ -666,29 +644,22 @@
         <parent link="h_expandable_r" />
         <child link="h_gantry_r" />
         <axis xyz="1.0 0.0 0.0" />
+        <limit lower="0.0" upper="0.2" effort="100" velocity="1.0"/>
+        <dynamics damping="5.0" friction="1.0"/>
     </joint>
     <joint name="h_expandable_l_h_gantry_l" type="prismatic">
         <origin xyz="0.0 0.0 0.02" rpy="0.0 -0.0 0.0" />
         <parent link="h_expandable_l" />
         <child link="h_gantry_l" />
         <axis xyz="1.0 0.0 0.0" />
-    </joint>
-
-    <joint name="h_gantry_l_gantry_bridge" type="fixed">
-        <origin xyz="0.0 0.0 0.01" rpy="0.0 -0.0 0.0" />
-        <parent link="h_gantry_l" />
-        <child link="gantry_bridge" />
-    </joint>
-    <joint name="gantry_bridge_h_gantry_l-1" type="fixed">
-        <origin xyz="0.0 0.0 0.4798" rpy="0.0 -0.0 0.0" />
-        <parent link="gantry_bridge" />
-        <child link="h_gantry_r" />
+        <limit lower="0.0" upper="0.2" effort="100" velocity="1.0"/>
+        <dynamics damping="5.0" friction="1.0"/>
     </joint>
 
 <!-- KFS Gripper Joint -->
     <joint name="gantry_bridge_kfs_gripper_joint" type="fixed">
-        <origin xyz="0.01 0.0 0.2399" rpy="1.5707963267948966 -0.0 1.5707963267948966" />
-        <parent link="gantry_bridge" />
+        <origin xyz="0.01 0.0 0.05" rpy="0.0 0 0.0" />
+        <parent link="h_gantry_r" />
         <child link="kfs_gripper_link" />
     </joint>
     

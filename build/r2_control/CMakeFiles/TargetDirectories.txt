@@ -1,9 +1,0 @@
-/home/void/DD-Robocon-2026-Programming/build/r2_control/CMakeFiles/uninstall.dir
-/home/void/DD-Robocon-2026-Programming/build/r2_control/CMakeFiles/r2_control_uninstall.dir
-/home/void/DD-Robocon-2026-Programming/build/r2_control/CMakeFiles/test.dir
-/home/void/DD-Robocon-2026-Programming/build/r2_control/CMakeFiles/edit_cache.dir
-/home/void/DD-Robocon-2026-Programming/build/r2_control/CMakeFiles/rebuild_cache.dir
-/home/void/DD-Robocon-2026-Programming/build/r2_control/CMakeFiles/list_install_components.dir
-/home/void/DD-Robocon-2026-Programming/build/r2_control/CMakeFiles/install.dir
-/home/void/DD-Robocon-2026-Programming/build/r2_control/CMakeFiles/install/local.dir
-/home/void/DD-Robocon-2026-Programming/build/r2_control/CMakeFiles/install/strip.dir
