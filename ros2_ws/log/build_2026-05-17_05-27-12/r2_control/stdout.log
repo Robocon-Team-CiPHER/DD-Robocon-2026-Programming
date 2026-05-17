@@ -19,7 +19,7 @@
 -- Added test 'lint_cmake' to check CMake code style
 -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
 -- Added test 'xmllint' to check XML markup files
--- Configuring done (0.9s)
+-- Configuring done (0.6s)
 -- Generating done (0.0s)
 -- Build files have been written to: /home/sam/DD-Robocon-2026-Programming/ros2_ws/build/r2_control
 -- Install configuration: ""

@@ -639,23 +639,23 @@
         <origin xyz="0.0 0.0 0.02" rpy="0.0 -0.0 0.0" />
         <parent link="h_expandable_r" />
         <child link="h_gantry_r" />
-        <axis xyz="0.0 0.0 1.0" />
+        <axis xyz="1.0 0.0 0.0" />
         <limit lower="0.0" upper="0.2" effort="100" velocity="1.0"/>
         <dynamics damping="5.0" friction="1.0"/>
     </joint>
     <joint name="h_expandable_l_h_gantry_l" type="prismatic">
-        <origin xyz="0.0 0.0 0.02" rpy="0.0 0.0 0.0" />
+        <origin xyz="0.0 0.0 0.02" rpy="0.0 -0.0 0.0" />
         <parent link="h_expandable_l" />
         <child link="h_gantry_l" />
-        <axis xyz="0.0 1.0 0.0" />
+        <axis xyz="1.0 0.0 0.0" />
         <limit lower="0.0" upper="0.2" effort="100" velocity="1.0"/>
         <dynamics damping="5.0" friction="1.0"/>
     </joint>
 
     <!--horizontal Gantry and KFS Gripper-->    
-    <joint name="h_gantry_left_kfs_gripper_gantry_l" type="fixed">
-        <origin xyz="-0.0325 0.01 0.03739999999999998" rpy="0.0 0.0 0.0" />
-        <parent link="h_gantry_l" />
+    <joint name="h_gantry_r_kfs_gripper_gantry_r" type="fixed">
+        <origin xyz="-0.0325 -0.01 0.03739999999999998" rpy="0.0 -0.0 0.0" />
+        <parent link="h_gantry_r" />
         <child link="kfs_gripper_link" />
     </joint>
     

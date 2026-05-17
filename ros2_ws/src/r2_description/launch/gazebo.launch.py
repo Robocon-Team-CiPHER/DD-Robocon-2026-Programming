@@ -2,6 +2,8 @@ from launch import LaunchDescription
 from launch.actions import IncludeLaunchDescription
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 
+from launch.actions import SetEnvironmentVariable
+
 from launch_ros.actions import Node
 
 from launch.substitutions import Command
@@ -52,6 +54,17 @@ def generate_launch_description():
             xacro_file
         ]),
         value_type=str
+    )
+
+    #==========================
+    #Resource Path set
+    #==========================
+
+    gazebo_resource_path = SetEnvironmentVariable(
+        name='GZ_SIM_RESOURCE_PATH',
+        value=os.path.join(
+            pkg_path
+        )
     )
 
     # =========================
@@ -144,6 +157,8 @@ def generate_launch_description():
     # =========================
 
     return LaunchDescription([
+
+        gazebo_resource_path,
 
         gazebo,
 

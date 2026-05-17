@@ -656,9 +656,9 @@
         <dynamics damping="5.0" friction="1.0"/>
     </joint>
 
-<!-- KFS Gripper Joint -->
-    <joint name="gantry_bridge_kfs_gripper_joint" type="fixed">
-        <origin xyz="0.01 0.0 0.05" rpy="0.0 0 0.0" />
+    <!--horizontal Gantry and KFS Gripper-->    
+    <joint name="h_gantry_r_kfs_gripper_gantry_r" type="fixed">
+        <origin xyz="-0.0325 -0.01 0.03739999999999998" rpy="0.0 -0.0 0.0" />
         <parent link="h_gantry_r" />
         <child link="kfs_gripper_link" />
     </joint>
@@ -689,11 +689,11 @@
     </joint>
 
     <!--Spearhead Revolute-->
-    <joint name="kfs_gripper_link_spearhead_gripper_rotate" type="revolute">
-        <origin xyz="0.0 0.12 0.2125" rpy="-3.141592653589793 -0.0 0.0" />
+    <joint name="kfs_gripper_link_spearhead_gripper_rotate" type="continuous">
+        <origin xyz="0.0 0.12 0.2125" rpy="-3.141592653589793 -0.0 1.1869459682199748e-66" />
         <parent link="kfs_gripper_link" />
         <child link="spearhead_body" />
-        <axis xyz="0.0 8.359326303060002e-17 1.0" />
+        <axis xyz="0.0 8.359326303060042e-17 1.0" />
         <limit lower="-1.5707963267948966" upper="1.5707963267948966" effort="100" velocity="1.0"/>
     </joint>
 

@@ -1,0 +1,240 @@
+[0.055s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--symlink-install']
+[0.055s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=True, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=14, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x754d423c8530>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x754d4258d280>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x754d4258d280>>)
+[0.075s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.075s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.075s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.075s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.075s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.075s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.075s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/sam/DD-Robocon-2026-Programming/ros2_ws'
+[0.075s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.075s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.075s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.075s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.075s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.075s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.075s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.075s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.075s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.088s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.089s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.089s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.089s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.089s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.089s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.089s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.089s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.089s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.089s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.089s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.089s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.089s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.089s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.089s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.089s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.089s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.089s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.089s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.089s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.089s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.089s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.089s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.089s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.089s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.089s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.089s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.089s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.089s] Level 1:colcon.colcon_core.package_identification:_identify(src/r2_control) by extensions ['ignore', 'ignore_ament_install']
+[0.089s] Level 1:colcon.colcon_core.package_identification:_identify(src/r2_control) by extension 'ignore'
+[0.089s] Level 1:colcon.colcon_core.package_identification:_identify(src/r2_control) by extension 'ignore_ament_install'
+[0.089s] Level 1:colcon.colcon_core.package_identification:_identify(src/r2_control) by extensions ['colcon_pkg']
+[0.089s] Level 1:colcon.colcon_core.package_identification:_identify(src/r2_control) by extension 'colcon_pkg'
+[0.089s] Level 1:colcon.colcon_core.package_identification:_identify(src/r2_control) by extensions ['colcon_meta']
+[0.089s] Level 1:colcon.colcon_core.package_identification:_identify(src/r2_control) by extension 'colcon_meta'
+[0.089s] Level 1:colcon.colcon_core.package_identification:_identify(src/r2_control) by extensions ['ros']
+[0.089s] Level 1:colcon.colcon_core.package_identification:_identify(src/r2_control) by extension 'ros'
+[0.091s] DEBUG:colcon.colcon_core.package_identification:Package 'src/r2_control' with type 'ros.ament_cmake' and name 'r2_control'
+[0.091s] Level 1:colcon.colcon_core.package_identification:_identify(src/r2_description) by extensions ['ignore', 'ignore_ament_install']
+[0.091s] Level 1:colcon.colcon_core.package_identification:_identify(src/r2_description) by extension 'ignore'
+[0.091s] Level 1:colcon.colcon_core.package_identification:_identify(src/r2_description) by extension 'ignore_ament_install'
+[0.091s] Level 1:colcon.colcon_core.package_identification:_identify(src/r2_description) by extensions ['colcon_pkg']
+[0.091s] Level 1:colcon.colcon_core.package_identification:_identify(src/r2_description) by extension 'colcon_pkg'
+[0.091s] Level 1:colcon.colcon_core.package_identification:_identify(src/r2_description) by extensions ['colcon_meta']
+[0.091s] Level 1:colcon.colcon_core.package_identification:_identify(src/r2_description) by extension 'colcon_meta'
+[0.091s] Level 1:colcon.colcon_core.package_identification:_identify(src/r2_description) by extensions ['ros']
+[0.091s] Level 1:colcon.colcon_core.package_identification:_identify(src/r2_description) by extension 'ros'
+[0.091s] DEBUG:colcon.colcon_core.package_identification:Package 'src/r2_description' with type 'ros.ament_cmake' and name 'r2_description'
+[0.091s] Level 1:colcon.colcon_core.package_identification:_identify(src/r2_perception) by extensions ['ignore', 'ignore_ament_install']
+[0.091s] Level 1:colcon.colcon_core.package_identification:_identify(src/r2_perception) by extension 'ignore'
+[0.091s] Level 1:colcon.colcon_core.package_identification:_identify(src/r2_perception) by extension 'ignore_ament_install'
+[0.091s] Level 1:colcon.colcon_core.package_identification:_identify(src/r2_perception) by extensions ['colcon_pkg']
+[0.091s] Level 1:colcon.colcon_core.package_identification:_identify(src/r2_perception) by extension 'colcon_pkg'
+[0.091s] Level 1:colcon.colcon_core.package_identification:_identify(src/r2_perception) by extensions ['colcon_meta']
+[0.091s] Level 1:colcon.colcon_core.package_identification:_identify(src/r2_perception) by extension 'colcon_meta'
+[0.091s] Level 1:colcon.colcon_core.package_identification:_identify(src/r2_perception) by extensions ['ros']
+[0.091s] Level 1:colcon.colcon_core.package_identification:_identify(src/r2_perception) by extension 'ros'
+[0.092s] DEBUG:colcon.colcon_core.package_identification:Package 'src/r2_perception' with type 'ros.ament_python' and name 'r2_perception'
+[0.092s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.092s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.092s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.092s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.092s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.102s] Level 5:colcon.colcon_core.verb:set package 'r2_control' build argument 'cmake_args' from command line to 'None'
+[0.102s] Level 5:colcon.colcon_core.verb:set package 'r2_control' build argument 'cmake_target' from command line to 'None'
+[0.102s] Level 5:colcon.colcon_core.verb:set package 'r2_control' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.102s] Level 5:colcon.colcon_core.verb:set package 'r2_control' build argument 'cmake_clean_cache' from command line to 'False'
+[0.102s] Level 5:colcon.colcon_core.verb:set package 'r2_control' build argument 'cmake_clean_first' from command line to 'False'
+[0.102s] Level 5:colcon.colcon_core.verb:set package 'r2_control' build argument 'cmake_force_configure' from command line to 'False'
+[0.102s] Level 5:colcon.colcon_core.verb:set package 'r2_control' build argument 'ament_cmake_args' from command line to 'None'
+[0.102s] Level 5:colcon.colcon_core.verb:set package 'r2_control' build argument 'catkin_cmake_args' from command line to 'None'
+[0.102s] Level 5:colcon.colcon_core.verb:set package 'r2_control' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.102s] DEBUG:colcon.colcon_core.verb:Building package 'r2_control' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/sam/DD-Robocon-2026-Programming/ros2_ws/build/r2_control', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_control', 'merge_install': False, 'path': '/home/sam/DD-Robocon-2026-Programming/ros2_ws/src/r2_control', 'symlink_install': True, 'test_result_base': None}
+[0.102s] Level 5:colcon.colcon_core.verb:set package 'r2_description' build argument 'cmake_args' from command line to 'None'
+[0.102s] Level 5:colcon.colcon_core.verb:set package 'r2_description' build argument 'cmake_target' from command line to 'None'
+[0.102s] Level 5:colcon.colcon_core.verb:set package 'r2_description' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.102s] Level 5:colcon.colcon_core.verb:set package 'r2_description' build argument 'cmake_clean_cache' from command line to 'False'
+[0.102s] Level 5:colcon.colcon_core.verb:set package 'r2_description' build argument 'cmake_clean_first' from command line to 'False'
+[0.102s] Level 5:colcon.colcon_core.verb:set package 'r2_description' build argument 'cmake_force_configure' from command line to 'False'
+[0.102s] Level 5:colcon.colcon_core.verb:set package 'r2_description' build argument 'ament_cmake_args' from command line to 'None'
+[0.102s] Level 5:colcon.colcon_core.verb:set package 'r2_description' build argument 'catkin_cmake_args' from command line to 'None'
+[0.102s] Level 5:colcon.colcon_core.verb:set package 'r2_description' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.102s] DEBUG:colcon.colcon_core.verb:Building package 'r2_description' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/sam/DD-Robocon-2026-Programming/ros2_ws/build/r2_description', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_description', 'merge_install': False, 'path': '/home/sam/DD-Robocon-2026-Programming/ros2_ws/src/r2_description', 'symlink_install': True, 'test_result_base': None}
+[0.102s] Level 5:colcon.colcon_core.verb:set package 'r2_perception' build argument 'cmake_args' from command line to 'None'
+[0.102s] Level 5:colcon.colcon_core.verb:set package 'r2_perception' build argument 'cmake_target' from command line to 'None'
+[0.102s] Level 5:colcon.colcon_core.verb:set package 'r2_perception' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.102s] Level 5:colcon.colcon_core.verb:set package 'r2_perception' build argument 'cmake_clean_cache' from command line to 'False'
+[0.102s] Level 5:colcon.colcon_core.verb:set package 'r2_perception' build argument 'cmake_clean_first' from command line to 'False'
+[0.102s] Level 5:colcon.colcon_core.verb:set package 'r2_perception' build argument 'cmake_force_configure' from command line to 'False'
+[0.102s] Level 5:colcon.colcon_core.verb:set package 'r2_perception' build argument 'ament_cmake_args' from command line to 'None'
+[0.102s] Level 5:colcon.colcon_core.verb:set package 'r2_perception' build argument 'catkin_cmake_args' from command line to 'None'
+[0.102s] Level 5:colcon.colcon_core.verb:set package 'r2_perception' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.102s] DEBUG:colcon.colcon_core.verb:Building package 'r2_perception' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/sam/DD-Robocon-2026-Programming/ros2_ws/build/r2_perception', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_perception', 'merge_install': False, 'path': '/home/sam/DD-Robocon-2026-Programming/ros2_ws/src/r2_perception', 'symlink_install': True, 'test_result_base': None}
+[0.102s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.103s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.104s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/sam/DD-Robocon-2026-Programming/ros2_ws/src/r2_control' with build type 'ament_cmake'
+[0.104s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/sam/DD-Robocon-2026-Programming/ros2_ws/src/r2_control'
+[0.106s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.106s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.107s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_perception' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.107s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_description' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.107s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_control' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.107s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_description' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[0.107s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_control' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[0.111s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/sam/DD-Robocon-2026-Programming/ros2_ws/src/r2_description' with build type 'ament_cmake'
+[0.111s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/sam/DD-Robocon-2026-Programming/ros2_ws/src/r2_description'
+[0.111s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.115s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/sam/DD-Robocon-2026-Programming/ros2_ws/src/r2_perception' with build type 'ament_python'
+[0.115s] Level 1:colcon.colcon_core.shell:create_environment_hook('r2_perception', 'ament_prefix_path')
+[0.115s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_perception/share/r2_perception/hook/ament_prefix_path.dsv'
+[0.116s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_perception/share/r2_perception/hook/ament_prefix_path.sh'
+[0.116s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.124s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/sam/DD-Robocon-2026-Programming/ros2_ws/build/r2_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_perception:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/sam/DD-Robocon-2026-Programming/ros2_ws/src/r2_control -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_control
+[0.126s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/sam/DD-Robocon-2026-Programming/ros2_ws/build/r2_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_perception:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/sam/DD-Robocon-2026-Programming/ros2_ws/src/r2_description -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_description
+[0.254s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/sam/DD-Robocon-2026-Programming/ros2_ws/src/r2_perception'
+[0.255s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.582s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/sam/DD-Robocon-2026-Programming/ros2_ws/build/r2_perception': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/sam/DD-Robocon-2026-Programming/ros2_ws/build/r2_perception/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_perception/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/sam/DD-Robocon-2026-Programming/ros2_ws/build/r2_perception/build --no-deps symlink_data
+[0.737s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/sam/DD-Robocon-2026-Programming/ros2_ws/build/r2_control' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_perception:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/sam/DD-Robocon-2026-Programming/ros2_ws/src/r2_control -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_control
+[0.738s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/sam/DD-Robocon-2026-Programming/ros2_ws/build/r2_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_perception:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/sam/DD-Robocon-2026-Programming/ros2_ws/build/r2_control -- -j14 -l14
+[0.740s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/sam/DD-Robocon-2026-Programming/ros2_ws/build/r2_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_perception:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/sam/DD-Robocon-2026-Programming/ros2_ws/src/r2_description -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_description
+[0.741s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/sam/DD-Robocon-2026-Programming/ros2_ws/build/r2_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_perception:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/sam/DD-Robocon-2026-Programming/ros2_ws/build/r2_description -- -j14 -l14
+[0.769s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/sam/DD-Robocon-2026-Programming/ros2_ws/build/r2_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_perception:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/sam/DD-Robocon-2026-Programming/ros2_ws/build/r2_description -- -j14 -l14
+[0.776s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/sam/DD-Robocon-2026-Programming/ros2_ws/build/r2_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_perception:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/sam/DD-Robocon-2026-Programming/ros2_ws/build/r2_description
+[0.777s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/sam/DD-Robocon-2026-Programming/ros2_ws/build/r2_control' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_perception:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/sam/DD-Robocon-2026-Programming/ros2_ws/build/r2_control -- -j14 -l14
+[0.778s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/sam/DD-Robocon-2026-Programming/ros2_ws/build/r2_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_perception:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/sam/DD-Robocon-2026-Programming/ros2_ws/build/r2_control
+[0.913s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(r2_control)
+[0.914s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/sam/DD-Robocon-2026-Programming/ros2_ws/build/r2_control' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_perception:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/sam/DD-Robocon-2026-Programming/ros2_ws/build/r2_control
+[0.916s] Level 1:colcon.colcon_core.environment:checking '/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_control' for CMake module files
+[0.917s] Level 1:colcon.colcon_core.environment:checking '/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_control' for CMake config files
+[0.917s] Level 1:colcon.colcon_core.shell:create_environment_hook('r2_control', 'cmake_prefix_path')
+[0.918s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_control/share/r2_control/hook/cmake_prefix_path.dsv'
+[0.918s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_control/share/r2_control/hook/cmake_prefix_path.sh'
+[0.919s] Level 1:colcon.colcon_core.environment:checking '/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_control/bin'
+[0.919s] Level 1:colcon.colcon_core.environment:checking '/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_control/lib/pkgconfig/r2_control.pc'
+[0.920s] Level 1:colcon.colcon_core.environment:checking '/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_control/lib/python3.12/site-packages'
+[0.920s] Level 1:colcon.colcon_core.environment:checking '/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_control/bin'
+[0.920s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_control/share/r2_control/package.dsv'
+[0.921s] INFO:colcon.colcon_core.shell:Creating package script '/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_control/share/r2_control/package.sh'
+[0.922s] INFO:colcon.colcon_core.shell:Creating package script '/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_control/share/r2_control/package.bash'
+[0.922s] INFO:colcon.colcon_core.shell:Creating package script '/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_control/share/r2_control/package.zsh'
+[0.923s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_control/share/colcon-core/packages/r2_control)
+[0.924s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(r2_control)
+[0.924s] Level 1:colcon.colcon_core.environment:checking '/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_control' for CMake module files
+[0.924s] Level 1:colcon.colcon_core.environment:checking '/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_control' for CMake config files
+[0.925s] Level 1:colcon.colcon_core.shell:create_environment_hook('r2_control', 'cmake_prefix_path')
+[0.925s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_control/share/r2_control/hook/cmake_prefix_path.dsv'
+[0.925s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_control/share/r2_control/hook/cmake_prefix_path.sh'
+[0.925s] Level 1:colcon.colcon_core.environment:checking '/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_control/bin'
+[0.925s] Level 1:colcon.colcon_core.environment:checking '/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_control/lib/pkgconfig/r2_control.pc'
+[0.925s] Level 1:colcon.colcon_core.environment:checking '/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_control/lib/python3.12/site-packages'
+[0.926s] Level 1:colcon.colcon_core.environment:checking '/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_control/bin'
+[0.926s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_control/share/r2_control/package.dsv'
+[0.926s] INFO:colcon.colcon_core.shell:Creating package script '/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_control/share/r2_control/package.sh'
+[0.926s] INFO:colcon.colcon_core.shell:Creating package script '/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_control/share/r2_control/package.bash'
+[0.927s] INFO:colcon.colcon_core.shell:Creating package script '/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_control/share/r2_control/package.zsh'
+[0.927s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_control/share/colcon-core/packages/r2_control)
+[0.927s] Level 1:colcon.colcon_core.shell:create_environment_hook('r2_perception', 'pythonpath_develop')
+[0.927s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/sam/DD-Robocon-2026-Programming/ros2_ws/build/r2_perception/share/r2_perception/hook/pythonpath_develop.dsv'
+[0.928s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/sam/DD-Robocon-2026-Programming/ros2_ws/build/r2_perception' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/sam/DD-Robocon-2026-Programming/ros2_ws/build/r2_perception/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_perception/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/sam/DD-Robocon-2026-Programming/ros2_ws/build/r2_perception/build --no-deps symlink_data
+[0.929s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sam/DD-Robocon-2026-Programming/ros2_ws/build/r2_perception/share/r2_perception/hook/pythonpath_develop.sh'
+[0.929s] Level 1:colcon.colcon_core.environment:checking '/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_perception' for CMake module files
+[0.929s] Level 1:colcon.colcon_core.environment:checking '/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_perception' for CMake config files
+[0.929s] Level 1:colcon.colcon_core.environment:checking '/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_perception/lib'
+[0.930s] Level 1:colcon.colcon_core.environment:checking '/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_perception/bin'
+[0.930s] Level 1:colcon.colcon_core.environment:checking '/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_perception/lib/pkgconfig/r2_perception.pc'
+[0.930s] Level 1:colcon.colcon_core.environment:checking '/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_perception/lib/python3.12/site-packages'
+[0.930s] Level 1:colcon.colcon_core.shell:create_environment_hook('r2_perception', 'pythonpath')
+[0.930s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_perception/share/r2_perception/hook/pythonpath.dsv'
+[0.930s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_perception/share/r2_perception/hook/pythonpath.sh'
+[0.931s] Level 1:colcon.colcon_core.environment:checking '/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_perception/bin'
+[0.931s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(r2_perception)
+[0.931s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_perception/share/r2_perception/package.dsv'
+[0.931s] INFO:colcon.colcon_core.shell:Creating package script '/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_perception/share/r2_perception/package.sh'
+[0.932s] INFO:colcon.colcon_core.shell:Creating package script '/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_perception/share/r2_perception/package.bash'
+[0.932s] INFO:colcon.colcon_core.shell:Creating package script '/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_perception/share/r2_perception/package.zsh'
+[0.932s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_perception/share/colcon-core/packages/r2_perception)
+[1.162s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(r2_description)
+[1.162s] Level 1:colcon.colcon_core.environment:checking '/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_description' for CMake module files
+[1.163s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/sam/DD-Robocon-2026-Programming/ros2_ws/build/r2_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_perception:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/sam/DD-Robocon-2026-Programming/ros2_ws/build/r2_description
+[1.163s] Level 1:colcon.colcon_core.environment:checking '/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_description' for CMake config files
+[1.163s] Level 1:colcon.colcon_core.shell:create_environment_hook('r2_description', 'cmake_prefix_path')
+[1.163s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/share/r2_description/hook/cmake_prefix_path.dsv'
+[1.164s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/share/r2_description/hook/cmake_prefix_path.sh'
+[1.164s] Level 1:colcon.colcon_core.environment:checking '/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/bin'
+[1.164s] Level 1:colcon.colcon_core.environment:checking '/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/lib/pkgconfig/r2_description.pc'
+[1.164s] Level 1:colcon.colcon_core.environment:checking '/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/lib/python3.12/site-packages'
+[1.164s] Level 1:colcon.colcon_core.environment:checking '/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/bin'
+[1.164s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/share/r2_description/package.dsv'
+[1.165s] INFO:colcon.colcon_core.shell:Creating package script '/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/share/r2_description/package.sh'
+[1.165s] INFO:colcon.colcon_core.shell:Creating package script '/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/share/r2_description/package.bash'
+[1.165s] INFO:colcon.colcon_core.shell:Creating package script '/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/share/r2_description/package.zsh'
+[1.165s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/share/colcon-core/packages/r2_description)
+[1.165s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(r2_description)
+[1.165s] Level 1:colcon.colcon_core.environment:checking '/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_description' for CMake module files
+[1.166s] Level 1:colcon.colcon_core.environment:checking '/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_description' for CMake config files
+[1.166s] Level 1:colcon.colcon_core.shell:create_environment_hook('r2_description', 'cmake_prefix_path')
+[1.166s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/share/r2_description/hook/cmake_prefix_path.dsv'
+[1.166s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/share/r2_description/hook/cmake_prefix_path.sh'
+[1.167s] Level 1:colcon.colcon_core.environment:checking '/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/bin'
+[1.167s] Level 1:colcon.colcon_core.environment:checking '/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/lib/pkgconfig/r2_description.pc'
+[1.167s] Level 1:colcon.colcon_core.environment:checking '/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/lib/python3.12/site-packages'
+[1.167s] Level 1:colcon.colcon_core.environment:checking '/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/bin'
+[1.167s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/share/r2_description/package.dsv'
+[1.167s] INFO:colcon.colcon_core.shell:Creating package script '/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/share/r2_description/package.sh'
+[1.167s] INFO:colcon.colcon_core.shell:Creating package script '/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/share/r2_description/package.bash'
+[1.168s] INFO:colcon.colcon_core.shell:Creating package script '/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/share/r2_description/package.zsh'
+[1.168s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/share/colcon-core/packages/r2_description)
+[1.168s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[1.168s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[1.168s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[1.168s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[1.173s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[1.173s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[1.173s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[1.190s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[1.190s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/local_setup.sh'
+[1.190s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/_local_setup_util_sh.py'
+[1.191s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/setup.sh'
+[1.192s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/local_setup.bash'
+[1.192s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/setup.bash'
+[1.192s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/local_setup.zsh'
+[1.192s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/setup.zsh'

@@ -19,7 +19,7 @@
 -- Added test 'lint_cmake' to check CMake code style
 -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
 -- Added test 'xmllint' to check XML markup files
--- Configuring done (1.0s)
+-- Configuring done (0.6s)
 -- Generating done (0.0s)
 -- Build files have been written to: /home/sam/DD-Robocon-2026-Programming/ros2_ws/build/r2_description
 -- Install configuration: ""
@@ -57,6 +57,21 @@
 -- Symlinking: /home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/share/r2_description/launch/note.md
 -- Symlinking: /home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/share/r2_description/rviz/r2.rviz
 -- Symlinking: /home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/share/r2_description/arena/arena.sdf
+-- Symlinking: /home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/share/r2_description/arena_models/meshes/arena.mtl
+-- Symlinking: /home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/share/r2_description/arena_models/meshes/arena.obj
+-- Symlinking: /home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/share/r2_description/arena_models/meshes/floor.mtl
+-- Symlinking: /home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/share/r2_description/arena_models/meshes/floor.obj
+-- Symlinking: /home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/share/r2_description/arena_models/meshes/floor.stl
+-- Symlinking: /home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/share/r2_description/arena_models/meshes/obstacles.mtl
+-- Symlinking: /home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/share/r2_description/arena_models/meshes/obstacles.obj
+-- Symlinking: /home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/share/r2_description/arena_models/meshes/obstacles.stl
+-- Symlinking: /home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/share/r2_description/arena_models/meshes/ramp.mtl
+-- Symlinking: /home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/share/r2_description/arena_models/meshes/ramp.obj
+-- Symlinking: /home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/share/r2_description/arena_models/meshes/ramp.stl
+-- Symlinking: /home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/share/r2_description/arena_models/meshes/walls.mtl
+-- Symlinking: /home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/share/r2_description/arena_models/meshes/walls.obj
+-- Symlinking: /home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/share/r2_description/arena_models/meshes/walls.stl
+-- Symlinking: /home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/share/r2_description/arena_models/model.config
 -- Symlinking: /home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/share/ament_index/resource_index/package_run_dependencies/r2_description
 -- Symlinking: /home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/share/ament_index/resource_index/parent_prefix_path/r2_description
 -- Symlinking: /home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/share/r2_description/environment/ament_prefix_path.sh
