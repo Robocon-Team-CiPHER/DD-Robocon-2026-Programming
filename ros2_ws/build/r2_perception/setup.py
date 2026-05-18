@@ -1,1 +1,0 @@
-/home/sam/DD-Robocon-2026-Programming/ros2_ws/src/r2_perception/setup.py

@@ -1,0 +1,33 @@
+[1.056s] Invoking command in '/home/sam/DD-Robocon-2026-Programming/ros2_ws/build/r2_perception': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/sam/DD-Robocon-2026-Programming/ros2_ws/build/r2_perception/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_perception/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/sam/DD-Robocon-2026-Programming/ros2_ws/build/r2_perception/build
+[1.367s] running develop
+[1.535s] Removing /home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_perception/lib/python3.12/site-packages/r2-perception.egg-link (link to .)
+[1.566s] Invoked command in '/home/sam/DD-Robocon-2026-Programming/ros2_ws/build/r2_perception' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/sam/DD-Robocon-2026-Programming/ros2_ws/build/r2_perception/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_perception/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/sam/DD-Robocon-2026-Programming/ros2_ws/build/r2_perception/build
+[1.568s] Invoking command in '/home/sam/DD-Robocon-2026-Programming/ros2_ws/src/r2_perception': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/sam/DD-Robocon-2026-Programming/ros2_ws/build/r2_perception/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_perception/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/r2_perception build --build-base /home/sam/DD-Robocon-2026-Programming/ros2_ws/build/r2_perception/build install --record /home/sam/DD-Robocon-2026-Programming/ros2_ws/build/r2_perception/install.log --single-version-externally-managed install_data --force
+[1.863s] running egg_info
+[1.878s] writing ../../build/r2_perception/r2_perception.egg-info/PKG-INFO
+[1.879s] writing dependency_links to ../../build/r2_perception/r2_perception.egg-info/dependency_links.txt
+[1.879s] writing entry points to ../../build/r2_perception/r2_perception.egg-info/entry_points.txt
+[1.879s] writing requirements to ../../build/r2_perception/r2_perception.egg-info/requires.txt
+[1.879s] writing top-level names to ../../build/r2_perception/r2_perception.egg-info/top_level.txt
+[1.911s] reading manifest file '../../build/r2_perception/r2_perception.egg-info/SOURCES.txt'
+[1.912s] writing manifest file '../../build/r2_perception/r2_perception.egg-info/SOURCES.txt'
+[1.912s] running build
+[1.912s] running build_py
+[1.913s] creating /home/sam/DD-Robocon-2026-Programming/ros2_ws/build/r2_perception/build
+[1.913s] creating /home/sam/DD-Robocon-2026-Programming/ros2_ws/build/r2_perception/build/lib
+[1.913s] creating /home/sam/DD-Robocon-2026-Programming/ros2_ws/build/r2_perception/build/lib/r2_perception
+[1.913s] copying r2_perception/__init__.py -> /home/sam/DD-Robocon-2026-Programming/ros2_ws/build/r2_perception/build/lib/r2_perception
+[1.913s] running install
+[1.919s] running install_lib
+[1.935s] creating /home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_perception/lib/python3.12/site-packages/r2_perception
+[1.935s] copying /home/sam/DD-Robocon-2026-Programming/ros2_ws/build/r2_perception/build/lib/r2_perception/__init__.py -> /home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_perception/lib/python3.12/site-packages/r2_perception
+[1.936s] byte-compiling /home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_perception/lib/python3.12/site-packages/r2_perception/__init__.py to __init__.cpython-312.pyc
+[1.936s] running install_data
+[1.937s] copying resource/r2_perception -> /home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_perception/share/ament_index/resource_index/packages
+[1.937s] copying package.xml -> /home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_perception/share/r2_perception
+[1.937s] running install_egg_info
+[1.953s] Copying ../../build/r2_perception/r2_perception.egg-info to /home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_perception/lib/python3.12/site-packages/r2_perception-0.0.0-py3.12.egg-info
+[1.955s] running install_scripts
+[2.070s] Installing vision_node script to /home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_perception/lib/r2_perception
+[2.071s] writing list of installed files to '/home/sam/DD-Robocon-2026-Programming/ros2_ws/build/r2_perception/install.log'
+[2.102s] Invoked command in '/home/sam/DD-Robocon-2026-Programming/ros2_ws/src/r2_perception' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/sam/DD-Robocon-2026-Programming/ros2_ws/build/r2_perception/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_perception/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/r2_perception build --build-base /home/sam/DD-Robocon-2026-Programming/ros2_ws/build/r2_perception/build install --record /home/sam/DD-Robocon-2026-Programming/ros2_ws/build/r2_perception/install.log --single-version-externally-managed install_data --force

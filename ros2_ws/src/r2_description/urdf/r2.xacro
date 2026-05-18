@@ -225,13 +225,13 @@
             <mass value="0.10204999999999999" />
             <inertia ixx="4.252083333333018e-06" iyy="3.678052083333234e-05" izz="3.9331770833333016e-05" ixy="1.7848833522293717e-19" iyz="1.734723475976807e-18" ixz="0.0" />
         </inertial>
-        <visual name="h_ganty_l_visual">
+        <visual name="h_gantry_l_visual">
             <origin xyz="0.0 -0.34600000000000003 0.24989999999999998" rpy="-1.5707963267948966 -0.0 0.0" />
             <geometry>
                 <mesh filename="meshes/h_gantry_l.stl" scale="0.001 0.001 0.001" />
             </geometry>
         </visual>
-        <collision name="h_ganty_l_collision">
+        <collision name="h_gantry_l_collision">
             <origin xyz="0.0 -0.34600000000000003 0.24989999999999998" rpy="-1.5707963267948966 -0.0 0.0" />
             <geometry>
                 <mesh filename="meshes/h_gantry_l.stl" scale="0.001 0.001 0.001" />
@@ -404,6 +404,26 @@
         </collision>
     </link>
 
+<!--Speahred support Horizontal Tubing-->
+    <link name="horizontal_tubing">
+        <inertial>
+            <origin xyz="-0.00999999999993996 -0.2698999999999995 0.009999996448131796" rpy="0.0 -0.0 0.0" />
+            <mass value="1.4819755366703677" />
+            <inertia ixx="0.03604098200232858" iyy="0.00011129416173860651" izz="0.03604098200210676" ixy="-7.487776782399223e-18" iyz="2.5179661329231423e-19" ixz="-8.326672684688674e-17" />
+        </inertial>
+        <visual name="horizontal_tubing_visual">
+            <origin xyz="-0.375 -0.2698999999999995 -0.3560000035518682" rpy="-1.7182958789296736e-16 2.465190328815662e-32 -3.141592653589793" />
+            <geometry>
+                <mesh filename="package://r2_description/meshes/horizontal_tubing.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="horizontal_tubing_collision">
+            <origin xyz="-0.375 -0.2698999999999995 -0.3560000035518682" rpy="-1.7182958789296736e-16 2.465190328815662e-32 -3.141592653589793" />
+            <geometry>
+                <mesh filename="package://r2_description/meshes/horizontal_tubing.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
 <!--Spearhead Gripper-->
     <link name="spearhead_body">
         <inertial>
@@ -678,22 +698,22 @@
         <parent link="spearhead_body" />
         <child link="spearhead_finger_l" />
         <axis xyz="-1.4449768080836794e-62 0.0 1.0" />
-        <limit lower="-0.02896" upper="-0.08765" effort="100" velocity="1.0"/>
+        <limit lower="-0.08765" upper="-0.02896" effort="100" velocity="1.0"/>
     </joint>
     <joint name="spearhead_body_spearhead_finger_r_grip" type="prismatic">
         <origin xyz="-0.08199999999999999 0.025 -2.089831575765001e-18" rpy="3.141592653589793 1.4351862472329628e-62 3.4454487729021107e-46" />
         <parent link="spearhead_body" />
         <child link="spearhead_finger_r" />
         <axis xyz="-1.4449768080836794e-62 0.0 1.0" />
-        <limit lower="-0.02896" upper="-0.08765" effort="100" velocity="1.0"/>
+        <limit lower="0.02896" upper="0.08765" effort="100" velocity="1.0"/>
     </joint>
 
     <!--Spearhead Revolute-->
-    <joint name="kfs_gripper_link_spearhead_gripper_rotate" type="continuous">
-        <origin xyz="0.0 0.12 0.2125" rpy="-3.141592653589793 -0.0 1.1869459682199748e-66" />
-        <parent link="kfs_gripper_link" />
+    <joint name="horizontal_tubing_spearhead_gripper_rotation" type="revolute">
+        <origin xyz="0.0 -0.2699 0.02" rpy="1.5707963267948966 -0.0 -3.141592653589793" />
+        <parent link="horizontal_tubing" />
         <child link="spearhead_body" />
-        <axis xyz="0.0 8.359326303060042e-17 1.0" />
+        <axis xyz="-4.235926382781239e-48 0.0 1.0" />
         <limit lower="-1.5707963267948966" upper="1.5707963267948966" effort="100" velocity="1.0"/>
     </joint>
 
