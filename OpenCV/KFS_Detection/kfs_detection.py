@@ -719,8 +719,8 @@
 # device = "mps" if torch.backends.mps.is_available() else "cpu"
 
 # # Load trained model
-=======
->>>>>>> refs/remotes/origin/ROS-implementation
+# =======
+# >>>>>>> refs/remotes/origin/ROS-implementation
 # model = YOLO("/Users/sk/Desktop/yolokfs/best.pt")
 
 # # Phone camera stream URL
@@ -1019,7 +1019,7 @@ device = "mps" if torch.backends.mps.is_available() else "cpu"
 model = YOLO("/home/sam/DD-Robocon-2026-Programming/OpenCV/yolokfs/best.pt")
 
 # Phone stream
-url = "https://10.122.68.179:8080/video"
+url = "https://10.246.109.154:8080/video"
 
 cap = cv2.VideoCapture(url)
 
@@ -1050,18 +1050,32 @@ while True:
     zone_x2 = center_x + box_size // 2
     zone_y2 = center_y + box_size // 2
 
+    # # ---------------------------------
+    # # BLUR OUTSIDE REGION
+    # # ---------------------------------
+
+    # blurred = cv2.GaussianBlur(frame, (31, 31), 0)
+
+    # # Keep center region clear
+    # blurred[zone_y1:zone_y2, zone_x1:zone_x2] = \
+    #     frame[zone_y1:zone_y2, zone_x1:zone_x2]
+
+    # frame = blurred
+
     # ---------------------------------
-    # BLUR OUTSIDE REGION
+    # STRONG BLUR + DARKEN OUTSIDE
     # ---------------------------------
 
-    blurred = cv2.GaussianBlur(frame, (31, 31), 0)
+    blurred = cv2.GaussianBlur(frame, (151, 151), 0)
+
+    # Darken blurred image
+    darkened = (blurred * 0.25).astype("uint8")
 
     # Keep center region clear
-    blurred[zone_y1:zone_y2, zone_x1:zone_x2] = \
+    darkened[zone_y1:zone_y2, zone_x1:zone_x2] = \
         frame[zone_y1:zone_y2, zone_x1:zone_x2]
 
-    frame = blurred
-
+    frame = darkened
     # Draw pickup zone
     cv2.rectangle(
         frame,
