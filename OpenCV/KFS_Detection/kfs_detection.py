@@ -217,6 +217,7 @@
 # device = "mps" if torch.backends.mps.is_available() else "cpu"
 
 # # Load trained model
+<<<<<<< HEAD
 # model = YOLO("/home/sam/DD-Robocon-2026-Programming/OpenCV/yolokfs/best.pt")
 
 # # Phone camera stream URL
@@ -718,6 +719,8 @@
 # device = "mps" if torch.backends.mps.is_available() else "cpu"
 
 # # Load trained model
+=======
+>>>>>>> refs/remotes/origin/ROS-implementation
 # model = YOLO("/Users/sk/Desktop/yolokfs/best.pt")
 
 # # Phone camera stream URL
@@ -998,6 +1001,7 @@
 
 # cap.release()
 # cv2.destroyAllWindows()
+<<<<<<< HEAD
 
 
 
@@ -1148,3 +1152,5 @@ while True:
 
 cap.release()
 cv2.destroyAllWindows()
+=======
+>>>>>>> refs/remotes/origin/ROS-implementation
