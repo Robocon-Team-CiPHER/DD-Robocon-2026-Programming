@@ -1118,6 +1118,7 @@ while True:
 
             cv2.circle(
                 annotated,
+                
                 (cx, cy),
                 5,
                 (255, 0, 0),
