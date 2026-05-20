@@ -753,123 +753,123 @@
 
 
 
-##normal  web cam settings
-# from ultralytics import YOLO
-# import cv2
-# import torch
+#normal  web cam settings
+from ultralytics import YOLO
+import cv2
+import torch
 
-# # Select device
-# device = "mps" if torch.backends.mps.is_available() else "cpu"
+# Select device
+device = "mps" if torch.backends.mps.is_available() else "cpu"
 
-# # Load trained model
-# model = YOLO("/Users/sk/Desktop/yolokfs/best.pt")
+# Load trained model
+model = YOLO("/home/sam/DD-Robocon-2026-Programming/OpenCV/yolov8/best.pt")
 
-# # Phone camera stream URL
-# url = "http://10.24.244.126:8080/video"
+# Phone camera stream URL
+url = "http://10.194.202.204:8080/video"
 
-# # Open stream
-# cap = cv2.VideoCapture(url)
+# Open stream
+cap = cv2.VideoCapture(url)
 
-# while True:
+while True:
 
-#     ret, frame = cap.read()
+    ret, frame = cap.read()
 
-#     if not ret:
-#         break
+    if not ret:
+        break
 
-#     # OPTIONAL: rotate if phone stream tilted
-#    #frame = cv2.rotate(frame, cv2.ROTATE_90_CLOCKWISE)
+    # OPTIONAL: rotate if phone stream tilted
+   #frame = cv2.rotate(frame, cv2.ROTATE_90_CLOCKWISE)
 
-#     h, w, _ = frame.shape
+    h, w, _ = frame.shape
 
-#     # ---------------------------------
-#     # IMAGINARY PICKUP ZONE
-#     # ---------------------------------
-#     zone_x1 = int(w * 0.35)
-#     zone_y1 = int(h * 0.25)
+    # ---------------------------------
+    # IMAGINARY PICKUP ZONE
+    # ---------------------------------
+    zone_x1 = int(w * 0.35)
+    zone_y1 = int(h * 0.25)
 
-#     zone_x2 = int(w * 0.65)
-#     zone_y2 = int(h * 0.75)
+    zone_x2 = int(w * 0.65)
+    zone_y2 = int(h * 0.75)
 
-#     # Draw pickup zone
-#     cv2.rectangle(
-#         frame,
-#         (zone_x1, zone_y1),
-#         (zone_x2, zone_y2),
-#         (0, 255, 0),
-#         3
-#     )
+    # Draw pickup zone
+    cv2.rectangle(
+        frame,
+        (zone_x1, zone_y1),
+        (zone_x2, zone_y2),
+        (0, 255, 0),
+        3
+    )
 
-#     # Run YOLO
-#     results = model(frame, device=device)
+    # Run YOLO
+    results = model(frame, device=device)
 
-#     # Draw detections
-#     annotated = results[0].plot()
+    # Draw detections
+    annotated = results[0].plot()
 
-#     for box in results[0].boxes:
+    for box in results[0].boxes:
 
-#         cls_id = int(box.cls[0])
-#         class_name = model.names[cls_id]
+        cls_id = int(box.cls[0])
+        class_name = model.names[cls_id]
 
-#         x1, y1, x2, y2 = map(int, box.xyxy[0])
+        x1, y1, x2, y2 = map(int, box.xyxy[0])
 
-#         # Object center
-#         cx = (x1 + x2) // 2
-#         cy = (y1 + y2) // 2
+        # Object center
+        cx = (x1 + x2) // 2
+        cy = (y1 + y2) // 2
 
-#         # Draw center point
-#         cv2.circle(annotated, (cx, cy), 5, (255, 0, 0), -1)
+        # Draw center point
+        cv2.circle(annotated, (cx, cy), 5, (255, 0, 0), -1)
 
-#         # Check if object center is inside pickup zone
-#         inside_zone = (
-#             zone_x1 < cx < zone_x2 and
-#             zone_y1 < cy < zone_y2
-#         )
+        # Check if object center is inside pickup zone
+        inside_zone = (
+            zone_x1 < cx < zone_x2 and
+            zone_y1 < cy < zone_y2
+        )
 
-#         # If Real_KFS enters zone
-#         if inside_zone and class_name == "Real_KFS":
+        # If Real_KFS enters zone
+        if inside_zone and class_name == "Real_KFS":
 
-#             cv2.putText(
-#                 annotated,
-#                 "PICK OBJECT",
-#                 (50, 50),
-#                 cv2.FONT_HERSHEY_SIMPLEX,
-#                 1,
-#                 (0, 255, 0),
-#                 3
-#             )
+            cv2.putText(
+                annotated,
+                "PICK OBJECT",
+                (50, 50),
+                cv2.FONT_HERSHEY_SIMPLEX,
+                1,
+                (0, 255, 0),
+                3
+            )
 
-#             print("Pick object")
+            print("Pick object")
 
-#         elif inside_zone and class_name == "Fake_KFS":
+        elif inside_zone and class_name == "Fake_KFS":
 
-#             cv2.putText(
-#                 annotated,
-#                 "FAKE OBJECT",
-#                 (50, 100),
-#                 cv2.FONT_HERSHEY_SIMPLEX,
-#                 1,
-#                 (0, 0, 255),
-#                 3
-#             )
+            cv2.putText(
+                annotated,
+                "FAKE OBJECT",
+                (50, 100),
+                cv2.FONT_HERSHEY_SIMPLEX,
+                1,
+                (0, 0, 255),
+                3
+            )
 
-#     # Draw pickup zone again on final frame
-#     cv2.rectangle(
-#         annotated,
-#         (zone_x1, zone_y1),
-#         (zone_x2, zone_y2),
-#         (0, 255, 0),
-#         3
-#     )
+    # Draw pickup zone again on final frame
+    cv2.rectangle(
+        annotated,
+        (zone_x1, zone_y1),
+        (zone_x2, zone_y2),
+        (0, 255, 0),
+        3
+    )
 
-#     cv2.imshow("Phone Camera Pickup Zone", annotated)
+    cv2.imshow("Phone Camera Pickup Zone", annotated)
 
-#     # Press q to quit
-#     if cv2.waitKey(1) & 0xFF == ord('q'):
-#         break
+    # Press q to quit
+    if cv2.waitKey(1) & 0xFF == ord('q'):
+        break
 
-# cap.release()
-# cv2.destroyAllWindows()
+cap.release()
+cv2.destroyAllWindows()
 
 
 
@@ -1006,164 +1006,164 @@
 
 
 
-#background is blurred out except for center box
-from ultralytics import YOLO
-import cv2
-import torch
-import numpy as np
+# #background is blurred out except for center box
+# from ultralytics import YOLO
+# import cv2
+# import torch
+# import numpy as np
 
-# Device
-device = "mps" if torch.backends.mps.is_available() else "cpu"
+# # Device
+# device = "mps" if torch.backends.mps.is_available() else "cpu"
 
-# Load model
-model = YOLO("/home/sam/DD-Robocon-2026-Programming/OpenCV/yolo8/best.pt")
+# # Load model
+# model = YOLO("/home/sam/DD-Robocon-2026-Programming/OpenCV/yolov8/best.pt")
 
-# Phone stream
-url = "https://10.246.109.154:8080/video"
+# # Phone stream
+# url = "https://10.194.202.204:8080/video"
 
-cap = cv2.VideoCapture(url)
+# cap = cv2.VideoCapture(url)
 
-while True:
+# while True:
 
-    ret, frame = cap.read()
+#     ret, frame = cap.read()
 
-    if not ret:
-        break
+#     if not ret:
+#         break
 
-    # # Rotate if needed
-    # frame = cv2.rotate(frame, cv2.ROTATE_90_CLOCKWISE)
+#     # # Rotate if needed
+#     # frame = cv2.rotate(frame, cv2.ROTATE_90_CLOCKWISE)
 
-    h, w, _ = frame.shape
+#     h, w, _ = frame.shape
 
-    # ---------------------------------
-    # CENTER PICKUP BOX
-    # ---------------------------------
+#     # ---------------------------------
+#     # CENTER PICKUP BOX
+#     # ---------------------------------
 
-    box_size = 350
+#     box_size = 350
 
-    center_x = w // 2
-    center_y = h // 2
+#     center_x = w // 2
+#     center_y = h // 2
 
-    zone_x1 = center_x - box_size // 2
-    zone_y1 = center_y - box_size // 2
+#     zone_x1 = center_x - box_size // 2
+#     zone_y1 = center_y - box_size // 2
 
-    zone_x2 = center_x + box_size // 2
-    zone_y2 = center_y + box_size // 2
+#     zone_x2 = center_x + box_size // 2
+#     zone_y2 = center_y + box_size // 2
 
-    # # ---------------------------------
-    # # BLUR OUTSIDE REGION
-    # # ---------------------------------
+#     # # ---------------------------------
+#     # # BLUR OUTSIDE REGION
+#     # # ---------------------------------
 
-    # blurred = cv2.GaussianBlur(frame, (31, 31), 0)
+#     # blurred = cv2.GaussianBlur(frame, (31, 31), 0)
 
-    # # Keep center region clear
-    # blurred[zone_y1:zone_y2, zone_x1:zone_x2] = \
-    #     frame[zone_y1:zone_y2, zone_x1:zone_x2]
+#     # # Keep center region clear
+#     # blurred[zone_y1:zone_y2, zone_x1:zone_x2] = \
+#     #     frame[zone_y1:zone_y2, zone_x1:zone_x2]
 
-    # frame = blurred
+#     # frame = blurred
 
-    # ---------------------------------
-    # STRONG BLUR + DARKEN OUTSIDE
-    # ---------------------------------
+#     # ---------------------------------
+#     # STRONG BLUR + DARKEN OUTSIDE
+#     # ---------------------------------
 
-    blurred = cv2.GaussianBlur(frame, (151, 151), 0)
+#     blurred = cv2.GaussianBlur(frame, (151, 151), 0)
 
-    # Darken blurred image
-    darkened = (blurred * 0.25).astype("uint8")
+#     # Darken blurred image
+#     darkened = (blurred * 0.25).astype("uint8")
 
-    # Keep center region clear
-    darkened[zone_y1:zone_y2, zone_x1:zone_x2] = \
-        frame[zone_y1:zone_y2, zone_x1:zone_x2]
+#     # Keep center region clear
+#     darkened[zone_y1:zone_y2, zone_x1:zone_x2] = \
+#         frame[zone_y1:zone_y2, zone_x1:zone_x2]
 
-    frame = darkened
-    # Draw pickup zone
-    cv2.rectangle(
-        frame,
-        (zone_x1, zone_y1),
-        (zone_x2, zone_y2),
-        (0, 255, 0),
-        3
-    )
+#     frame = darkened
+#     # Draw pickup zone
+#     cv2.rectangle(
+#         frame,
+#         (zone_x1, zone_y1),
+#         (zone_x2, zone_y2),
+#         (0, 255, 0),
+#         3
+#     )
 
-    # ---------------------------------
-    # RUN YOLO
-    # ---------------------------------
+#     # ---------------------------------
+#     # RUN YOLO
+#     # ---------------------------------
 
-    results = model(
-        frame,
-        device=device,
-        conf=0.7
-    )
+#     results = model(
+#         frame,
+#         device=device,
+#         conf=0.7
+#     )
 
-    annotated = results[0].plot()
+#     annotated = results[0].plot()
 
-    for box in results[0].boxes:
+#     for box in results[0].boxes:
 
-        cls_id = int(box.cls[0])
-        class_name = model.names[cls_id]
+#         cls_id = int(box.cls[0])
+#         class_name = model.names[cls_id]
 
-        x1, y1, x2, y2 = map(int, box.xyxy[0])
+#         x1, y1, x2, y2 = map(int, box.xyxy[0])
 
-        # Object center
-        cx = (x1 + x2) // 2
-        cy = (y1 + y2) // 2
+#         # Object center
+#         cx = (x1 + x2) // 2
+#         cy = (y1 + y2) // 2
 
-        # ONLY allow detections INSIDE zone
-        inside_zone = (
-            zone_x1 < cx < zone_x2 and
-            zone_y1 < cy < zone_y2
-        )
+#         # ONLY allow detections INSIDE zone
+#         inside_zone = (
+#             zone_x1 < cx < zone_x2 and
+#             zone_y1 < cy < zone_y2
+#         )
 
-        if inside_zone:
+#         if inside_zone:
 
-            cv2.circle(
-                annotated,
+#             cv2.circle(
+#                 annotated,
                 
-                (cx, cy),
-                5,
-                (255, 0, 0),
-                -1
-            )
+#                 (cx, cy),
+#                 5,
+#                 (255, 0, 0),
+#                 -1
+#             )
 
-            if class_name == "Real_KFS":
+#             if class_name == "Real_KFS":
 
-                cv2.putText(
-                    annotated,
-                    "PICK OBJECT",
-                    (50, 50),
-                    cv2.FONT_HERSHEY_SIMPLEX,
-                    1,
-                    (0, 255, 0),
-                    3
-                )
+#                 cv2.putText(
+#                     annotated,
+#                     "PICK OBJECT",
+#                     (50, 50),
+#                     cv2.FONT_HERSHEY_SIMPLEX,
+#                     1,
+#                     (0, 255, 0),
+#                     3
+#                 )
 
-                print("Pick object")
+#                 print("Pick object")
 
-            elif class_name == "Fake_KFS":
+#             elif class_name == "Fake_KFS":
 
-                cv2.putText(
-                    annotated,
-                    "FAKE OBJECT",
-                    (50, 100),
-                    cv2.FONT_HERSHEY_SIMPLEX,
-                    1,
-                    (0, 0, 255),
-                    3
-                )
+#                 cv2.putText(
+#                     annotated,
+#                     "FAKE OBJECT",
+#                     (50, 100),
+#                     cv2.FONT_HERSHEY_SIMPLEX,
+#                     1,
+#                     (0, 0, 255),
+#                     3
+#                 )
 
-    # Draw zone again
-    cv2.rectangle(
-        annotated,
-        (zone_x1, zone_y1),
-        (zone_x2, zone_y2),
-        (0, 255, 0),
-        3
-    )
+#     # Draw zone again
+#     cv2.rectangle(
+#         annotated,
+#         (zone_x1, zone_y1),
+#         (zone_x2, zone_y2),
+#         (0, 255, 0),
+#         3
+#     )
 
-    cv2.imshow("Phone Camera Pickup Zone", annotated)
+#     cv2.imshow("Phone Camera Pickup Zone", annotated)
 
-    if cv2.waitKey(1) & 0xFF == ord('q'):
-        break
+#     if cv2.waitKey(1) & 0xFF == ord('q'):
+#         break
 
-cap.release()
-cv2.destroyAllWindows()
+# cap.release()
+# cv2.destroyAllWindows()
