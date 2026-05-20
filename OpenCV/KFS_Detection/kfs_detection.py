@@ -753,10 +753,11 @@
 
 
 
-#normal  web cam settings
+#normal video settings
 from ultralytics import YOLO
 import cv2
 import torch
+import time
 
 # Select device
 device = "mps" if torch.backends.mps.is_available() else "cpu"
@@ -764,11 +765,14 @@ device = "mps" if torch.backends.mps.is_available() else "cpu"
 # Load trained model
 model = YOLO("/home/sam/DD-Robocon-2026-Programming/OpenCV/yolov8/best.pt")
 
-# Phone camera stream URL
-url = "http://10.194.202.204:8080/video"
+video_path = "/home/sam/DD-Robocon-2026-Programming/OpenCV/kfs_detect_video.mp4"
+# # Phone camera stream URL
+# url = "http://10.194.202.204:8080/video"
 
 # Open stream
-cap = cv2.VideoCapture(url)
+cap = cv2.VideoCapture(video_path)
+
+cv2.waitKey(10000)
 
 while True:
 
@@ -785,10 +789,10 @@ while True:
     # ---------------------------------
     # IMAGINARY PICKUP ZONE
     # ---------------------------------
-    zone_x1 = int(w * 0.35)
-    zone_y1 = int(h * 0.25)
+    zone_x1 = int(w * 0.15)
+    zone_y1 = int(h * 0.35)
 
-    zone_x2 = int(w * 0.65)
+    zone_x2 = int(w * 0.85)
     zone_y2 = int(h * 0.75)
 
     # Draw pickup zone
@@ -804,7 +808,36 @@ while True:
     results = model(frame, device=device)
 
     # Draw detections
-    annotated = results[0].plot()
+    # annotated = results[0].plot()
+
+    annotated = frame.copy()
+
+    for box in results[0].boxes:
+
+        cls_id = int(box.cls[0])
+        original_name = model.names[cls_id]
+
+        name_map = {
+            "Real_KFS": "r2_real",
+            "Fake_KFS": "r2_fake",
+            "kfs": "r1_kfs"
+        }
+
+        class_name = name_map.get(original_name, original_name)
+
+        x1, y1, x2, y2 = map(int, box.xyxy[0])
+
+        cv2.rectangle(annotated, (x1, y1), (x2, y2), (0,255,0), 2)
+
+        cv2.putText(
+            annotated,
+            class_name,
+            (x1, y1 - 10),
+            cv2.FONT_HERSHEY_SIMPLEX,
+            0.7,
+            (0,255,0),
+            2
+        )
 
     for box in results[0].boxes:
 
@@ -815,14 +848,14 @@ while True:
         name_map = {
             "Real_KFS": "r2_real",
             "Fake_KFS": "r2_fake",
-            "R1": "r1_box"
+            "kfs": "r1_kfs"
         }
 
         class_name = name_map.get(original_name, original_name)
 
         x1, y1, x2, y2 = map(int, box.xyxy[0])
 
-        # Object center
+        # Object centers
         cx = (x1 + x2) // 2
         cy = (y1 + y2) // 2
 
@@ -836,7 +869,7 @@ while True:
         )
 
         # If Real_KFS enters zone
-        if inside_zone and class_name == "Real_KFS":
+        if inside_zone and class_name == "r2_real":
 
             cv2.putText(
                 annotated,
@@ -850,10 +883,11 @@ while True:
 
             print("Pick object")
 
-        elif inside_zone and class_name == "Fake_KFS":
+        elif inside_zone and class_name == "r2_fake":
 
             cv2.putText(
                 annotated,
+                "" \
                 "FAKE OBJECT",
                 (50, 100),
                 cv2.FONT_HERSHEY_SIMPLEX,
@@ -867,11 +901,13 @@ while True:
         annotated,
         (zone_x1, zone_y1),
         (zone_x2, zone_y2),
-        (0, 255, 0),
+        (255, 0, 0),
         3
     )
 
-    cv2.imshow("Phone Camera Pickup Zone", annotated)
+    # annotated = cv2.resize(annotated, (750, 1000))
+
+    cv2.imshow("KFS Detection", annotated)
 
     # Press q to quit
     if cv2.waitKey(1) & 0xFF == ord('q'):
