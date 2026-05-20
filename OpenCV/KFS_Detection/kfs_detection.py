@@ -809,7 +809,16 @@ while True:
     for box in results[0].boxes:
 
         cls_id = int(box.cls[0])
-        class_name = model.names[cls_id]
+        # class_name = model.names[cls_id]
+        original_name = model.names[cls_id]
+
+        name_map = {
+            "Real_KFS": "r2_real",
+            "Fake_KFS": "r2_fake",
+            "R1": "r1_box"
+        }
+
+        class_name = name_map.get(original_name, original_name)
 
         x1, y1, x2, y2 = map(int, box.xyxy[0])
 
