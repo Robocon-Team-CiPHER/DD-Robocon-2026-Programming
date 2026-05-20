@@ -1016,7 +1016,7 @@ import numpy as np
 device = "mps" if torch.backends.mps.is_available() else "cpu"
 
 # Load model
-model = YOLO("/home/sam/DD-Robocon-2026-Programming/OpenCV/yolokfs/best.pt")
+model = YOLO("/home/sam/DD-Robocon-2026-Programming/OpenCV/yolo8/best.pt")
 
 # Phone stream
 url = "https://10.246.109.154:8080/video"
