@@ -1,6 +1,6 @@
 set(_AMENT_PACKAGE_NAME "r2_description")
 set(r2_description_VERSION "0.0.0")
-set(r2_description_MAINTAINER "sam <sampatwardhan1112@gmail.com>")
+set(r2_description_MAINTAINER "void <sampatwardhan1112@gmail.com>")
 set(r2_description_BUILD_DEPENDS )
 set(r2_description_BUILDTOOL_DEPENDS "ament_cmake")
 set(r2_description_BUILD_EXPORT_DEPENDS )

@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/sam/DD-Robocon-2026-Programming/ros2_ws/src/r2_control
+CMAKE_SOURCE_DIR = /home/void/DD-Robocon-2026-Programming/ros2_ws/src/r2_control
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/sam/DD-Robocon-2026-Programming/ros2_ws/build/r2_control
+CMAKE_BINARY_DIR = /home/void/DD-Robocon-2026-Programming/ros2_ws/build/r2_control
 
 # Utility rule file for uninstall.
 
@@ -78,6 +78,6 @@ CMakeFiles/uninstall.dir/clean:
 .PHONY : CMakeFiles/uninstall.dir/clean
 
 CMakeFiles/uninstall.dir/depend:
-	cd /home/sam/DD-Robocon-2026-Programming/ros2_ws/build/r2_control && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/sam/DD-Robocon-2026-Programming/ros2_ws/src/r2_control /home/sam/DD-Robocon-2026-Programming/ros2_ws/src/r2_control /home/sam/DD-Robocon-2026-Programming/ros2_ws/build/r2_control /home/sam/DD-Robocon-2026-Programming/ros2_ws/build/r2_control /home/sam/DD-Robocon-2026-Programming/ros2_ws/build/r2_control/CMakeFiles/uninstall.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/void/DD-Robocon-2026-Programming/ros2_ws/build/r2_control && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/void/DD-Robocon-2026-Programming/ros2_ws/src/r2_control /home/void/DD-Robocon-2026-Programming/ros2_ws/src/r2_control /home/void/DD-Robocon-2026-Programming/ros2_ws/build/r2_control /home/void/DD-Robocon-2026-Programming/ros2_ws/build/r2_control /home/void/DD-Robocon-2026-Programming/ros2_ws/build/r2_control/CMakeFiles/uninstall.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/uninstall.dir/depend
 

@@ -2,14 +2,10 @@ from launch import LaunchDescription
 from launch.actions import IncludeLaunchDescription
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 
-from launch.actions import SetEnvironmentVariable
-
 from launch_ros.actions import Node
 
 from launch.substitutions import Command
 from launch_ros.parameter_descriptions import ParameterValue
-
-from launch.actions import TimerAction
 
 from ament_index_python.packages import get_package_share_directory
 
@@ -50,21 +46,10 @@ def generate_launch_description():
 
     robot_description = ParameterValue(
         Command([
-            'xacro ',
+            'xacro',
             xacro_file
         ]),
         value_type=str
-    )
-
-    #==========================
-    #Resource Path set
-    #==========================
-
-    gazebo_resource_path = SetEnvironmentVariable(
-        name='GZ_SIM_RESOURCE_PATH',
-        value=os.path.join(
-            pkg_path
-        )
     )
 
     # =========================
@@ -125,28 +110,9 @@ def generate_launch_description():
             '-name',
             'r2',
 
-            '-x', '5.3',
-            '-y', '1.6',
-            '-z', '0.2',
-
-            '-R', '0.0',
-            '-P', '0.0',
-            '-Y', '3.1415926535' 
-        ],
-
-        output='screen'
-    )
-
-    # =========================
-    # JOINT STATE BROADCASTER
-    # =========================
-
-    joint_state_broadcaster_spawner = Node(
-        package='controller_manager',
-        executable='spawner',
-
-        arguments=[
-            'joint_state_broadcaster'
+            '-x', '0',
+            '-y', '0',
+            '-z', '0.2'
         ],
 
         output='screen'
@@ -158,14 +124,12 @@ def generate_launch_description():
 
     return LaunchDescription([
 
-        gazebo_resource_path,
-
         gazebo,
 
         robot_state_publisher,
 
         joint_state_publisher,
 
-        spawn_robot,
+        spawn_robot
 
     ])

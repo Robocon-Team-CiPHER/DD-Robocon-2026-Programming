@@ -1,0 +1,78 @@
+[0.015s] Invoking command in '/home/void/DD-Robocon-2026-Programming/ros2_ws/build/r2_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_perception:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/void/DD-Robocon-2026-Programming/ros2_ws/build/r2_description -- -j14 -l14
+[0.059s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.368s] -- Found ament_lint_auto: 0.17.5 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[0.479s] -- Added test 'flake8' to check Python code syntax and style conventions
+[0.479s] -- Configured 'flake8' exclude dirs and/or files: 
+[0.480s] -- Added test 'lint_cmake' to check CMake code style
+[0.481s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[0.483s] -- Added test 'xmllint' to check XML markup files
+[0.484s] -- Configuring done (0.4s)
+[0.488s] -- Generating done (0.0s)
+[0.491s] -- Build files have been written to: /home/void/DD-Robocon-2026-Programming/ros2_ws/build/r2_description
+[0.534s] Invoked command in '/home/void/DD-Robocon-2026-Programming/ros2_ws/build/r2_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_perception:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/void/DD-Robocon-2026-Programming/ros2_ws/build/r2_description -- -j14 -l14
+[0.548s] Invoking command in '/home/void/DD-Robocon-2026-Programming/ros2_ws/build/r2_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_perception:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/void/DD-Robocon-2026-Programming/ros2_ws/build/r2_description
+[0.566s] -- Install configuration: ""
+[0.566s] -- Up-to-date: /home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/share/r2_description/urdf
+[0.566s] -- Up-to-date: /home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/share/r2_description/urdf/r2.xacro
+[0.567s] -- Up-to-date: /home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/share/r2_description/urdf/r2.urdf
+[0.567s] -- Up-to-date: /home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/share/r2_description/urdf/materials.xacro
+[0.567s] -- Up-to-date: /home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/share/r2_description/urdf/gazebo.xacro
+[0.567s] -- Up-to-date: /home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/share/r2_description/meshes
+[0.567s] -- Up-to-date: /home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/share/r2_description/meshes/kfs_gripper_link.stl
+[0.567s] -- Up-to-date: /home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/share/r2_description/meshes/camera_link.stl
+[0.567s] -- Up-to-date: /home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/share/r2_description/meshes/v_gantry_l.stl
+[0.567s] -- Up-to-date: /home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/share/r2_description/meshes/back_link.stl
+[0.568s] -- Up-to-date: /home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/share/r2_description/meshes/v_expandable_l.stl
+[0.568s] -- Up-to-date: /home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/share/r2_description/meshes/spearhead_gripper_link.stl
+[0.568s] -- Up-to-date: /home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/share/r2_description/meshes/f_wheel_r.stl
+[0.568s] -- Up-to-date: /home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/share/r2_description/meshes/h_expandable_l.stl
+[0.568s] -- Up-to-date: /home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/share/r2_description/meshes/b_wheel_l.stl
+[0.568s] -- Up-to-date: /home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/share/r2_description/meshes/storage_plate.stl
+[0.568s] -- Up-to-date: /home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/share/r2_description/meshes/v_gantry_r.stl
+[0.568s] -- Up-to-date: /home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/share/r2_description/meshes/f_wheel_l.stl
+[0.568s] -- Up-to-date: /home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/share/r2_description/meshes/b_wheel_r.stl
+[0.568s] -- Up-to-date: /home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/share/r2_description/meshes/base_link.stl
+[0.568s] -- Up-to-date: /home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/share/r2_description/meshes/h_gantry_l.stl
+[0.568s] -- Up-to-date: /home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/share/r2_description/meshes/h_expandable_r.stl
+[0.569s] -- Up-to-date: /home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/share/r2_description/meshes/v_expandable_r.stl
+[0.569s] -- Up-to-date: /home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/share/r2_description/meshes/front_link.stl
+[0.569s] -- Up-to-date: /home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/share/r2_description/meshes/h_gantry_r.stl
+[0.569s] -- Up-to-date: /home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/share/r2_description/launch
+[0.569s] -- Up-to-date: /home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/share/r2_description/launch/gazebo.launch.py
+[0.569s] -- Up-to-date: /home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/share/r2_description/launch/display.launch.py
+[0.569s] -- Up-to-date: /home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/share/r2_description/rviz
+[0.569s] -- Up-to-date: /home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/share/r2_description/rviz/r2.rviz
+[0.569s] -- Installing: /home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/share/r2_description/arena
+[0.569s] -- Installing: /home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/share/r2_description/arena/arena.sdf
+[0.569s] -- Installing: /home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/share/r2_description/arena/meshes
+[0.570s] -- Installing: /home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/share/r2_description/arena/meshes/ramp.stl
+[0.570s] -- Installing: /home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/share/r2_description/arena/meshes/floor.mtl
+[0.570s] -- Installing: /home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/share/r2_description/arena/meshes/ramp.obj
+[0.570s] -- Installing: /home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/share/r2_description/arena/meshes/arena.obj
+[0.570s] -- Installing: /home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/share/r2_description/arena/meshes/walls.stl
+[0.570s] -- Installing: /home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/share/r2_description/arena/meshes/obstacles.obj
+[0.570s] -- Installing: /home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/share/r2_description/arena/meshes/obstacles.stl
+[0.570s] -- Installing: /home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/share/r2_description/arena/meshes/walls.mtl
+[0.570s] -- Installing: /home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/share/r2_description/arena/meshes/walls.obj
+[0.570s] -- Installing: /home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/share/r2_description/arena/meshes/obstacles.mtl
+[0.570s] -- Installing: /home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/share/r2_description/arena/meshes/arena.mtl
+[0.571s] -- Installing: /home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/share/r2_description/arena/meshes/ramp.mtl
+[0.571s] -- Installing: /home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/share/r2_description/arena/meshes/floor.obj
+[0.571s] -- Installing: /home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/share/r2_description/arena/meshes/floor.stl
+[0.571s] -- Installing: /home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/share/r2_description/arena/model.config
+[0.571s] -- Up-to-date: /home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/share/ament_index/resource_index/package_run_dependencies/r2_description
+[0.571s] -- Up-to-date: /home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/share/ament_index/resource_index/parent_prefix_path/r2_description
+[0.571s] -- Up-to-date: /home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/share/r2_description/environment/ament_prefix_path.sh
+[0.571s] -- Up-to-date: /home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/share/r2_description/environment/ament_prefix_path.dsv
+[0.571s] -- Up-to-date: /home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/share/r2_description/environment/path.sh
+[0.572s] -- Up-to-date: /home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/share/r2_description/environment/path.dsv
+[0.572s] -- Up-to-date: /home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/share/r2_description/local_setup.bash
+[0.572s] -- Up-to-date: /home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/share/r2_description/local_setup.sh
+[0.572s] -- Up-to-date: /home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/share/r2_description/local_setup.zsh
+[0.572s] -- Up-to-date: /home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/share/r2_description/local_setup.dsv
+[0.572s] -- Installing: /home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/share/r2_description/package.dsv
+[0.572s] -- Up-to-date: /home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/share/ament_index/resource_index/packages/r2_description
+[0.572s] -- Up-to-date: /home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/share/r2_description/cmake/r2_descriptionConfig.cmake
+[0.572s] -- Up-to-date: /home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/share/r2_description/cmake/r2_descriptionConfig-version.cmake
+[0.572s] -- Up-to-date: /home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_description/share/r2_description/package.xml
+[0.575s] Invoked command in '/home/void/DD-Robocon-2026-Programming/ros2_ws/build/r2_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/void/DD-Robocon-2026-Programming/ros2_ws/install/r2_perception:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/void/DD-Robocon-2026-Programming/ros2_ws/build/r2_description

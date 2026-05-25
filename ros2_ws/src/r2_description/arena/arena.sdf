@@ -120,7 +120,7 @@
 
             <mesh>
 
-              <uri>/home/sam/DD-Robocon-2026-Programming/ros2_ws/src/r2_description/arena_models/meshes/arena.obj</uri>
+              <uri>package://r2_description/arena_models/meshes/arena.obj</uri>
 
               <scale>1 1 1</scale>
 
@@ -140,7 +140,7 @@
 
             <mesh>
 
-              <uri>/home/sam/DD-Robocon-2026-Programming/ros2_ws/src/r2_description/arena_models/meshes/arena.obj</uri>
+              <uri>package://r2_description/arena_models/meshes/arena.obj</uri>
 
               <scale>1 1 1</scale>
 

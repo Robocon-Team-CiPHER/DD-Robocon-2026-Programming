@@ -34,11 +34,6 @@
   <material name="gripper_color">
     <color rgba="0.80 0.10 0.10 1.0"/>
   </material>
-  
-  <!--Gripper Finger-->
-  <material name="gripper_finger_color">
-    <color rgba="0.9 0.9 0.2 1.0"/>
-  </material>
 
   <!-- CAMERA -->
   <material name="camera_color">

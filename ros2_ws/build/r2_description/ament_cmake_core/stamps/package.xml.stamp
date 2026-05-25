@@ -7,7 +7,7 @@
   <version>0.0.0</version>
   <description>Robot description for r2</description>
 
-  <maintainer email="sampatwardhan1112@gmail.com">sam</maintainer>
+  <maintainer email="sampatwardhan1112@gmail.com">void</maintainer>
   <license>Apache-2.0</license>
 
   <!-- Build tool -->

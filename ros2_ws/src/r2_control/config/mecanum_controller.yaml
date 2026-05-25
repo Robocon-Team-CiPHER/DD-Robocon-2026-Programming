@@ -19,10 +19,10 @@ mecanum_controller:
     rear_left_wheel_state_joint: back_link_b_wheel_l
     rear_right_wheel_state_joint: back_link_b_wheel_r
 
-    wheel_radius: 0.06
+    wheel_radius: 0.0445
 
-    wheel_separation_width: 0.404
-    wheel_separation_length: 0.357
+    wheel_separation_width: 0.547
+    wheel_separation_length: 0.476
 
     publish_rate: 50.0
 
@@ -31,7 +31,7 @@ mecanum_controller:
 
     enable_odom_tf: true
 
-    cmd_vel_timeout: 1.0
+    cmd_vel_timeout: 0.5
 
     velocity_rolling_window_size: 10
 
