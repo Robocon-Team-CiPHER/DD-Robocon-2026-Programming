@@ -1,2 +1,2 @@
 # DD-Robocon-2026-Programming
-openCV | ROS2 | Gazebo 
+openCV | ROS2 | Serial CommunicationS
