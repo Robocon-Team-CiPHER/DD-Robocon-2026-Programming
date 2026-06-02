@@ -1,0 +1,11 @@
+# SetMechanismState.srv
+# Generic service to command any Arduino-controlled mechanism
+
+string mechanism_id          # Target mechanism ID (see MechanismStatus)
+uint8  command               # 0=IDLE, 1=EXTEND, 2=RETRACT, 3=GRIP, 4=RELEASE, 5=HOME
+float32 target_position_mm  # Optional target position (0 if unused)
+float32 speed_percent        # Motor speed 0–100 %
+---
+bool    success
+string  message              # Human-readable result / error
+float32 actual_position_mm   # Position after command

@@ -1,0 +1,1 @@
+/home/tejas-raut/r2_ws/build/r2_actuation/ament_cmake_environment_hooks/local_setup.sh

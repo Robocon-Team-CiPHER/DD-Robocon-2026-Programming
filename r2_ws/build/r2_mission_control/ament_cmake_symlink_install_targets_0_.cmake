@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/tejas-raut/r2_ws/build/r2_mission_control/mission_state_machine_node" "TARGETS" "mission_state_machine_node" "DESTINATION" "lib/r2_mission_control")

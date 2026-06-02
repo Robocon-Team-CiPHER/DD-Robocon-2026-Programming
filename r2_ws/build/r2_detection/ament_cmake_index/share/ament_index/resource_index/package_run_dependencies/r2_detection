@@ -1,0 +1,1 @@
+rclpy;r2_interfaces;sensor_msgs;std_msgs;cv_bridge;image_transport;python3-opencv;python3-numpy

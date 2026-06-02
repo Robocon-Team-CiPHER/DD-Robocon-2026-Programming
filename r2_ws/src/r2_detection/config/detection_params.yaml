@@ -1,0 +1,35 @@
+# r2_detection/config/detection_params.yaml
+# ============================================================
+# Parameters for all detection nodes.
+# Tune HSV ranges with the colour picker script or a live feed.
+# ============================================================
+
+/**:
+  ros__parameters:
+    # ── Camera ──────────────────────────────────────────────
+    width:  640
+    height: 480
+    fps:    30
+
+    # ── Spearhead detection ──────────────────────────────────
+    focal_length_px:     620.0   # Calibrate with known distance!
+    spearhead_width_mm:  150.0   # Physical spearhead rack width
+    confidence_area_min: 500
+    target_height_mm:    500.0
+    # HSV range for spearhead rack colour (red-orange example)
+    hsv_lower: [0,   100, 100]
+    hsv_upper: [15,  255, 255]
+
+    # ── KFS box detection ────────────────────────────────────
+    # focal_length_px shared (override per-node if cameras differ)
+    aspect_ratio_tol: 0.35
+    # HSV range for KFS box colour (yellow/wood example)
+    # hsv_lower: [20, 80, 80]
+    # hsv_upper: [40, 255, 255]
+
+    # ── TTT rack detection ───────────────────────────────────
+    canny_threshold1: 50
+    canny_threshold2: 150
+    hough_threshold:  80
+    min_line_length:  80
+    max_line_gap:     20

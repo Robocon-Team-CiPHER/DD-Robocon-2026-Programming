@@ -1,0 +1,18 @@
+{
+  "package_name": "r2_interfaces",
+  "non_idl_tuples": [
+    "/home/tejas-raut/r2_ws/src/r2_interfaces:msg/ChassisCmd.msg",
+    "/home/tejas-raut/r2_ws/src/r2_interfaces:msg/MechanismStatus.msg",
+    "/home/tejas-raut/r2_ws/src/r2_interfaces:msg/DetectionResult.msg",
+    "/home/tejas-raut/r2_ws/src/r2_interfaces:msg/SystemStatus.msg",
+    "/home/tejas-raut/r2_ws/src/r2_interfaces:msg/SerialFrame.msg",
+    "/home/tejas-raut/r2_ws/src/r2_interfaces:srv/SetMechanismState.srv",
+    "/home/tejas-raut/r2_ws/src/r2_interfaces:srv/SystemHandshake.srv",
+    "/home/tejas-raut/r2_ws/src/r2_interfaces:srv/TriggerDetection.srv",
+    "/home/tejas-raut/r2_ws/src/r2_interfaces:action/MoveToPosition.action",
+    "/home/tejas-raut/r2_ws/src/r2_interfaces:action/ClimbStep.action",
+    "/home/tejas-raut/r2_ws/src/r2_interfaces:action/GripObject.action",
+    "/home/tejas-raut/r2_ws/src/r2_interfaces:action/ExpandMechanism.action",
+    "/home/tejas-raut/r2_ws/src/r2_interfaces:action/ExecuteRegion.action"
+  ]
+}

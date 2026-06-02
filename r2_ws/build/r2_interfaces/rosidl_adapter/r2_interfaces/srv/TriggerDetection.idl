@@ -1,0 +1,27 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from r2_interfaces/srv/TriggerDetection.srv
+// generated code does not contain a copyright notice
+
+#include "r2_interfaces/msg/DetectionResult.idl"
+
+module r2_interfaces {
+  module srv {
+    @verbatim (language="comment", text=
+      "TriggerDetection.srv" "\n"
+      "One-shot request to perform a detection and return result immediately")
+    struct TriggerDetection_Request {
+      @verbatim (language="comment", text=
+        "\"spearhead\" | \"kfs_box\" | \"ttt_rack\"")
+      string target_type;
+
+      @verbatim (language="comment", text=
+        "Maximum time to wait for a confident detection")
+      uint32 timeout_ms;
+    };
+    struct TriggerDetection_Response {
+      boolean success;
+
+      r2_interfaces::msg::DetectionResult result;
+    };
+  };
+};

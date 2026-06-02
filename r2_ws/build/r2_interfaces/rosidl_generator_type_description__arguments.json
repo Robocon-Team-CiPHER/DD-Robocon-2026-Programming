@@ -1,0 +1,28 @@
+{
+  "package_name": "r2_interfaces",
+  "output_dir": "/home/tejas-raut/r2_ws/build/r2_interfaces/rosidl_generator_type_description/r2_interfaces",
+  "idl_tuples": [
+    "/home/tejas-raut/r2_ws/build/r2_interfaces/rosidl_adapter/r2_interfaces:msg/ChassisCmd.idl",
+    "/home/tejas-raut/r2_ws/build/r2_interfaces/rosidl_adapter/r2_interfaces:msg/MechanismStatus.idl",
+    "/home/tejas-raut/r2_ws/build/r2_interfaces/rosidl_adapter/r2_interfaces:msg/DetectionResult.idl",
+    "/home/tejas-raut/r2_ws/build/r2_interfaces/rosidl_adapter/r2_interfaces:msg/SystemStatus.idl",
+    "/home/tejas-raut/r2_ws/build/r2_interfaces/rosidl_adapter/r2_interfaces:msg/SerialFrame.idl",
+    "/home/tejas-raut/r2_ws/build/r2_interfaces/rosidl_adapter/r2_interfaces:srv/SetMechanismState.idl",
+    "/home/tejas-raut/r2_ws/build/r2_interfaces/rosidl_adapter/r2_interfaces:srv/SystemHandshake.idl",
+    "/home/tejas-raut/r2_ws/build/r2_interfaces/rosidl_adapter/r2_interfaces:srv/TriggerDetection.idl",
+    "/home/tejas-raut/r2_ws/build/r2_interfaces/rosidl_adapter/r2_interfaces:action/MoveToPosition.idl",
+    "/home/tejas-raut/r2_ws/build/r2_interfaces/rosidl_adapter/r2_interfaces:action/ClimbStep.idl",
+    "/home/tejas-raut/r2_ws/build/r2_interfaces/rosidl_adapter/r2_interfaces:action/GripObject.idl",
+    "/home/tejas-raut/r2_ws/build/r2_interfaces/rosidl_adapter/r2_interfaces:action/ExpandMechanism.idl",
+    "/home/tejas-raut/r2_ws/build/r2_interfaces/rosidl_adapter/r2_interfaces:action/ExecuteRegion.idl"
+  ],
+  "include_paths": [
+    "std_msgs:/opt/ros/jazzy/share/std_msgs",
+    "builtin_interfaces:/opt/ros/jazzy/share/builtin_interfaces",
+    "sensor_msgs:/opt/ros/jazzy/share/sensor_msgs",
+    "geometry_msgs:/opt/ros/jazzy/share/geometry_msgs",
+    "service_msgs:/opt/ros/jazzy/share/service_msgs",
+    "action_msgs:/opt/ros/jazzy/share/action_msgs",
+    "unique_identifier_msgs:/opt/ros/jazzy/share/unique_identifier_msgs"
+  ]
+}

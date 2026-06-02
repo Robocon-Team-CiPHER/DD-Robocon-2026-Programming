@@ -1,0 +1,15 @@
+# ClimbStep.action
+# Long-running action: climb one step to a target height
+
+# GOAL
+float32 target_height_mm     # 200, 400, or 600 mm
+float32 speed_percent        # 0–100
+---
+# RESULT
+bool    success
+float32 achieved_height_mm
+string  message
+---
+# FEEDBACK
+float32 current_height_mm
+string  phase                # "LIFTING_FRONT" | "DRIVING" | "LIFTING_BACK" | "DONE"

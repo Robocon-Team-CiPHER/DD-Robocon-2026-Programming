@@ -1,0 +1,58 @@
+-- The C compiler identification is GNU 13.3.0
+-- The CXX compiler identification is GNU 13.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Found rclcpp: 28.1.18 (/opt/ros/jazzy/share/rclcpp/cmake)
+-- Found rosidl_generator_c: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+-- Found rosidl_generator_cpp: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+-- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Found std_msgs: 5.3.7 (/opt/ros/jazzy/share/std_msgs/cmake)
+-- Found r2_interfaces: 1.0.0 (/home/tejas-raut/r2_ws/install/r2_interfaces/share/r2_interfaces/cmake)
+-- Configuring done (0.9s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/tejas-raut/r2_ws/build/r2_comm_bridge
+[ 25%] [32mBuilding CXX object CMakeFiles/serial_bridge_node.dir/src/serial_bridge_node.cpp.o[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/arduino_bridge_node.dir/src/arduino_bridge_node.cpp.o[0m
+[ 75%] [32m[1mLinking CXX executable serial_bridge_node[0m
+[100%] [32m[1mLinking CXX executable arduino_bridge_node[0m
+[100%] Built target serial_bridge_node
+[100%] Built target arduino_bridge_node
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /home/tejas-raut/r2_ws/install/r2_comm_bridge/lib/r2_comm_bridge/serial_bridge_node
+-- Symlinking: /home/tejas-raut/r2_ws/install/r2_comm_bridge/lib/r2_comm_bridge/arduino_bridge_node
+-- Symlinking: /home/tejas-raut/r2_ws/install/r2_comm_bridge/share/r2_comm_bridge/launch/comm_bridge.launch.py
+-- Symlinking: /home/tejas-raut/r2_ws/install/r2_comm_bridge/share/r2_comm_bridge/config/comm_params.yaml
+-- Symlinking: /home/tejas-raut/r2_ws/install/r2_comm_bridge/share/r2_comm_bridge/config/protocol.yaml
+-- Symlinking: /home/tejas-raut/r2_ws/install/r2_comm_bridge/share/ament_index/resource_index/package_run_dependencies/r2_comm_bridge
+-- Symlinking: /home/tejas-raut/r2_ws/install/r2_comm_bridge/share/ament_index/resource_index/parent_prefix_path/r2_comm_bridge
+-- Symlinking: /home/tejas-raut/r2_ws/install/r2_comm_bridge/share/r2_comm_bridge/environment/ament_prefix_path.sh
+-- Symlinking: /home/tejas-raut/r2_ws/install/r2_comm_bridge/share/r2_comm_bridge/environment/ament_prefix_path.dsv
+-- Symlinking: /home/tejas-raut/r2_ws/install/r2_comm_bridge/share/r2_comm_bridge/environment/path.sh
+-- Symlinking: /home/tejas-raut/r2_ws/install/r2_comm_bridge/share/r2_comm_bridge/environment/path.dsv
+-- Symlinking: /home/tejas-raut/r2_ws/install/r2_comm_bridge/share/r2_comm_bridge/local_setup.bash
+-- Symlinking: /home/tejas-raut/r2_ws/install/r2_comm_bridge/share/r2_comm_bridge/local_setup.sh
+-- Symlinking: /home/tejas-raut/r2_ws/install/r2_comm_bridge/share/r2_comm_bridge/local_setup.zsh
+-- Symlinking: /home/tejas-raut/r2_ws/install/r2_comm_bridge/share/r2_comm_bridge/local_setup.dsv
+-- Symlinking: /home/tejas-raut/r2_ws/install/r2_comm_bridge/share/r2_comm_bridge/package.dsv
+-- Symlinking: /home/tejas-raut/r2_ws/install/r2_comm_bridge/share/ament_index/resource_index/packages/r2_comm_bridge
+-- Symlinking: /home/tejas-raut/r2_ws/install/r2_comm_bridge/share/r2_comm_bridge/cmake/r2_comm_bridgeConfig.cmake
+-- Symlinking: /home/tejas-raut/r2_ws/install/r2_comm_bridge/share/r2_comm_bridge/cmake/r2_comm_bridgeConfig-version.cmake
+-- Symlinking: /home/tejas-raut/r2_ws/install/r2_comm_bridge/share/r2_comm_bridge/package.xml

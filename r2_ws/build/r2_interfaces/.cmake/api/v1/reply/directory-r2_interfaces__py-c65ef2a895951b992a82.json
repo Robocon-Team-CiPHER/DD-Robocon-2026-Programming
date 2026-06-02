@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "r2_interfaces__py",
+		"source" : "/home/tejas-raut/r2_ws/build/r2_interfaces/r2_interfaces__py"
+	}
+}

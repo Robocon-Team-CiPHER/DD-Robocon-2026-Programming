@@ -1,0 +1,56 @@
+# r2_comm_bridge/config/protocol.yaml
+# ============================================================
+# Serial protocol command definitions.
+# Reference for ESP32 and Arduino Mega firmware.
+# ============================================================
+
+# Frame format: [0xAA] [DEVICE_ID] [CMD_ID] [LEN] [PAYLOAD...] [CRC8]
+#
+# CRC-8 polynomial: 0x07 (x^8 + x^2 + x + 1)
+# Computed over CMD_ID + PAYLOAD bytes.
+
+devices:
+  esp32:
+    id: 0x01
+    commands:
+      CHASSIS_MOVE:            { cmd: 0x10, payload: "int8[4] = [FL, FR, RL, RR] wheel speeds" }
+      CHASSIS_ENCODER_STATUS:  { cmd: 0x11, payload: "uint16[4] = encoder ticks per wheel", direction: "rx" }
+      CHASSIS_ESTOP:           { cmd: 0x12, payload: "none" }
+
+  arduino_mega:
+    id: 0x02
+    commands:
+      # Step climbing
+      SET_FRONT_LIFT:    { cmd: 0x20, payload: "uint16 = target_mm" }
+      SET_BACK_LIFT:     { cmd: 0x21, payload: "uint16 = target_mm" }
+
+      # Spearhead gripper
+      SPEARHEAD_GRIP:    { cmd: 0x30, payload: "uint8 = speed_percent" }
+      SPEARHEAD_RELEASE: { cmd: 0x31, payload: "none" }
+      SPEARHEAD_ROTATE:  { cmd: 0x32, payload: "uint8 = angle_degrees" }
+
+      # KFS gripper (pneumatic)
+      KFS_GRIP:          { cmd: 0x40, payload: "none" }
+      KFS_RELEASE:       { cmd: 0x41, payload: "none" }
+
+      # Horizontal expansion
+      HORIZ_EXTEND:      { cmd: 0x50, payload: "uint16 target_mm, uint8 speed" }
+      HORIZ_RETRACT:     { cmd: 0x51, payload: "uint8 speed" }
+      HORIZ_STOP:        { cmd: 0x52, payload: "none" }
+
+      # Vertical expansion
+      VERT_EXTEND:       { cmd: 0x60, payload: "uint16 target_mm, uint8 speed" }
+      VERT_RETRACT:      { cmd: 0x61, payload: "uint8 speed" }
+      VERT_STOP:         { cmd: 0x62, payload: "none" }
+
+      # System
+      HANDSHAKE_REQ:     { cmd: 0x01, payload: "none" }
+      HANDSHAKE_ACK:     { cmd: 0x02, payload: "string firmware_version", direction: "rx" }
+
+    status_responses:
+      FRONT_LIFT_STATUS:       { cmd: 0xA0, payload: "uint8 state, uint16 pos_mm, uint8 lim_min, uint8 lim_max" }
+      BACK_LIFT_STATUS:        { cmd: 0xA1, payload: "same as above" }
+      SPEARHEAD_STATUS:        { cmd: 0xA2, payload: "same as above" }
+      KFS_GRIPPER_STATUS:      { cmd: 0xA3, payload: "same as above" }
+      HORIZ_EXPANSION_STATUS:  { cmd: 0xA4, payload: "same as above" }
+      VERT_EXPANSION_STATUS:   { cmd: 0xA5, payload: "same as above" }

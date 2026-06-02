@@ -1,0 +1,88 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-9974d7f6074a1e47c1fa.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "r2_comm_bridge",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "arduino_bridge_node::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-arduino_bridge_node-2c477618b1f9c296c641.json",
+					"name" : "arduino_bridge_node",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "r2_comm_bridge_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-r2_comm_bridge_uninstall-25a8f68b2e1afd0cd4ad.json",
+					"name" : "r2_comm_bridge_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "serial_bridge_node::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-serial_bridge_node-ade9de043efe52377618.json",
+					"name" : "serial_bridge_node",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-57d2bfe9a2962876239f.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/tejas-raut/r2_ws/build/r2_comm_bridge",
+		"source" : "/home/tejas-raut/r2_ws/src/r2_comm_bridge"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/tejas-raut/r2_ws/build/r2_interfaces/rosidl_generator_py/r2_interfaces/r2_interfaces_s__rosidl_typesupport_introspection_c.so" "TARGETS" "r2_interfaces_s__rosidl_typesupport_introspection_c" "DESTINATION" "lib/python3.12/site-packages/r2_interfaces")

@@ -1,0 +1,21 @@
+# MoveToPosition.action
+# Long-running action: drive chassis to an (x, y, theta) goal
+
+# GOAL
+float32 x_m          # Target X in map frame (metres)
+float32 y_m          # Target Y in map frame (metres)
+float32 theta_rad    # Target heading  (radians)
+float32 tolerance_m  # Acceptable position tolerance
+---
+# RESULT
+bool    success
+float32 final_x_m
+float32 final_y_m
+float32 final_theta_rad
+string  message
+---
+# FEEDBACK
+float32 distance_remaining_m
+float32 current_x_m
+float32 current_y_m
+float32 current_theta_rad

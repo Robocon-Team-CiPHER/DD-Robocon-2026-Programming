@@ -1,0 +1,36 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "r2_interfaces/srv/TriggerDetection_Request",
+      "fields": [
+        {
+          "name": "target_type",
+          "type": {
+            "type_id": 17,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "timeout_ms",
+          "type": {
+            "type_id": 7,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": []
+  },
+  "type_hashes": [
+    {
+      "type_name": "r2_interfaces/srv/TriggerDetection_Request",
+      "hash_string": "RIHS01_d522def76836bfeb95b50da20296812659c7d23807d0a405c48df3c6152f8edc"
+    }
+  ]
+}

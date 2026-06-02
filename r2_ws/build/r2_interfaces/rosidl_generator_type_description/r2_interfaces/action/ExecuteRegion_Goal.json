@@ -1,0 +1,26 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "r2_interfaces/action/ExecuteRegion_Goal",
+      "fields": [
+        {
+          "name": "region_name",
+          "type": {
+            "type_id": 17,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": []
+  },
+  "type_hashes": [
+    {
+      "type_name": "r2_interfaces/action/ExecuteRegion_Goal",
+      "hash_string": "RIHS01_47f2bf304bf8e6847db7cee9340fcf3ff9b83c6ecc9699bf09280d5ce2df76d9"
+    }
+  ]
+}

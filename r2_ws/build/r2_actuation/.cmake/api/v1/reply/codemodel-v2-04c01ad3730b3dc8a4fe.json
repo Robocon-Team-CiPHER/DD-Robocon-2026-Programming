@@ -1,0 +1,124 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-064c4bb7d10322271a0d.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "r2_actuation",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "chassis_controller_node::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-chassis_controller_node-729fadbe8036e1a513c1.json",
+					"name" : "chassis_controller_node",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "horizontal_expansion_node::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-horizontal_expansion_node-ad7f31bd3eea2b18b90e.json",
+					"name" : "horizontal_expansion_node",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "kfs_gripper_node::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-kfs_gripper_node-6e652fa0bfacd8f87982.json",
+					"name" : "kfs_gripper_node",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "r2_actuation_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-r2_actuation_uninstall-7b3621e00cb4519c87cf.json",
+					"name" : "r2_actuation_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "spearhead_gripper_node::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-spearhead_gripper_node-f0720e59ed2c68d76423.json",
+					"name" : "spearhead_gripper_node",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "step_climber_node::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-step_climber_node-cd92b0ece9f731af4dc5.json",
+					"name" : "step_climber_node",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-a26b9d1a2e559c3cdddc.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "vertical_expansion_node::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-vertical_expansion_node-d3655bd219c1c745b298.json",
+					"name" : "vertical_expansion_node",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/tejas-raut/r2_ws/build/r2_actuation",
+		"source" : "/home/tejas-raut/r2_ws/src/r2_actuation"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

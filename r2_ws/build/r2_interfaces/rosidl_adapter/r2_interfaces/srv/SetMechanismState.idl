@@ -1,0 +1,40 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from r2_interfaces/srv/SetMechanismState.srv
+// generated code does not contain a copyright notice
+
+
+module r2_interfaces {
+  module srv {
+    @verbatim (language="comment", text=
+      "SetMechanismState.srv" "\n"
+      "Generic service to command any Arduino-controlled mechanism")
+    struct SetMechanismState_Request {
+      @verbatim (language="comment", text=
+        "Target mechanism ID (see MechanismStatus)")
+      string mechanism_id;
+
+      @verbatim (language="comment", text=
+        "0=IDLE, 1=EXTEND, 2=RETRACT, 3=GRIP, 4=RELEASE, 5=HOME")
+      uint8 command;
+
+      @verbatim (language="comment", text=
+        "Optional target position (0 if unused)")
+      float target_position_mm;
+
+      @verbatim (language="comment", text=
+        "Motor speed 0–100 %")
+      float speed_percent;
+    };
+    struct SetMechanismState_Response {
+      boolean success;
+
+      @verbatim (language="comment", text=
+        "Human-readable result / error")
+      string message;
+
+      @verbatim (language="comment", text=
+        "Position after command")
+      float actual_position_mm;
+    };
+  };
+};

@@ -1,0 +1,78 @@
+-- The C compiler identification is GNU 13.3.0
+-- The CXX compiler identification is GNU 13.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Found rclpy: 7.1.11 (/opt/ros/jazzy/share/rclpy/cmake)
+-- Found r2_interfaces: 1.0.0 (/home/tejas-raut/r2_ws/install/r2_interfaces/share/r2_interfaces/cmake)
+-- Found rosidl_generator_c: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+-- Found rosidl_generator_cpp: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Configuring done (0.7s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/tejas-raut/r2_ws/build/r2_detection
+Built target ament_cmake_python_symlink_r2_detection
+running egg_info
+creating r2_detection.egg-info
+writing r2_detection.egg-info/PKG-INFO
+writing dependency_links to r2_detection.egg-info/dependency_links.txt
+writing top-level names to r2_detection.egg-info/top_level.txt
+writing manifest file 'r2_detection.egg-info/SOURCES.txt'
+reading manifest file 'r2_detection.egg-info/SOURCES.txt'
+writing manifest file 'r2_detection.egg-info/SOURCES.txt'
+Built target ament_cmake_python_build_r2_detection_egg
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /home/tejas-raut/r2_ws/install/r2_detection/share/r2_detection/environment/pythonpath.sh
+-- Symlinking: /home/tejas-raut/r2_ws/install/r2_detection/share/r2_detection/environment/pythonpath.dsv
+-- Symlinking: /home/tejas-raut/r2_ws/install/r2_detection/lib/python3.12/site-packages/r2_detection-1.0.0-py3.12.egg-info/PKG-INFO
+-- Symlinking: /home/tejas-raut/r2_ws/install/r2_detection/lib/python3.12/site-packages/r2_detection-1.0.0-py3.12.egg-info/SOURCES.txt
+-- Symlinking: /home/tejas-raut/r2_ws/install/r2_detection/lib/python3.12/site-packages/r2_detection-1.0.0-py3.12.egg-info/dependency_links.txt
+-- Symlinking: /home/tejas-raut/r2_ws/install/r2_detection/lib/python3.12/site-packages/r2_detection-1.0.0-py3.12.egg-info/top_level.txt
+-- Symlinking: /home/tejas-raut/r2_ws/install/r2_detection/lib/python3.12/site-packages/r2_detection/__init__.py
+-- Symlinking: /home/tejas-raut/r2_ws/install/r2_detection/lib/python3.12/site-packages/r2_detection/camera_node.py
+-- Symlinking: /home/tejas-raut/r2_ws/install/r2_detection/lib/python3.12/site-packages/r2_detection/detection_utils.py
+-- Symlinking: /home/tejas-raut/r2_ws/install/r2_detection/lib/python3.12/site-packages/r2_detection/kfs_detection_node.py
+-- Symlinking: /home/tejas-raut/r2_ws/install/r2_detection/lib/python3.12/site-packages/r2_detection/spearhead_detection_node.py
+-- Symlinking: /home/tejas-raut/r2_ws/install/r2_detection/lib/python3.12/site-packages/r2_detection/ttt_detection_node.py
+-- Symlinking: /home/tejas-raut/r2_ws/install/r2_detection/lib/r2_detection/camera_node.py
+-- Symlinking: /home/tejas-raut/r2_ws/install/r2_detection/lib/r2_detection/spearhead_detection_node.py
+-- Symlinking: /home/tejas-raut/r2_ws/install/r2_detection/lib/r2_detection/kfs_detection_node.py
+-- Symlinking: /home/tejas-raut/r2_ws/install/r2_detection/lib/r2_detection/ttt_detection_node.py
+-- Symlinking: /home/tejas-raut/r2_ws/install/r2_detection/lib/r2_detection/detection_utils.py
+-- Symlinking: /home/tejas-raut/r2_ws/install/r2_detection/share/r2_detection/launch/detection.launch.py
+-- Symlinking: /home/tejas-raut/r2_ws/install/r2_detection/share/r2_detection/config/detection_params.yaml
+-- Symlinking: /home/tejas-raut/r2_ws/install/r2_detection/share/r2_detection/models/README.md
+-- Symlinking: /home/tejas-raut/r2_ws/install/r2_detection/share/ament_index/resource_index/package_run_dependencies/r2_detection
+-- Symlinking: /home/tejas-raut/r2_ws/install/r2_detection/share/ament_index/resource_index/parent_prefix_path/r2_detection
+-- Symlinking: /home/tejas-raut/r2_ws/install/r2_detection/share/r2_detection/environment/ament_prefix_path.sh
+-- Symlinking: /home/tejas-raut/r2_ws/install/r2_detection/share/r2_detection/environment/ament_prefix_path.dsv
+-- Symlinking: /home/tejas-raut/r2_ws/install/r2_detection/share/r2_detection/environment/path.sh
+-- Symlinking: /home/tejas-raut/r2_ws/install/r2_detection/share/r2_detection/environment/path.dsv
+-- Symlinking: /home/tejas-raut/r2_ws/install/r2_detection/share/r2_detection/local_setup.bash
+-- Symlinking: /home/tejas-raut/r2_ws/install/r2_detection/share/r2_detection/local_setup.sh
+-- Symlinking: /home/tejas-raut/r2_ws/install/r2_detection/share/r2_detection/local_setup.zsh
+-- Symlinking: /home/tejas-raut/r2_ws/install/r2_detection/share/r2_detection/local_setup.dsv
+-- Symlinking: /home/tejas-raut/r2_ws/install/r2_detection/share/r2_detection/package.dsv
+-- Symlinking: /home/tejas-raut/r2_ws/install/r2_detection/share/ament_index/resource_index/packages/r2_detection
+-- Symlinking: /home/tejas-raut/r2_ws/install/r2_detection/share/r2_detection/cmake/r2_detectionConfig.cmake
+-- Symlinking: /home/tejas-raut/r2_ws/install/r2_detection/share/r2_detection/cmake/r2_detectionConfig-version.cmake
+-- Symlinking: /home/tejas-raut/r2_ws/install/r2_detection/share/r2_detection/package.xml
+Listing '/home/tejas-raut/r2_ws/install/r2_detection/lib/python3.12/site-packages/r2_detection'...
+Compiling '/home/tejas-raut/r2_ws/install/r2_detection/lib/python3.12/site-packages/r2_detection/__init__.py'...
+Compiling '/home/tejas-raut/r2_ws/install/r2_detection/lib/python3.12/site-packages/r2_detection/camera_node.py'...
+Compiling '/home/tejas-raut/r2_ws/install/r2_detection/lib/python3.12/site-packages/r2_detection/detection_utils.py'...
+Compiling '/home/tejas-raut/r2_ws/install/r2_detection/lib/python3.12/site-packages/r2_detection/kfs_detection_node.py'...
+Compiling '/home/tejas-raut/r2_ws/install/r2_detection/lib/python3.12/site-packages/r2_detection/spearhead_detection_node.py'...
+Compiling '/home/tejas-raut/r2_ws/install/r2_detection/lib/python3.12/site-packages/r2_detection/ttt_detection_node.py'...

@@ -1,0 +1,16 @@
+# ExecuteRegion.action
+# High-level action: complete an entire game region task
+
+# GOAL
+string  region_name          # "martial_club" | "meihua_forest" | "martial_arena"
+---
+# RESULT
+bool    success
+string  message
+uint8   kfs_boxes_collected  # Filled by meihua_forest region
+---
+# FEEDBACK
+string  current_step         # Human-readable step name
+uint8   steps_completed
+uint8   total_steps
+float32 progress_percent

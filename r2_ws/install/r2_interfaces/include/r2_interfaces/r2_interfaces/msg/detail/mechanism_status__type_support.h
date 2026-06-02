@@ -1,0 +1,1 @@
+/home/tejas-raut/r2_ws/build/r2_interfaces/rosidl_generator_c/r2_interfaces/msg/detail/mechanism_status__type_support.h

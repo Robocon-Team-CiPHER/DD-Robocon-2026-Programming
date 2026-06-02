@@ -1,0 +1,11 @@
+source;share/r2_initialization/hook/cmake_prefix_path.ps1
+source;share/r2_initialization/hook/cmake_prefix_path.dsv
+source;share/r2_initialization/hook/cmake_prefix_path.sh
+source;share/r2_initialization/hook/pythonpath.ps1
+source;share/r2_initialization/hook/pythonpath.dsv
+source;share/r2_initialization/hook/pythonpath.sh
+source;share/r2_initialization/local_setup.bash
+source;share/r2_initialization/local_setup.dsv
+source;share/r2_initialization/local_setup.ps1
+source;share/r2_initialization/local_setup.sh
+source;share/r2_initialization/local_setup.zsh

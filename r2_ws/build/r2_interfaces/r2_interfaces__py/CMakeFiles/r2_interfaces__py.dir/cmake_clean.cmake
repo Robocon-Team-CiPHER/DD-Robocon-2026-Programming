@@ -1,0 +1,40 @@
+file(REMOVE_RECURSE
+  "/home/tejas-raut/r2_ws/build/r2_interfaces/rosidl_generator_py/r2_interfaces/_r2_interfaces_s.ep.rosidl_typesupport_c.c"
+  "/home/tejas-raut/r2_ws/build/r2_interfaces/rosidl_generator_py/r2_interfaces/_r2_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c"
+  "/home/tejas-raut/r2_ws/build/r2_interfaces/rosidl_generator_py/r2_interfaces/_r2_interfaces_s.ep.rosidl_typesupport_introspection_c.c"
+  "/home/tejas-raut/r2_ws/build/r2_interfaces/rosidl_generator_py/r2_interfaces/action/__init__.py"
+  "/home/tejas-raut/r2_ws/build/r2_interfaces/rosidl_generator_py/r2_interfaces/action/_climb_step.py"
+  "/home/tejas-raut/r2_ws/build/r2_interfaces/rosidl_generator_py/r2_interfaces/action/_climb_step_s.c"
+  "/home/tejas-raut/r2_ws/build/r2_interfaces/rosidl_generator_py/r2_interfaces/action/_execute_region.py"
+  "/home/tejas-raut/r2_ws/build/r2_interfaces/rosidl_generator_py/r2_interfaces/action/_execute_region_s.c"
+  "/home/tejas-raut/r2_ws/build/r2_interfaces/rosidl_generator_py/r2_interfaces/action/_expand_mechanism.py"
+  "/home/tejas-raut/r2_ws/build/r2_interfaces/rosidl_generator_py/r2_interfaces/action/_expand_mechanism_s.c"
+  "/home/tejas-raut/r2_ws/build/r2_interfaces/rosidl_generator_py/r2_interfaces/action/_grip_object.py"
+  "/home/tejas-raut/r2_ws/build/r2_interfaces/rosidl_generator_py/r2_interfaces/action/_grip_object_s.c"
+  "/home/tejas-raut/r2_ws/build/r2_interfaces/rosidl_generator_py/r2_interfaces/action/_move_to_position.py"
+  "/home/tejas-raut/r2_ws/build/r2_interfaces/rosidl_generator_py/r2_interfaces/action/_move_to_position_s.c"
+  "/home/tejas-raut/r2_ws/build/r2_interfaces/rosidl_generator_py/r2_interfaces/msg/__init__.py"
+  "/home/tejas-raut/r2_ws/build/r2_interfaces/rosidl_generator_py/r2_interfaces/msg/_chassis_cmd.py"
+  "/home/tejas-raut/r2_ws/build/r2_interfaces/rosidl_generator_py/r2_interfaces/msg/_chassis_cmd_s.c"
+  "/home/tejas-raut/r2_ws/build/r2_interfaces/rosidl_generator_py/r2_interfaces/msg/_detection_result.py"
+  "/home/tejas-raut/r2_ws/build/r2_interfaces/rosidl_generator_py/r2_interfaces/msg/_detection_result_s.c"
+  "/home/tejas-raut/r2_ws/build/r2_interfaces/rosidl_generator_py/r2_interfaces/msg/_mechanism_status.py"
+  "/home/tejas-raut/r2_ws/build/r2_interfaces/rosidl_generator_py/r2_interfaces/msg/_mechanism_status_s.c"
+  "/home/tejas-raut/r2_ws/build/r2_interfaces/rosidl_generator_py/r2_interfaces/msg/_serial_frame.py"
+  "/home/tejas-raut/r2_ws/build/r2_interfaces/rosidl_generator_py/r2_interfaces/msg/_serial_frame_s.c"
+  "/home/tejas-raut/r2_ws/build/r2_interfaces/rosidl_generator_py/r2_interfaces/msg/_system_status.py"
+  "/home/tejas-raut/r2_ws/build/r2_interfaces/rosidl_generator_py/r2_interfaces/msg/_system_status_s.c"
+  "/home/tejas-raut/r2_ws/build/r2_interfaces/rosidl_generator_py/r2_interfaces/srv/__init__.py"
+  "/home/tejas-raut/r2_ws/build/r2_interfaces/rosidl_generator_py/r2_interfaces/srv/_set_mechanism_state.py"
+  "/home/tejas-raut/r2_ws/build/r2_interfaces/rosidl_generator_py/r2_interfaces/srv/_set_mechanism_state_s.c"
+  "/home/tejas-raut/r2_ws/build/r2_interfaces/rosidl_generator_py/r2_interfaces/srv/_system_handshake.py"
+  "/home/tejas-raut/r2_ws/build/r2_interfaces/rosidl_generator_py/r2_interfaces/srv/_system_handshake_s.c"
+  "/home/tejas-raut/r2_ws/build/r2_interfaces/rosidl_generator_py/r2_interfaces/srv/_trigger_detection.py"
+  "/home/tejas-raut/r2_ws/build/r2_interfaces/rosidl_generator_py/r2_interfaces/srv/_trigger_detection_s.c"
+  "CMakeFiles/r2_interfaces__py"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang )
+  include(CMakeFiles/r2_interfaces__py.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

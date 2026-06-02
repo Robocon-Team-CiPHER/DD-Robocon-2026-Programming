@@ -1,0 +1,45 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from r2_interfaces/msg/DetectionResult.msg
+// generated code does not contain a copyright notice
+
+#include "sensor_msgs/msg/RegionOfInterest.idl"
+#include "std_msgs/msg/Header.idl"
+
+module r2_interfaces {
+  module msg {
+    @verbatim (language="comment", text=
+      "DetectionResult.msg" "\n"
+      "Published by detection nodes (spearhead, KFS, TicTacToe rack)")
+    struct DetectionResult {
+      std_msgs::msg::Header header;
+
+      @verbatim (language="comment", text=
+        "\"spearhead\" | \"kfs_box\" | \"ttt_rack\"")
+      string target_type;
+
+      @verbatim (language="comment", text=
+        "True when target is visible")
+      boolean detected;
+
+      @verbatim (language="comment", text=
+        "Estimated distance to target (mm)")
+      float distance_mm;
+
+      @verbatim (language="comment", text=
+        "Horizontal offset from robot centre (mm)")
+      float offset_x_mm;
+
+      @verbatim (language="comment", text=
+        "Vertical   offset from robot centre (mm)")
+      float offset_y_mm;
+
+      @verbatim (language="comment", text=
+        "Detection confidence 0.0–1.0")
+      float confidence;
+
+      @verbatim (language="comment", text=
+        "Pixel bounding box")
+      sensor_msgs::msg::RegionOfInterest bounding_box;
+    };
+  };
+};

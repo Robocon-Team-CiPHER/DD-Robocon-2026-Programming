@@ -1,0 +1,30 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from r2_interfaces/srv/SystemHandshake.srv
+// generated code does not contain a copyright notice
+
+
+module r2_interfaces {
+  module srv {
+    @verbatim (language="comment", text=
+      "SystemHandshake.srv" "\n"
+      "Called during initialization to ping a hardware device and get its status")
+    struct SystemHandshake_Request {
+      @verbatim (language="comment", text=
+        "0x01 = ESP32, 0x02 = Arduino Mega")
+      uint8 device_id;
+
+      @verbatim (language="comment", text=
+        "Max wait for ACK")
+      uint32 timeout_ms;
+    };
+    struct SystemHandshake_Response {
+      boolean success;
+
+      string firmware_version;
+
+      string device_status;
+
+      string error_msg;
+    };
+  };
+};

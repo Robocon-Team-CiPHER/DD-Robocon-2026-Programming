@@ -1,0 +1,35 @@
+# r2_actuation/config/actuation_params.yaml
+# ============================================================
+# Parameters for all actuation nodes.
+# ============================================================
+
+chassis_controller_node:
+  ros__parameters:
+    wheel_base_m: 0.30
+    max_rpm: 200.0
+    rpm_to_byte: 1.27
+
+step_climber_node:
+  ros__parameters:
+    tolerance_mm: 5.0
+    step_timeout_s: 15.0
+
+spearhead_gripper_node:
+  ros__parameters:
+    grip_timeout_s: 10.0
+
+kfs_gripper_node:
+  ros__parameters:
+    grip_timeout_s: 5.0
+
+horizontal_expansion_node:
+  ros__parameters:
+    tolerance_mm: 10.0
+    timeout_s: 12.0
+    max_travel_mm: 600.0
+
+vertical_expansion_node:
+  ros__parameters:
+    tolerance_mm: 8.0
+    timeout_s: 15.0
+    max_height_mm: 1700.0
