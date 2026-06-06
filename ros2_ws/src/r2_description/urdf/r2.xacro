@@ -705,7 +705,7 @@
 
     <!--Spearhead Revolute-->
     <joint name="kfs_gripper_link_spearhead_gripper_rotate" type="revolute">
-        <origin xyz="0.0 0.12 0.2125" rpy="+1.57 -0.0 0.0" />
+        <origin xyz="0.0 0.36 0.2125" rpy="+1.57 0.0 0.0" />
         <parent link="kfs_gripper_link" />
         <child link="spearhead_body" />
         <axis xyz="0.0 8.359326303060042e-17 1.0" />
