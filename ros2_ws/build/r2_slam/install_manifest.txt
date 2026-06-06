@@ -1,0 +1,15 @@
+/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_slam/share/ament_index/resource_index/package_run_dependencies/r2_slam
+/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_slam/share/ament_index/resource_index/parent_prefix_path/r2_slam
+/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_slam/share/r2_slam/environment/ament_prefix_path.sh
+/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_slam/share/r2_slam/environment/ament_prefix_path.dsv
+/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_slam/share/r2_slam/environment/path.sh
+/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_slam/share/r2_slam/environment/path.dsv
+/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_slam/share/r2_slam/local_setup.bash
+/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_slam/share/r2_slam/local_setup.sh
+/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_slam/share/r2_slam/local_setup.zsh
+/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_slam/share/r2_slam/local_setup.dsv
+/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_slam/share/r2_slam/package.dsv
+/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_slam/share/ament_index/resource_index/packages/r2_slam
+/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_slam/share/r2_slam/cmake/r2_slamConfig.cmake
+/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_slam/share/r2_slam/cmake/r2_slamConfig-version.cmake
+/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_slam/share/r2_slam/package.xml
