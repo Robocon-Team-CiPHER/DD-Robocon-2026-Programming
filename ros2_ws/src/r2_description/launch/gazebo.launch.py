@@ -1,5 +1,6 @@
 from launch import LaunchDescription
 from launch.actions import IncludeLaunchDescription
+from launch.actions import SetEnvironmentVariable
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 
 from launch_ros.actions import Node
@@ -56,6 +57,13 @@ def generate_launch_description():
     # GAZEBO HARMONIC
     # =========================
 
+    gz_resource_path = SetEnvironmentVariable(
+        name='GZ_SIM_RESOURCE_PATH',
+        value=os.path.join(
+            get_package_share_directory('r2_description')
+        )
+    )
+    
     gazebo = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
             os.path.join(
@@ -110,9 +118,11 @@ def generate_launch_description():
             '-name',
             'r2',
 
-            '-x', '0',
-            '-y', '0',
-            '-z', '0.2'
+            '-x', '5.3',
+            '-y', '1.6',
+            '-z', '0.2',
+
+            '-Y', '3.14'
         ],
 
         output='screen'
@@ -123,7 +133,8 @@ def generate_launch_description():
     # =========================
 
     return LaunchDescription([
-
+        gz_resource_path,
+        
         gazebo,
 
         robot_state_publisher,

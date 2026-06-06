@@ -7,6 +7,10 @@
   <!-- Include gazebo -->
   <xacro:include filename="$(find r2_description)/urdf/gazebo.xacro"/>
 
+
+<!--Odometry-->
+<link name="odom"/>
+
 <!-- Base Link-->
     <link name="base_link">
         <inertial>
@@ -17,14 +21,14 @@
         <visual name="base_link_visual">
             <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
             <geometry>
-                <mesh filename="package://r2_description/meshes/base_link.stl" scale="0.001 0.001 0.001" />
+                <mesh filename="file://$(find r2_description)/meshes/base_link.stl" scale="0.001 0.001 0.001" />
             </geometry>
             <material name="base_color"/>
         </visual>   
         <collision name="base_link_collision">
             <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
             <geometry>
-                <mesh filename="package://r2_description/meshes/base_link.stl" scale="0.001 0.001 0.001" />
+                <box size="0.63 0.65 0.08"/>
             </geometry>
         </collision>
     </link>
@@ -39,14 +43,14 @@
         <visual name="front_link_visual">
             <origin xyz="-0.23800000000000002 0.0 -0.006025000000000001" rpy="3.141592653589793 -0.0 0.0" />
             <geometry>
-                <mesh filename="package://r2_description/meshes/front_link.stl" scale="0.001 0.001 0.001" />
+                <mesh filename="file://$(find r2_description)/meshes/front_link.stl" scale="0.001 0.001 0.001" />
             </geometry>
             <material name="chassis_color"/>
         </visual>
         <collision name="front_link_collision">
             <origin xyz="-0.23800000000000002 0.0 -0.006025000000000001" rpy="3.141592653589793 -0.0 0.0" />
             <geometry>
-                <mesh filename="package://r2_description/meshes/front_link.stl" scale="0.001 0.001 0.001" />
+                <box size="0.154 0.594 0.10"/>
             </geometry>
         </collision>
     </link>
@@ -61,14 +65,14 @@
         <visual name="back_link_visual">
             <origin xyz="0.23800000000000002 0.0 -0.006025000000000001" rpy="3.141592653589793 -0.0 0.0" />
             <geometry>
-                <mesh filename="package://r2_description/meshes/back_link.stl" scale="0.001 0.001 0.001" />
+                <mesh filename="file://$(find r2_description)/meshes/back_link.stl" scale="0.001 0.001 0.001" />
             </geometry>
             <material name="chassis_color"/>
         </visual>
         <collision name="back_link_collision">
             <origin xyz="0.23800000000000002 0.0 -0.006025000000000001" rpy="3.141592653589793 -0.0 0.0" />
             <geometry>
-                <mesh filename="package://r2_description/meshes/back_link.stl" scale="0.001 0.001 0.001" />
+                <box size="0.154 0.594 0.10"/>
             </geometry>
         </collision>
     </link>
@@ -83,14 +87,14 @@
         <visual name="v_expandable_r_visual">
             <origin xyz="-7.105427357601002e-17 -0.45599999999999946 0.3069999999999998" rpy="1.5707963267948966 -6.938893903907214e-18 3.141592653589793" />
             <geometry>
-                <mesh filename="package://r2_description/meshes/v_expandable_r.stl" scale="0.001 0.001 0.001" />
+                <mesh filename="file://$(find r2_description)/meshes/v_expandable_r.stl" scale="0.001 0.001 0.001" />
             </geometry>
             <material name="expandable_color"/>
         </visual>
         <collision name="v_expandable_r_collision">
             <origin xyz="-7.105427357601002e-17 -0.45599999999999946 0.3069999999999998" rpy="1.5707963267948966 -6.938893903907214e-18 3.141592653589793" />
             <geometry>
-                <mesh filename="package://r2_description/meshes/v_expandable_r.stl" scale="0.001 0.001 0.001" />
+                <box size="0.04 0.168 0.08"/>
             </geometry>
         </collision>
     </link>
@@ -103,14 +107,14 @@
         <visual name="v_expandable_l_visual">
             <origin xyz="-7.105427357601002e-17 -0.45600000000000007 0.3069999999999999" rpy="-1.5707963267948957 1.3877787807814443e-17 -1.2246467991473532e-16" />
             <geometry>
-                <mesh filename="package://r2_description/meshes/v_expandable_l.stl" scale="0.001 0.001 0.001" />
+                <mesh filename="file://$(find r2_description)/meshes/v_expandable_l.stl" scale="0.001 0.001 0.001" />
             </geometry>
             <material name="expandable_color"/>
         </visual>
         <collision name="v_expandable_l_collision">
             <origin xyz="-7.105427357601002e-17 -0.45600000000000007 0.3069999999999999" rpy="-1.5707963267948957 1.3877787807814443e-17 -1.2246467991473532e-16" />
             <geometry>
-                <mesh filename="package://r2_description/meshes/v_expandable_l.stl" scale="0.001 0.001 0.001" />
+                <box size="0.04 0.168 0.08"/>
             </geometry>
         </collision>
     </link>
@@ -125,14 +129,14 @@
         <visual name="h_expandable_r_visual">
             <origin xyz="6.042827863252935e-17 0.2824999999999999 0.26990000000000003" rpy="1.5707963267948966 -0.0 -1.2246467991473532e-16" />
             <geometry>
-                <mesh filename="package://r2_description/meshes/h_expandable_r.stl" scale="0.001 0.001 0.001" />
+                <mesh filename="file://$(find r2_description)/meshes/h_expandable_r.stl" scale="0.001 0.001 0.001" />
             </geometry>
             <material name="expandable_color"/>
         </visual>
         <collision name="h_expandable_r_collision">
             <origin xyz="6.042827863252935e-17 0.2824999999999999 0.26990000000000003" rpy="1.5707963267948966 -0.0 -1.2246467991473532e-16" />
             <geometry>
-                <mesh filename="package://r2_description/meshes/h_expandable_r.stl" scale="0.001 0.001 0.001" />
+                <box size="0.32 0.04 0.04"/>
             </geometry>
         </collision>
     </link>
@@ -145,14 +149,14 @@
         <visual name="h_expandable_l_visual">
             <origin xyz="-6.153850165715452e-17 -0.28250000000000003 0.26990000000000003" rpy="-1.5707963267948966 -0.0 -1.2246467991473532e-16" />
             <geometry>
-                <mesh filename="package://r2_description/meshes/h_expandable_l.stl" scale="0.001 0.001 0.001" />
+                <mesh filename="file://$(find r2_description)/meshes/h_expandable_l.stl" scale="0.001 0.001 0.001" />
             </geometry>
             <material name="expandable_color"/>
         </visual>
         <collision name="h_expandable_l_collision">
             <origin xyz="-6.153850165715452e-17 -0.28250000000000003 0.26990000000000003" rpy="-1.5707963267948966 -0.0 -1.2246467991473532e-16" />
             <geometry>
-                <mesh filename="package://r2_description/meshes/h_expandable_l.stl" scale="0.001 0.001 0.001" />
+                <box size="0.32 0.04 0.04"/>
             </geometry>
         </collision>
     </link>
@@ -167,14 +171,14 @@
         <visual name="v_gantry_r_visual">
             <origin xyz="6.042827863252935e-17 0.2824999999999999 0.28700000000000003" rpy="1.5707963267948966 -4.479329460506078e-34 -1.2246467991473532e-16" />
             <geometry>
-                <mesh filename="package://r2_description/meshes/v_gantry_r.stl" scale="0.001 0.001 0.001" />
+                <mesh filename="file://$(find r2_description)/meshes/v_gantry_r.stl" scale="0.001 0.001 0.001" />
             </geometry>
             <material name="gantry_color"/>
         </visual>
         <collision name="v_gantry_r_collision">
             <origin xyz="6.042827863252935e-17 0.2824999999999999 0.28700000000000003" rpy="1.5707963267948966 -4.479329460506078e-34 -1.2246467991473532e-16" />
             <geometry>
-                <mesh filename="package://r2_description/meshes/v_gantry_r.stl" scale="0.001 0.001 0.001" />
+                <box size="0.04 0.168 0.12"/>
             </geometry>
         </collision>
     </link>
@@ -187,14 +191,14 @@
         <visual name="v_gantry_l_visual">
             <origin xyz="-6.153850165715452e-17 -0.28250000000000003 0.28700000000000003" rpy="-1.5707963267948966 1.1947622849140125e-34 -1.2246467991473532e-16" />
             <geometry>
-                <mesh filename="package://r2_description/meshes/v_gantry_l.stl" scale="0.001 0.001 0.001" />
+                <mesh filename="file://$(find r2_description)/meshes/v_gantry_l.stl" scale="0.001 0.001 0.001" />
             </geometry>
             <material name="gantry_color"/>
         </visual>
         <collision name="v_gantry_l_collision">
             <origin xyz="-6.153850165715452e-17 -0.28250000000000003 0.28700000000000003" rpy="-1.5707963267948966 1.1947622849140125e-34 -1.2246467991473532e-16" />
             <geometry>
-                <mesh filename="package://r2_description/meshes/v_gantry_l.stl" scale="0.001 0.001 0.001" />
+                <box size="0.04 0.168 0.12"/>
             </geometry>
         </collision>
     </link>
@@ -208,14 +212,14 @@
         <visual name="h_gantry_r_visual">
             <origin xyz="0.0 0.34600000000000003 0.24989999999999998" rpy="1.5707963267948966 -0.0 0.0" />
             <geometry>
-                <mesh filename="package://r2_description/meshes/h_gantry_r.stl" scale="0.001 0.001 0.001" />
+                <mesh filename="file://$(find r2_description)/meshes/h_gantry_r.stl" scale="0.001 0.001 0.001" />
             </geometry>
             <material name="gantry_color"/>
         </visual>
         <collision name="h_gantry_r_collision">
             <origin xyz="0.0 0.34600000000000003 0.24989999999999998" rpy="1.5707963267948966 -0.0 0.0" />
             <geometry>
-                <mesh filename="package://r2_description/meshes/h_gantry_r.stl" scale="0.001 0.001 0.001" />
+                <box size="0.45 0.04 0.04"/>
             </geometry>
         </collision>
     </link>
@@ -229,14 +233,14 @@
         <visual name="h_gantry_l_visual">
             <origin xyz="0.0 -0.34600000000000003 0.24989999999999998" rpy="-1.5707963267948966 -0.0 0.0" />
             <geometry>
-                <mesh filename="package://r2_description/meshes/h_gantry_l.stl" scale="0.001 0.001 0.001" />
+                <mesh filename="file://$(find r2_description)/meshes/h_gantry_l.stl" scale="0.001 0.001 0.001" />
             </geometry>
             <material name="gantry_color"/>
         </visual>
         <collision name="h_gantry_l_collision">
             <origin xyz="0.0 -0.34600000000000003 0.24989999999999998" rpy="-1.5707963267948966 -0.0 0.0" />
             <geometry>
-                <mesh filename="package://r2_description/meshes/h_gantry_l.stl" scale="0.001 0.001 0.001" />
+                <box size="0.45 0.04 0.04"/>
             </geometry>
         </collision>
     </link>
@@ -251,14 +255,14 @@
         <visual name="f_wheel_r_visual">
             <origin xyz="-0.23800000000000002 0.044524999999999995 -0.2715" rpy="-1.5707963267948966 -0.0 0.0" />
             <geometry>
-                <mesh filename="package://r2_description/meshes/f_wheel_r.stl" scale="0.001 0.001 0.001" />
+                <mesh filename="file://$(find r2_description)/meshes/f_wheel_r.stl" scale="0.001 0.001 0.001" />
             </geometry>
             <material name="wheel_color"/>
         </visual>
         <collision name="f_wheel_r_collision">
             <origin xyz="-0.23800000000000002 0.044524999999999995 -0.2715" rpy="-1.5707963267948966 -0.0 0.0" />
             <geometry>
-                <mesh filename="package://r2_description/meshes/f_wheel_r.stl" scale="0.001 0.001 0.001" />
+                <cylinder length="0.08" radius="0.0625"/>
             </geometry>
 
             <surface>
@@ -281,14 +285,14 @@
         <visual name="f_wheel_l_visual">
             <origin xyz="-0.23800000000000002 -0.044524999999999995 -0.2715" rpy="1.5707963267948966 -0.0 0.0" />
             <geometry>
-                <mesh filename="package://r2_description/meshes/f_wheel_l.stl" scale="0.001 0.001 0.001" />
+                <mesh filename="file://$(find r2_description)/meshes/f_wheel_l.stl" scale="0.001 0.001 0.001" />
             </geometry>
             <material name="wheel_color"/>
         </visual>
         <collision name="f_wheel_l_collision">
             <origin xyz="-0.23800000000000002 -0.044524999999999995 -0.2715" rpy="1.5707963267948966 -0.0 0.0" />
             <geometry>
-                <mesh filename="package://r2_description/meshes/f_wheel_l.stl" scale="0.001 0.001 0.001" />
+                <cylinder length="0.08" radius="0.0625"/>
             </geometry>
 
             <surface>
@@ -311,14 +315,14 @@
         <visual name="b_wheel_r_visual">
             <origin xyz="0.23800000000000002 0.044524999999999995 -0.2735" rpy="-1.5707963267948966 -0.0 0.0" />
             <geometry>
-                <mesh filename="package://r2_description/meshes/b_wheel_r.stl" scale="0.001 0.001 0.001" />
+                <mesh filename="file://$(find r2_description)/meshes/b_wheel_r.stl" scale="0.001 0.001 0.001" />
             </geometry>
             <material name="wheel_color"/>
         </visual>
         <collision name="b_wheel_r_collision">
             <origin xyz="0.23800000000000002 0.044524999999999995 -0.2735" rpy="-1.5707963267948966 -0.0 0.0" />
             <geometry>
-                <mesh filename="package://r2_description/meshes/b_wheel_r.stl" scale="0.001 0.001 0.001" />
+                <cylinder length="0.08" radius="0.0625"/>
             </geometry>
 
             <surface>
@@ -341,14 +345,14 @@
         <visual name="b_wheel_l_visual">
             <origin xyz="0.23800000000000002 -0.044524999999999995 -0.2735" rpy="1.5707963267948966 -0.0 0.0" />
             <geometry>
-                <mesh filename="package://r2_description/meshes/b_wheel_l.stl" scale="0.001 0.001 0.001" />
+                <mesh filename="file://$(find r2_description)/meshes/b_wheel_l.stl" scale="0.001 0.001 0.001" />
             </geometry>
             <material name="wheel_color"/>
         </visual>
         <collision name="b_wheel_l_collision">
             <origin xyz="0.23800000000000002 -0.044524999999999995 -0.2735" rpy="1.5707963267948966 -0.0 0.0" />
             <geometry>
-                <mesh filename="package://r2_description/meshes/b_wheel_l.stl" scale="0.001 0.001 0.001" />
+                <cylinder length="0.08" radius="0.0625"/>
             </geometry>
 
             <surface>
@@ -372,13 +376,13 @@
         <visual name="kfs_gripper_link_visual">
             <origin xyz="0.0 0.3559999999999999 0.21249999999999997" rpy="1.5707963267948966 -0.0 0.0" />
             <geometry>
-                <mesh filename="package://r2_description/meshes/kfs_gripper_link.stl" scale="0.001 0.001 0.001" />
+                <mesh filename="file://$(find r2_description)/meshes/kfs_gripper_link.stl" scale="0.001 0.001 0.001" />
             </geometry>
         </visual>
         <collision name="kfs_gripper_link_collision">
             <origin xyz="0.0 0.3559999999999999 0.21249999999999997" rpy="1.5707963267948966 -0.0 0.0" />
             <geometry>
-                <mesh filename="package://r2_description/meshes/kfs_gripper_link.stl" scale="0.001 0.001 0.001" />
+                <box size="0.08 0.08 0.06"/>
             </geometry>
         </collision>
     </link>
@@ -393,13 +397,13 @@
         <visual name="kfs_finger_visual">
             <origin xyz="-0.2124999999999999 0.3559999999999999 -0.012000000000000002" rpy="1.5707963267948966 -1.5707963267948966 0" />
             <geometry>
-                <mesh filename="package://r2_description/meshes/kfs_finger.stl" scale="0.001 0.001 0.001" />
+                <mesh filename="file://$(find r2_description)/meshes/kfs_finger.stl" scale="0.001 0.001 0.001" />
             </geometry>
         </visual>
         <collision name="kfs_finger_collision">
             <origin xyz="-0.2124999999999999 0.3559999999999999 -0.012000000000000002" rpy="1.5707963267948966 -1.5707963267948966 0" />
             <geometry>
-                <mesh filename="package://r2_description/meshes/kfs_finger.stl" scale="0.001 0.001 0.001" />
+                <box size="0.02 0.04 0.05"/>
             </geometry>
         </collision>
     </link>
@@ -414,13 +418,13 @@
         <visual name="spearhead_body_visual">
             <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
             <geometry>
-                <mesh filename="package://r2_description/meshes/spearhead_body.stl" scale="0.001 0.001 0.001" />
+                <mesh filename="file://$(find r2_description)/meshes/spearhead_body.stl" scale="0.001 0.001 0.001" />
             </geometry>
         </visual>
         <collision name="spearhead_body_collision">
             <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
             <geometry>
-                <mesh filename="package://r2_description/meshes/spearhead_body.stl" scale="0.001 0.001 0.001" />
+                <box size="0.06 0.06 0.08"/>
             </geometry>
         </collision>
     </link>
@@ -434,13 +438,13 @@
         <visual name="spearhead_finger_r_visual">
             <origin xyz="0.10250000190230253 0.2560000046766657 -0.008748863488359066" rpy="1.5707963267948963 -0.0 0.0" />
             <geometry>
-                <mesh filename="package://r2_description/meshes/spearhead_finger_r.stl" scale="0.001 0.001 0.001" />
+                <mesh filename="file://$(find r2_description)/meshes/spearhead_finger_r.stl" scale="0.001 0.001 0.001" />
             </geometry>
         </visual>
         <collision name="spearhead_finger_r_collision">
             <origin xyz="0.10250000190230253 0.2560000046766657 -0.008748863488359066" rpy="1.5707963267948963 -0.0 0.0" />
             <geometry>
-                <mesh filename="package://r2_description/meshes/spearhead_finger_r.stl" scale="0.001 0.001 0.001" />
+                <box size="0.01 0.04 0.06"/>
             </geometry>
         </collision>
     </link>
@@ -454,13 +458,13 @@
         <visual name="spearhead_finger_l_visual">
             <origin xyz="0.13250000190230252 0.2560000046766657 0.008748869216825784" rpy="1.5707963267948963 -0.0 0.0" />
             <geometry>
-                <mesh filename="package://r2_description/meshes/spearhead_finger_l.stl" scale="0.001 0.001 0.001" />
+                <mesh filename="file://$(find r2_description)/meshes/spearhead_finger_l.stl" scale="0.001 0.001 0.001" />
             </geometry>
         </visual>
         <collision name="spearhead_finger_l_collision">
             <origin xyz="0.13250000190230252 0.2560000046766657 0.008748869216825784" rpy="1.5707963267948963 -0.0 0.0" />
             <geometry>
-                <mesh filename="package://r2_description/meshes/spearhead_finger_l.stl" scale="0.001 0.001 0.001" />
+                <box size="0.01 0.04 0.06"/>
             </geometry>
         </collision>
     </link>
@@ -475,14 +479,14 @@
         <visual name="camera_link_visual">
             <origin xyz="0.052499999999999984 0.36749999999999994 -3.552713678800515e-17" rpy="1.5707963267948966 -4.6816763546921983e-97 -1.1869459682199748e-66" />
             <geometry>
-                <mesh filename="package://r2_description/meshes/camera_link.stl" scale="0.001 0.001 0.001" />
+                <mesh filename="file://$(find r2_description)/meshes/camera_link.stl" scale="0.001 0.001 0.001" />
             </geometry>
             <material name="camera_color"/>
         </visual>
         <collision name="camera_link_collision">
             <origin xyz="0.052499999999999984 0.36749999999999994 -3.552713678800515e-17" rpy="1.5707963267948966 -4.6816763546921983e-97 -1.1869459682199748e-66" />
             <geometry>
-                <mesh filename="package://r2_description/meshes/camera_link.stl" scale="0.001 0.001 0.001" />
+                <box size="0.03 0.03 0.03"/>
             </geometry>
         </collision>
     </link>
@@ -529,19 +533,26 @@
         <visual name="storage_plate_visual">
             <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
             <geometry>
-                <mesh filename="package://r2_description/meshes/storage_plate.stl" scale="0.001 0.001 0.001" />
+                <mesh filename="file://$(find r2_description)/meshes/storage_plate.stl" scale="0.001 0.001 0.001" />
             </geometry>
             <material name="storage_plate_color"/>
         </visual>
         <collision name="storage_plate_collision">
             <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
             <geometry>
-                <mesh filename="package://r2_description/meshes/storage_plate.stl" scale="0.001 0.001 0.001" />
+                <mesh filename="file://$(find r2_description)/meshes/storage_plate.stl" scale="0.001 0.001 0.001" />
             </geometry>
         </collision>
     </link>
 
 <!--JOINTS-->
+
+    <!--Odometry to Base-->
+    <joint name="odom_base_link" type="fixed">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <parent link="odom"/>
+        <child link="base_link"/>
+    </joint>
 
     <!--Base link -Front-Back-Links-->
     <joint name="base_link_front_link" type="prismatic">
@@ -693,26 +704,28 @@
     </joint>
 
     <!--Spearhead Revolute-->
-    <joint name="kfs_gripper_link_spearhead_gripper_rotate" type="continuous">
+    <joint name="kfs_gripper_link_spearhead_gripper_rotate" type="revolute">
         <origin xyz="0.0 0.12 0.2125" rpy="+1.57 -0.0 0.0" />
         <parent link="kfs_gripper_link" />
         <child link="spearhead_body" />
         <axis xyz="0.0 8.359326303060042e-17 1.0" />
+        <limit lower="-1.57" upper="1.57" effort="100" velocity="1.0"/>
     </joint>
 
     <!--CAMERA Rotation-->
-    <joint name="kfs_gripper_link_camera_rotate" type="continuous">
+    <joint name="kfs_gripper_link_camera_rotate" type="revolute">
         <origin xyz="0.0 0.0 0.2125" rpy="3.944304526105059e-31 -0.0 1.1869459682199748e-66" />
         <parent link="kfs_gripper_link" />
         <child link="camera_link" />
         <axis xyz="0.0 3.944304526105059e-31 1.0" />
+        <limit lower="-1.57" upper="1.57" effort="100" velocity="1.0"/>
     </joint>
 
     <!--LIDAR Joint-->
     <joint name="base_to_lidar" type="fixed">
         <parent link="base_link"/>
         <child link="lidar_link"/>
-        <origin xyz="0 0 -0.05" rpy="0 0 0"/>
+        <origin xyz="0 0 0.05" rpy="0 0 0"/>
     </joint>
     
     <!--Storage Plate Joint-->
@@ -727,67 +740,12 @@
         <plugin
             filename="libgz_ros2_control-system.so"
             name="gz_ros2_control::GazeboSimROS2ControlPlugin">
+
+            <parameters>
+                $(find r2_control)/config/controller_manager.yaml
+            </parameters>
+
         </plugin>
-    </gazebo>
-
-<!--Camera Sensor Plugin-->
-    <gazebo reference="camera_link">
-        <sensor name="camera_sensor" type="camera">
-
-            <always_on>true</always_on>
-            <visualize>true</visualize>
-            <update_rate>30</update_rate>
-
-            <topic>/camera/image_raw</topic>
-
-            <camera>
-            <horizontal_fov>1.047</horizontal_fov>
-
-            <image>
-                <width>640</width>
-                <height>480</height>
-                <format>R8G8B8</format>
-            </image>
-
-            <clip>
-                <near>0.1</near>
-                <far>100</far>
-            </clip>
-            </camera>
-
-        </sensor>
-    </gazebo>
-
-<!--LIDAR Sensor Plugin-->
-    <gazebo reference="lidar_link">
-        <sensor name="lidar_sensor" type="ray">
-
-            <always_on>true</always_on>
-            <visualize>true</visualize>
-            <update_rate>10</update_rate>
-
-            <topic>scan</topic>
-
-            <gz_frame_id>lidar_link</gz_frame_id>
-
-            <ray>
-            <scan>
-                <horizontal>
-                <samples>720</samples>
-                <resolution>1</resolution>
-                <min_angle>-3.14159</min_angle>
-                <max_angle>3.14159</max_angle>
-                </horizontal>
-            </scan>
-
-            <range>
-                <min>0.10</min>
-                <max>12.0</max>
-                <resolution>0.01</resolution>
-            </range>
-            </ray>
-
-        </sensor>
     </gazebo>
 
 <!--ro2_control block-->
