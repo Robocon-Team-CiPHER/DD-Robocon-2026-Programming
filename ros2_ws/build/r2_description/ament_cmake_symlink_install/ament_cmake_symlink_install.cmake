@@ -315,8 +315,8 @@ message(STATUS "Execute custom install script")
 
 # begin of custom install code
 
-# install(DIRECTORY "urdf" "meshes" "launch" "rviz" "arena" "arena_models/meshes" "DESTINATION" "share/r2_description")
-ament_cmake_symlink_install_directory("/home/sam/DD-Robocon-2026-Programming/ros2_ws/src/r2_description" DIRECTORY "urdf" "meshes" "launch" "rviz" "arena" "arena_models/meshes" "DESTINATION" "share/r2_description")
+# install(DIRECTORY "urdf" "meshes" "launch" "rviz" "arena" "arena_models" "DESTINATION" "share/r2_description")
+ament_cmake_symlink_install_directory("/home/sam/DD-Robocon-2026-Programming/ros2_ws/src/r2_description" DIRECTORY "urdf" "meshes" "launch" "rviz" "arena" "arena_models" "DESTINATION" "share/r2_description")
 
 # install(FILES "/home/sam/DD-Robocon-2026-Programming/ros2_ws/build/r2_description/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/r2_description" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 ament_cmake_symlink_install_files("/home/sam/DD-Robocon-2026-Programming/ros2_ws/src/r2_description" FILES "/home/sam/DD-Robocon-2026-Programming/ros2_ws/build/r2_description/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/r2_description" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")

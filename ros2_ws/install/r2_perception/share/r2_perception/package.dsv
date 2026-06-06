@@ -2,3 +2,5 @@ source;share/r2_perception/hook/pythonpath.dsv
 source;share/r2_perception/hook/pythonpath.sh
 source;share/r2_perception/hook/ament_prefix_path.dsv
 source;share/r2_perception/hook/ament_prefix_path.sh
+source;../../build/r2_perception/share/r2_perception/hook/pythonpath_develop.dsv
+source;../../build/r2_perception/share/r2_perception/hook/pythonpath_develop.sh
