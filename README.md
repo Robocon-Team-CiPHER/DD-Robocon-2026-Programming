@@ -16,18 +16,6 @@
 
 *"This repository preserves the software engineering journey of the DD ROBOCON 2026 Programming Team so future teams can continue building upon a strong foundation rather than starting from scratch."*
 
-# 📊 Repository Statistics
-
-| Item | Count |
-|------|------:|
-| ROS Packages | 4 |
-| Arena Components | 10+ |
-| Vision Datasets | 2 |
-| Detection Models | YOLO + OpenCV |
-| Simulation Worlds | 1 |
-| Programming Languages | Python |
-| CI Workflows | 1 |
-
 </div>
 
 ---
@@ -87,6 +75,20 @@ The primary goals of this repository are to:
 - Experiment with SLAM and autonomous navigation.
 - Document the complete development process for future programming teams.
 - Preserve engineering knowledge beyond a single ROBOCON season.
+
+---
+
+# 📊 Repository Statistics
+
+| Item | Count |
+|------|------:|
+| ROS Packages | 4 |
+| Arena Components | 10+ |
+| Vision Datasets | 2 |
+| Detection Models | YOLO + OpenCV |
+| Simulation Worlds | 1 |
+| Programming Languages | Python |
+| CI Workflows | 1 |
 
 ---
 
@@ -214,6 +216,18 @@ The software stack evolved incrementally throughout the season.
 | Navigation | 🟡 |
 | Hardware Integration | ⏳ |
 | Competition Ready | 🚧 |
+
+---
+
+# 💡 Repository Philosophy
+
+The goal of this repository is not merely to preserve source code.
+
+It exists to preserve engineering knowledge.
+
+Every experiment, every simulation, every design decision, and every lesson learned has been documented so that future DD ROBOCON programming teams can continue improving the software rather than rebuilding it.
+
+Each generation should leave the repository in a better state than they found it.
 
 ---
 
@@ -498,6 +512,48 @@ Examples include
 - Controller debugging
 
 These development snapshots preserve the team's engineering progress for future programming teams.
+
+---
+
+# 📸 Development Gallery
+
+## Robot Simulation
+
+<p align="center">
+
+<img src="highlights/rviz/r2_03_05_mid_night.png" width="48%">
+
+<img src="highlights/rviz/r2_rviz.png" width="48%">
+
+</p>
+
+---
+
+## Arena Evolution
+
+<p align="center">
+
+<img src="highlights/arena/v2_arena.png" width="48%">
+
+<img src="highlights/arena/v2_arena_with_light.png" width="48%">
+
+</p>
+
+---
+
+## Early Development
+
+<p align="center">
+
+<img src="highlights/stage_1/r2_1.png" width="24%">
+
+<img src="highlights/stage_1/r2_4.png" width="24%">
+
+<img src="highlights/stage_1/r2_6.png" width="24%">
+
+<img src="highlights/stage_1/r2_8.png" width="24%">
+
+</p>
 
 ---
 
@@ -1194,6 +1250,32 @@ Before the next DD ROBOCON theme is announced, we strongly recommend completing 
 - Unit Testing
 - Performance Benchmarking
 - Complete Digital Twin
+
+---
+
+# 📌 Future Improvements
+
+The repository should eventually include:
+
+```
+docs/
+├── Architecture.md
+├── Simulation.md
+├── Vision.md
+├── SLAM.md
+├── Navigation.md
+├── Control.md
+└── Hardware.md
+```
+
+Every ROS package should also contain its own README describing:
+
+- Topics
+- Nodes
+- Parameters
+- Launch files
+- Dependencies
+- Known Issues
 
 ---
 
