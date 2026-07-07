@@ -1,4 +1,0 @@
-import sys
-if sys.prefix == '/usr':
-    sys.real_prefix = sys.prefix
-    sys.prefix = sys.exec_prefix = '/home/sam/DD-Robocon-2026-Programming/ros2_ws/install/r2_perception'

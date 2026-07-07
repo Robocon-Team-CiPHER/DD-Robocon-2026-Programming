@@ -1,9 +1,0 @@
-/home/sam/DD-Robocon-2026-Programming/ros2_ws/build/r2_description/CMakeFiles/uninstall.dir
-/home/sam/DD-Robocon-2026-Programming/ros2_ws/build/r2_description/CMakeFiles/r2_description_uninstall.dir
-/home/sam/DD-Robocon-2026-Programming/ros2_ws/build/r2_description/CMakeFiles/test.dir
-/home/sam/DD-Robocon-2026-Programming/ros2_ws/build/r2_description/CMakeFiles/edit_cache.dir
-/home/sam/DD-Robocon-2026-Programming/ros2_ws/build/r2_description/CMakeFiles/rebuild_cache.dir
-/home/sam/DD-Robocon-2026-Programming/ros2_ws/build/r2_description/CMakeFiles/list_install_components.dir
-/home/sam/DD-Robocon-2026-Programming/ros2_ws/build/r2_description/CMakeFiles/install.dir
-/home/sam/DD-Robocon-2026-Programming/ros2_ws/build/r2_description/CMakeFiles/install/local.dir
-/home/sam/DD-Robocon-2026-Programming/ros2_ws/build/r2_description/CMakeFiles/install/strip.dir
