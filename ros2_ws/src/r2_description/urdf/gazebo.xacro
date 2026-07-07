@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <!-- ================================= -->
+  <!-- GAZEBO HARMONIC ROS2 CONTROL      -->
+  <!-- ROS2 JAZZY + GAZEBO HARMONIC      -->
+  <!-- ================================= -->
+
+  <gazebo>
+    <plugin
+        filename="libgz_ros2_control-system.so"
+        name="gz_ros2_control::GazeboSimROS2ControlPlugin">
+    </plugin>
+  </gazebo>
+
+
+  <!-- ===================== -->
+  <!-- WHEEL CONTACT PHYSICS -->
+  <!-- ===================== -->
+
+  <!-- Front Right Wheel -->
+  <gazebo reference="f_wheel_r">
+    <mu1>1.2</mu1>
+    <mu2>1.2</mu2>
+    <kp>100000.0</kp>
+    <kd>1.0</kd>
+  </gazebo>
+
+  <!-- Front Left Wheel -->
+  <gazebo reference="f_wheel_l">
+    <mu1>1.2</mu1>
+    <mu2>1.2</mu2>
+    <kp>100000.0</kp>
+    <kd>1.0</kd>
+  </gazebo>
+
+  <!-- Back Right Wheel -->
+  <gazebo reference="b_wheel_r">
+    <mu1>1.2</mu1>
+    <mu2>1.2</mu2>
+    <kp>100000.0</kp>
+    <kd>1.0</kd>
+  </gazebo>
+
+  <!-- Back Left Wheel -->
+  <gazebo reference="b_wheel_l">
+    <mu1>1.2</mu1>
+    <mu2>1.2</mu2>
+    <kp>100000.0</kp>
+    <kd>1.0</kd>
+  </gazebo>
+
+  <gazebo reference="camera_link">
+    <sensor name="camera_sensor" type="camera">
+      <update_rate>30</update_rate>
+
+      <camera>
+        <horizontal_fov>1.047</horizontal_fov>
+
+        <image>
+          <width>640</width>
+          <height>480</height>
+          <format>R8G8B8</format>
+        </image>
+
+        <clip>
+          <near>0.1</near>
+          <far>100</far>
+        </clip>
+      </camera>
+
+      <always_on>true</always_on>
+      <visualize>true</visualize>
+
+      <topic>camera/image</topic>
+    </sensor>
+  </gazebo>
+
+  <gazebo reference="lidar_link">
+    <sensor name="lidar_sensor" type="gpu_lidar">
+      <update_rate>20</update_rate>
+
+      <ray>
+        <scan>
+          <horizontal>
+            <samples>720</samples>
+            <resolution>1</resolution>
+            <min_angle>-3.14159</min_angle>
+            <max_angle>3.14159</max_angle>
+          </horizontal>
+        </scan>
+
+        <range>
+          <min>0.12</min>
+          <max>12.0</max>
+          <resolution>0.01</resolution>
+        </range>
+      </ray>
+
+      <always_on>true</always_on>
+      <visualize>true</visualize>
+
+      <topic>scan</topic>
+    </sensor>
+  </gazebo>
+  
+</robot>

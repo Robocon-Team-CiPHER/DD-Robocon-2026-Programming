@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<sdf version="1.11">
+  <model name="fist">
+    <static>false</static>
+    <link name="fist_link">
+      <!-- ================= VISUAL ================= -->
+      <visual name="visual">
+        <geometry>
+          <mesh>
+            <uri>model://model://fist/meshes/fist.obj</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.8 0.1 0.1 1</ambient>
+          <diffuse>0.8 0.1 0.1 1</diffuse>
+        </material>
+      </visual>
+      <!-- ================= COLLISION ================= -->
+      <collision name="collision">
+        <geometry>
+          <mesh>
+            <uri>model://fist/meshes/fist.obj</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1.2</mu>
+              <mu2>1.2</mu2>
+            </ode>
+          </friction>
+          <bounce>
+            <restitution_coefficient>0.0</restitution_coefficient>
+          </bounce>
+        </surface>
+      </collision>
+      <!-- ================= INERTIAL ================= -->
+      <inertial>
+        <mass>0.085</mass> <!-- 85 grams -->
+        <inertia>
+          <ixx>0.000083</ixx>
+          <iyy>0.000083</iyy>
+          <izz>0.000083</izz>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyz>0</iyz>
+        </inertia>
+      </inertial>
+    </link>
+  </model>
+</sdf>
