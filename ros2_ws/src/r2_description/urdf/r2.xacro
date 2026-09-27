@@ -9,12 +9,12 @@
 
 
 <!--Odometry-->
-<link name="odom"/>
+<link name="base_footprint"/>
 
 <!-- Base Link-->
     <link name="base_link">
         <inertial>
-            <origin xyz="0.0042186271235444715 2.679193213808116e-16 0.0773228479596528" rpy="0.0 0.0 0.0" />
+            <origin xyz="0.0042186271235444715 2.679193213808116e-16 0.16" rpy="0.0 0.0 0.0" />
             <mass value="2.00" />
             <inertia ixx="0.42155335598643257" iyy="0.2892124481695275" izz="0.5315505031508672" ixy="-1.1992727721844926e-16" iyz="1.5347918280439902e-16" ixz="0.0001585619900969315" />
         </inertial>
@@ -28,7 +28,7 @@
         <collision name="base_link_collision">
             <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
             <geometry>
-                <box size="0.63 0.65 0.08"/>
+                <mesh filename="file://$(find r2_description)/meshes/base_link.stl" scale="0.001 0.001 0.001" />
             </geometry>
         </collision>
     </link>
@@ -50,7 +50,7 @@
         <collision name="front_link_collision">
             <origin xyz="-0.23800000000000002 0.0 -0.006025000000000001" rpy="3.141592653589793 -0.0 0.0" />
             <geometry>
-                <box size="0.154 0.594 0.10"/>
+                <mesh filename="file://$(find r2_description)/meshes/front_link.stl" scale="0.001 0.001 0.001" />
             </geometry>
         </collision>
     </link>
@@ -72,7 +72,7 @@
         <collision name="back_link_collision">
             <origin xyz="0.23800000000000002 0.0 -0.006025000000000001" rpy="3.141592653589793 -0.0 0.0" />
             <geometry>
-                <box size="0.154 0.594 0.10"/>
+                <mesh filename="file://$(find r2_description)/meshes/back_link.stl" scale="0.001 0.001 0.001" />
             </geometry>
         </collision>
     </link>
@@ -253,16 +253,16 @@
             <inertia ixx="0.0006063195606969968" iyy="0.0006063195607106525" izz="0.0009683138409003339" ixy="-8.673617379884035e-19" iyz="1.734723475976807e-18" ixz="-1.3877787807814457e-17" />
         </inertial>
         <visual name="f_wheel_r_visual">
-            <origin xyz="-0.23800000000000002 0.044524999999999995 -0.2715" rpy="-1.5707963267948966 -0.0 0.0" />
+            <origin xyz="-0.23800000000000002 0.044524999999999995 -0.2715" rpy="-1.5707963267948966 0.0 0.0" />
             <geometry>
                 <mesh filename="file://$(find r2_description)/meshes/f_wheel_r.stl" scale="0.001 0.001 0.001" />
             </geometry>
             <material name="wheel_color"/>
         </visual>
         <collision name="f_wheel_r_collision">
-            <origin xyz="-0.23800000000000002 0.044524999999999995 -0.2715" rpy="-1.5707963267948966 -0.0 0.0" />
+            <origin xyz="0 0 -0.025" rpy="0.0 0.0 0.0" />
             <geometry>
-                <cylinder length="0.08" radius="0.0625"/>
+                <cylinder length="0.05" radius="0.06"/>
             </geometry>
 
             <surface>
@@ -290,9 +290,9 @@
             <material name="wheel_color"/>
         </visual>
         <collision name="f_wheel_l_collision">
-            <origin xyz="-0.23800000000000002 -0.044524999999999995 -0.2715" rpy="1.5707963267948966 -0.0 0.0" />
+            <origin xyz="0.0 0.0 -0.025" rpy="0.0 -0.0 0.0" />
             <geometry>
-                <cylinder length="0.08" radius="0.0625"/>
+                <cylinder length="0.05" radius="0.06"/>
             </geometry>
 
             <surface>
@@ -320,9 +320,9 @@
             <material name="wheel_color"/>
         </visual>
         <collision name="b_wheel_r_collision">
-            <origin xyz="0.23800000000000002 0.044524999999999995 -0.2735" rpy="-1.5707963267948966 -0.0 0.0" />
+            <origin xyz="0 0 -0.025" rpy="0.0 0.0 -1.5707963267948966" />
             <geometry>
-                <cylinder length="0.08" radius="0.0625"/>
+                <cylinder length="0.05" radius="0.06"/>
             </geometry>
 
             <surface>
@@ -350,9 +350,9 @@
             <material name="wheel_color"/>
         </visual>
         <collision name="b_wheel_l_collision">
-            <origin xyz="0.23800000000000002 -0.044524999999999995 -0.2735" rpy="1.5707963267948966 -0.0 0.0" />
+            <origin xyz="0 0 -0.025" rpy="0.0 0.0 -1.5707963267948966" />
             <geometry>
-                <cylinder length="0.08" radius="0.0625"/>
+                <cylinder length="0.05" radius="0.06"/>
             </geometry>
 
             <surface>
@@ -547,10 +547,10 @@
 
 <!--JOINTS-->
 
-    <!--Odometry to Base-->
+    <!--base_footprint to Base-->
     <joint name="odom_base_link" type="fixed">
         <origin xyz="0 0 0" rpy="0 0 0"/>
-        <parent link="odom"/>
+        <parent link="base_footprint"/>
         <child link="base_link"/>
     </joint>
 
@@ -573,25 +573,25 @@
     </joint>
 
     <!--Wheel Joints-->
-    <joint name="front_link_f_wheel_r" type="continuous">
+    <joint name="f_wheel_r_revolute" type="continuous">
         <origin xyz="0.0 0.2715 0.0385" rpy="-1.5707963267948966 -0.0 0.0" />
         <parent link="front_link" />
         <child link="f_wheel_r" />
         <axis xyz="0.0 0.0 -1.0" />
     </joint>
-    <joint name="front_link_f_wheel_l" type="continuous">
+    <joint name="f_wheel_l_revolute" type="continuous">
         <origin xyz="0.0 -0.2715 0.0385" rpy="1.5707963267948966 -0.0 0.0" />
         <parent link="front_link" />
         <child link="f_wheel_l" />
         <axis xyz="0.0 0.0 1.0" />
     </joint>
-    <joint name="back_link_b_wheel_r" type="continuous">
+    <joint name="b_wheel_r_revolute" type="continuous">
         <origin xyz="0.0 0.2735 0.0385" rpy="-1.5707963267948966 -0.0 0.0" />
         <parent link="back_link" />
         <child link="b_wheel_r" />
         <axis xyz="0.0 0.0 -1.0" />
     </joint>
-    <joint name="back_link_b_wheel_l" type="continuous">
+    <joint name="b_wheel_l_revolute" type="continuous">
         <origin xyz="0.0 -0.2735 0.0385" rpy="1.5707963267948966 -0.0 0.0" />
         <parent link="back_link" />
         <child link="b_wheel_l" />
@@ -770,40 +770,36 @@
         </joint>
 
         <!-- Front Right -->
-        <joint name="front_link_f_wheel_r">
+        <joint name="f_wheel_r_revolute">
 
             <command_interface name="velocity"/>
-
             <state_interface name="position"/>
             <state_interface name="velocity"/>
 
         </joint>
 
         <!-- Front Left -->
-        <joint name="front_link_f_wheel_l">
+        <joint name="f_wheel_l_revolute">
 
             <command_interface name="velocity"/>
-
             <state_interface name="position"/>
             <state_interface name="velocity"/>
 
         </joint>
 
         <!-- Back Right -->
-        <joint name="back_link_b_wheel_r">
+        <joint name="b_wheel_r_revolute">
 
             <command_interface name="velocity"/>
-
             <state_interface name="position"/>
             <state_interface name="velocity"/>
 
         </joint>
 
         <!-- Back Left -->
-        <joint name="back_link_b_wheel_l">
+        <joint name="b_wheel_l_revolute">
 
             <command_interface name="velocity"/>
-
             <state_interface name="position"/>
             <state_interface name="velocity"/>
 

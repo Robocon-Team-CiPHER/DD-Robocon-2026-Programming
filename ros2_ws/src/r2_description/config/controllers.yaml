@@ -1,0 +1,55 @@
+controller_manager:
+  ros__parameters:
+
+    update_rate: 1000
+
+    use_sim_time: true
+
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+
+    diff_drive_controller:
+      type: diff_drive_controller/DiffDriveController
+
+
+diff_drive_controller:
+  ros__parameters:
+
+    # Left wheels
+    left_wheel_names:
+      - f_wheel_l_revolute
+      - b_wheel_l_revolute
+
+    # Right wheels
+    right_wheel_names:
+      - b_wheel_r_revolute
+      - f_wheel_r_revolute
+
+    # Robot dimensions
+    wheel_separation: 0.085
+    wheel_radius: 0.025
+
+    # Controller settings
+    publish_rate: 50.0
+
+    base_frame_id: base_footprint
+    odom_frame_id: odom
+
+    enable_odom_tf: true
+
+    use_stamped_vel: false
+
+    cmd_vel_timeout: 0.5
+
+    publish_limited_velocity: true
+
+    velocity_rolling_window_size: 10
+
+    # Velocity limits
+    linear.x.has_velocity_limits: true
+    linear.x.max_velocity: 1.0
+    linear.x.min_velocity: -1.0
+
+    angular.z.has_velocity_limits: true
+    angular.z.max_velocity: 2.0
+    angular.z.min_velocity: -2.0

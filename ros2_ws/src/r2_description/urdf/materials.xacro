@@ -1,10 +1,6 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
 
-  <!-- ================================= -->
-  <!-- ROS2 HUMBLE + IGNITION MATERIALS -->
-  <!-- ================================= -->
-
   <!-- BASE -->
   <material name="base_color">
     <color rgba="0.20 0.20 0.20 1.0"/>

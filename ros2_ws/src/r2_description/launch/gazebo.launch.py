@@ -128,6 +128,19 @@ def generate_launch_description():
         output='screen'
     )
 
+    ros_gz_bridge_config = os.path.join(
+        pkg_path,
+        'config',
+        'bridge.yaml'
+    )
+    
+    ros_gz_bridge = Node(
+        package='ros_gz_bridge',
+        executable='parameter_bridge',
+        parameters=[{'config_file': ros_gz_bridge_config}],
+        output='screen'
+    )
+
     # =========================
     # LAUNCH DESCRIPTION
     # =========================
@@ -141,6 +154,7 @@ def generate_launch_description():
 
         joint_state_publisher,
 
+        ros_gz_bridge,
+        
         spawn_robot
-
     ])
