@@ -2,14 +2,55 @@
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
 
   <!-- ================================= -->
-  <!-- GAZEBO HARMONIC ROS2 CONTROL      -->
-  <!-- ROS2 JAZZY + GAZEBO HARMONIC      -->
+  <!-- GAZEBO HARMONIC DIFF DRIVE       -->
+  <!-- ROS 2 JAZZY + GAZEBO HARMONIC     -->
   <!-- ================================= -->
 
   <gazebo>
     <plugin
-        filename="libgz_ros2_control-system.so"
-        name="gz_ros2_control::GazeboSimROS2ControlPlugin">
+      filename="gz-sim-diff-drive-system"
+      name="gz::sim::systems::DiffDrive">
+
+      <!-- R2: four-wheel differential / skid-steer drive -->
+      <left_joint>f_wheel_l_revolute</left_joint>
+      <left_joint>b_wheel_l_revolute</left_joint>
+      <right_joint>f_wheel_r_revolute</right_joint>
+      <right_joint>b_wheel_r_revolute</right_joint>
+
+      <!-- Measured from the wheel joint locations -->
+      <wheel_separation>0.545</wheel_separation>
+      <wheel_radius>0.06</wheel_radius>
+
+      <!-- Explicit model-scoped Gazebo Transport topics -->
+      <topic>/cmd_vel</topic>
+      <odom_topic>/model/r2/odom</odom_topic>
+      <tf_topic>/model/r2/tf</tf_topic>
+
+      <frame_id>odom</frame_id>
+      <child_frame_id>base_footprint</child_frame_id>
+
+      <odom_publish_frequency>50</odom_publish_frequency>
+
+      <max_linear_velocity>1.0</max_linear_velocity>
+      <min_linear_velocity>-1.0</min_linear_velocity>
+      <max_angular_velocity>2.0</max_angular_velocity>
+      <min_angular_velocity>-2.0</min_angular_velocity>
+
+      <max_linear_acceleration>1.0</max_linear_acceleration>
+      <min_linear_acceleration>-1.0</min_linear_acceleration>
+      <max_angular_acceleration>2.0</max_angular_acceleration>
+      <min_angular_acceleration>-2.0</min_angular_acceleration>
+    </plugin>
+
+    <!-- Publish the four driven wheel states from Gazebo -->
+    <plugin
+      filename="gz-sim-joint-state-publisher-system"
+      name="gz::sim::systems::JointStatePublisher">
+      <topic>/model/r2/joint_states</topic>
+      <joint_name>f_wheel_l_revolute</joint_name>
+      <joint_name>f_wheel_r_revolute</joint_name>
+      <joint_name>b_wheel_l_revolute</joint_name>
+      <joint_name>b_wheel_r_revolute</joint_name>
     </plugin>
   </gazebo>
 

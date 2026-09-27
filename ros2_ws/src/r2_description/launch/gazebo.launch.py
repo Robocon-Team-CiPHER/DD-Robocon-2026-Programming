@@ -131,7 +131,7 @@ def generate_launch_description():
     ros_gz_bridge_config = os.path.join(
         pkg_path,
         'config',
-        'bridge.yaml'
+        'bridge_config.yaml'
     )
     
     ros_gz_bridge = Node(
@@ -152,7 +152,6 @@ def generate_launch_description():
 
         robot_state_publisher,
 
-        joint_state_publisher,
 
         ros_gz_bridge,
         
