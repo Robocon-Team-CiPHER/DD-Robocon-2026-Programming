@@ -1,9 +1,0 @@
-setup.py
-r2_initialization/__init__.py
-r2_initialization/esp32_handshake_node.py
-r2_initialization/startup_monitor_node.py
-r2_initialization/system_check_node.py
-r2_initialization.egg-info/PKG-INFO
-r2_initialization.egg-info/SOURCES.txt
-r2_initialization.egg-info/dependency_links.txt
-r2_initialization.egg-info/top_level.txt

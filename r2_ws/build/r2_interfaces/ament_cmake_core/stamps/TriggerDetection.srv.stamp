@@ -1,8 +1,0 @@
-# TriggerDetection.srv
-# One-shot request to perform a detection and return result immediately
-
-string  target_type     # "spearhead" | "kfs_box" | "ttt_rack"
-uint32  timeout_ms      # Maximum time to wait for a confident detection
----
-bool                    success
-r2_interfaces/DetectionResult result

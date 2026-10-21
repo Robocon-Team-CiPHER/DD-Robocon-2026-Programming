@@ -1,1 +1,0 @@
-ament_cmake_symlink_install_targets("TARGET_FILES" "/home/tejas-raut/r2_ws/build/r2_comm_bridge/serial_bridge_node" "/home/tejas-raut/r2_ws/build/r2_comm_bridge/arduino_bridge_node" "TARGETS" "serial_bridge_node" "arduino_bridge_node" "DESTINATION" "lib/r2_comm_bridge")
