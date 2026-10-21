@@ -1,1 +1,0 @@
-/home/tejas-raut/r2_ws/src/r2_detection/r2_detection/ttt_detection_node.py

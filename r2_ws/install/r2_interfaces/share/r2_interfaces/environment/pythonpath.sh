@@ -1,1 +1,0 @@
-/home/tejas-raut/r2_ws/build/r2_interfaces/ament_cmake_environment_hooks/pythonpath.sh

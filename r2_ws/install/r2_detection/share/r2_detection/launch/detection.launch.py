@@ -1,1 +1,0 @@
-/home/tejas-raut/r2_ws/src/r2_detection/launch/detection.launch.py

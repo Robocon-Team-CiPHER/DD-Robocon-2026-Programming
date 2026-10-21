@@ -1,1 +1,0 @@
-/home/tejas-raut/r2_ws/src/r2_bringup/launch/detection_only.launch.py

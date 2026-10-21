@@ -1,1 +1,0 @@
-/home/tejas-raut/r2_ws/build/r2_interfaces/rosidl_typesupport_fastrtps_c/r2_interfaces/action/detail/grip_object__rosidl_typesupport_fastrtps_c.h

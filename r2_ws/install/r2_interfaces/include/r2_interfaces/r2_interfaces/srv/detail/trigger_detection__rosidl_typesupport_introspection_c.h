@@ -1,1 +1,0 @@
-/home/tejas-raut/r2_ws/build/r2_interfaces/rosidl_typesupport_introspection_c/r2_interfaces/srv/detail/trigger_detection__rosidl_typesupport_introspection_c.h

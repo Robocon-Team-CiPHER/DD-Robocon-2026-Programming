@@ -1,1 +1,0 @@
-/home/tejas-raut/r2_ws/build/r2_interfaces/rosidl_generator_c/r2_interfaces/srv/detail/trigger_detection__functions.h
